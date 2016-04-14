@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$USER_HOME$/Documents/workspace/satprof/py_epg_tests/.idea/py_epg_tests.iml" filepath="$USER_HOME$/Documents/workspace/satprof/py_epg_tests/.idea/py_epg_tests.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/py_epg_tests.iml" filepath="$PROJECT_DIR$/.idea/py_epg_tests.iml" />
     </modules>
   </component>
 </project>

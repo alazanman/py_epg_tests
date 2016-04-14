@@ -11,21 +11,20 @@ class ChannelHelper:
         wd = self.app.wd
         self.open_channels_page()
         wd.find_element_by_link_text("Добавить").click()
-        wd.find_element_by_id("id_name").click()
-        wd.find_element_by_id("id_name").clear()
-        wd.find_element_by_id("id_name").send_keys(channel.name)
-        wd.find_element_by_id("id_service_id").click()
-        wd.find_element_by_id("id_service_id").clear()
-        wd.find_element_by_id("id_service_id").send_keys(channel.service_id)
-        wd.find_element_by_id("id_epg_name").click()
-        wd.find_element_by_id("id_epg_name").clear()
-        wd.find_element_by_id("id_epg_name").send_keys(channel.epg_name)
-        wd.find_element_by_id("id_offset").click()
-        wd.find_element_by_id("id_offset").clear()
-        wd.find_element_by_id("id_offset").send_keys(channel.offset)
-        wd.find_element_by_id("id_provider").click()
-        wd.find_element_by_id("id_provider").clear()
-        wd.find_element_by_id("id_provider").send_keys(channel.provider)
+        self.fill_channel_form(channel)
+        wd.find_element_by_css_selector("button.btn.btn-success").click()
+
+    def fill_channel_form(self, channel):
+        wd = self.app.wd
+        self.enter_text("id_name", channel.name)
+        self.enter_text("id_service_id", channel.service_id)
+        self.enter_text("id_epg_name", channel.epg_name)
+        self.enter_text("id_offset", channel.offset)
+        self.enter_text("id_provider", channel.provider)
+        # wd.find_element_by_xpath("//select[@id='id_languages']/option[@value='2']").click()
+        # wd.find_element_by_xpath("//select[@id='id_languages']/option[@value='3']").click()
+        # wd.find_element_by_xpath("//select[@id='id_languages']/option[@value='1']").click()
+        # wd.find_element_by_xpath("//select[@id='id_languages']/option[@value='4']").click()
         if not wd.find_element_by_xpath("//select[@id='id_languages']/option[@value='2']").is_selected():
             wd.find_element_by_xpath("//select[@id='id_languages']/option[@value='2']").click()
         if not wd.find_element_by_xpath("//select[@id='id_languages']/option[@value='3']").is_selected():
@@ -40,14 +39,32 @@ class ChannelHelper:
         #        wd.find_element_by_id("drop-select-input").click()
         #        wd.find_element_by_xpath("//form[@class='epg-channel-form']/fieldset/div[11]/div/img").click()
         #        wd.find_element_by_id("drop-select-input").click()
-        wd.find_element_by_css_selector("button.btn.btn-success").click()
+
+
+    def enter_text(self, field_id, text):
+        wd = self.app.wd
+        if text is not None:
+            wd.find_element_by_id(field_id).click()
+            wd.find_element_by_id(field_id).clear()
+            wd.find_element_by_id(field_id).send_keys(text)
 
     def delete_first_channel(self):
         wd = self.app.wd
         self.open_channels_page()
-        wd.find_element_by_xpath("//*[@id='content']/div[2]/table/tbody/tr[1]/td[2]/a").click()
+        self.click_first_channel_in_list()
         wd.find_element_by_id("del").click()
         wd.find_element_by_xpath("//*[@id='content']/div/div/div/div[2]/form/div/button").click()
+
+    def click_first_channel_in_list(self):
+        wd = self.app.wd
+        wd.find_element_by_xpath("//*[@id='content']/div[2]/table/tbody/tr[1]/td[2]/a").click()
+
+    def edit_first_channel(self, new_channel):
+        wd = self.app.wd
+        self.open_channels_page()
+        self.click_first_channel_in_list()
+        self.fill_channel_form(new_channel)
+        wd.find_element_by_css_selector("button.btn.btn-success").click()
 
     def open_channels_page(self):
         wd = self.app.wd
