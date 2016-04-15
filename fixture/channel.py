@@ -64,8 +64,9 @@ class ChannelHelper:
         self.open_channels_page()
         self.click_first_channel_in_list()
         self.fill_channel_form(new_channel)
-        wd.find_element_by_css_selector("button.btn.btn-success").click()
+        wd.find_element_by_xpath("//*[@id='content']/form/fieldset/div[12]/div[2]/button").click()
 
     def open_channels_page(self):
         wd = self.app.wd
-        wd.find_element_by_link_text("Каналы").click()
+        wd.find_element_by_xpath("//*[@id='menu']/div[1]/div[2]/a[1]").click()
+        #wd.find_element_by_link_text("Каналы").click()
