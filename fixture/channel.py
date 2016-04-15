@@ -68,5 +68,9 @@ class ChannelHelper:
 
     def open_channels_page(self):
         wd = self.app.wd
-        wd.find_element_by_xpath("//*[@id='menu']/div[1]/div[2]/a[1]").click()
+        if not wd.current_url.endswith('/epg/channel/'):            # MOVE TO EPG CONSTANTS, PARAMETRISE URL
+            wd.find_element_by_xpath("//*[@id='menu']/div[1]/div[2]/a[1]").click()
         #wd.find_element_by_link_text("Каналы").click()
+
+    def count(self):        # MAKE IT FROM DB
+        pass

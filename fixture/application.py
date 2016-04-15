@@ -22,5 +22,9 @@ class Application:
         wd = self.wd
         wd.get("http://10.130.8.116/epg/")
 
+    # def current_url(self):
+    #     wd = self.wd
+    #     return wd.current_url()
+
     def destroy(self):
         self.wd.quit()
