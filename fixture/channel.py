@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 
+from model.channel import Channel
+
 
 class ChannelHelper:
 
@@ -69,8 +71,20 @@ class ChannelHelper:
     def open_channels_page(self):
         wd = self.app.wd
         if not wd.current_url.endswith('/epg/channel/'):            # MOVE TO EPG CONSTANTS, PARAMETRISE URL
+            wd.execute_script("window.scrollTo(0, 0)")
             wd.find_element_by_xpath("//*[@id='menu']/div[1]/div[2]/a[1]").click()
         #wd.find_element_by_link_text("Каналы").click()
 
     def count(self):        # MAKE IT FROM DB
         pass
+
+    def get_channel_list(self):
+        wd = self.app.wd
+        self.open_channels_page()
+        channels = []
+        for element in wd.find_elements_by_xpath("//*[@id='content']/div[2]/table/tbody/tr[.]/td[2]/a"):
+            text = element.text
+            id = element.get_attribute("href").split('/')[-2]
+            #print "id =", id
+            channels.append(Channel(name=text, id=id))
+        return channels

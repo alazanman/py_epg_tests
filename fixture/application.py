@@ -20,7 +20,7 @@ class Application:
 
     def open_home_page(self):
         wd = self.wd
-        wd.get("http://10.130.8.116/epg/")
+        wd.get("http://10.130.8.159/epg/")
 
     # def current_url(self):
     #     wd = self.wd
