@@ -15,6 +15,7 @@ class ChannelHelper:
         wd.find_element_by_link_text("Добавить").click()
         self.fill_channel_form(channel)
         wd.find_element_by_css_selector("button.btn.btn-success").click()
+        self.channel_cache = None
 
     def fill_channel_form(self, channel):
         wd = self.app.wd
@@ -56,6 +57,7 @@ class ChannelHelper:
         self.click_first_channel_in_list()
         wd.find_element_by_id("del").click()
         wd.find_element_by_xpath("//*[@id='content']/div/div/div/div[2]/form/div/button").click()
+        self.channel_cache = None
 
     def click_first_channel_in_list(self):
         wd = self.app.wd
@@ -67,6 +69,7 @@ class ChannelHelper:
         self.click_first_channel_in_list()
         self.fill_channel_form(new_channel)
         wd.find_element_by_xpath("//*[@id='content']/form/fieldset/div[12]/div[2]/button").click()
+        self.channel_cache = None
 
     def open_channels_page(self):
         wd = self.app.wd
@@ -78,13 +81,27 @@ class ChannelHelper:
     def count(self):        # MAKE IT FROM DB
         pass
 
+    channel_cache = None
+
     def get_channel_list(self):
-        wd = self.app.wd
-        self.open_channels_page()
-        channels = []
-        for element in wd.find_elements_by_xpath("//*[@id='content']/div[2]/table/tbody/tr[.]/td[2]/a"):
-            text = element.text
-            id = element.get_attribute("href").split('/')[-2]
-            #print "id =", id
-            channels.append(Channel(name=text, id=id))
-        return channels
+        if self.channel_cache is None:
+            wd = self.app.wd
+            self.open_channels_page()
+            self.channel_cache = []
+            for element in wd.find_elements_by_xpath("//*[@id='content']/div[2]/table/tbody/tr[.]/td[2]/a"):
+                text = element.text
+                id = element.get_attribute("href").split('/')[-2]
+                # print "id =", id
+                self.channel_cache.append(Channel(name=text, id=id))
+        return list(self.channel_cache)
+
+    # def get_channel_list(self):
+    #     wd = self.app.wd
+    #     self.open_channels_page()
+    #     channels = []
+    #     for element in wd.find_elements_by_xpath("//*[@id='content']/div[2]/table/tbody/tr[.]/td[2]/a"):
+    #         text = element.text
+    #         id = element.get_attribute("href").split('/')[-2]
+    #         #print "id =", id
+    #         channels.append(Channel(name=text, id=id))
+    #     return channels

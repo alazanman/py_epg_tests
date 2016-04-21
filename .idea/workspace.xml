@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a8dbaa5f-938a-40f2-b51a-d8b37148c058" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/channel.py" afterPath="$PROJECT_DIR$/model/channel.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test_create_channel.py" afterPath="$PROJECT_DIR$/tests/test_create_channel.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test_del_channel.py" afterPath="$PROJECT_DIR$/tests/test_del_channel.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test_edit_channel.py" afterPath="$PROJECT_DIR$/tests/test_edit_channel.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fixture/channel.py" afterPath="$PROJECT_DIR$/fixture/channel.py" />
     </list>
     <ignored path="py_epg.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -51,11 +47,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test_del_channel.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="test_del_channel.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/test_del_channel.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="39" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
+            <state relative-caret-position="187">
+              <caret line="11" column="49" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
               <folding>
                 <element signature="e#24#46#0" expanded="true" />
               </folding>
@@ -63,11 +59,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="channel.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="channel.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/fixture/channel.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="519">
-              <caret line="89" column="23" selection-start-line="89" selection-start-column="23" selection-end-line="89" selection-end-column="23" />
+            <state relative-caret-position="340">
+              <caret line="68" column="33" selection-start-line="68" selection-start-column="33" selection-end-line="68" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -120,10 +116,10 @@
         <option value="$PROJECT_DIR$/misc/bak1/fixture/application.py" />
         <option value="$PROJECT_DIR$/fixture/application.py" />
         <option value="$PROJECT_DIR$/tests/test_del_channel.py" />
-        <option value="$PROJECT_DIR$/fixture/channel.py" />
         <option value="$PROJECT_DIR$/model/channel.py" />
         <option value="$PROJECT_DIR$/tests/test_create_channel.py" />
         <option value="$PROJECT_DIR$/tests/test_edit_channel.py" />
+        <option value="$PROJECT_DIR$/fixture/channel.py" />
       </list>
     </option>
   </component>
@@ -921,14 +917,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fixture/channel.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="519">
-          <caret line="89" column="23" selection-start-line="89" selection-start-column="23" selection-end-line="89" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/model/channel.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -959,11 +947,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/test_del_channel.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="39" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
+        <state relative-caret-position="187">
+          <caret line="11" column="49" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
           <folding>
             <element signature="e#24#46#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fixture/channel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="68" column="33" selection-start-line="68" selection-start-column="33" selection-end-line="68" selection-end-column="33" />
+          <folding />
         </state>
       </provider>
     </entry>
