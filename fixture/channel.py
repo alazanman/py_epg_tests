@@ -52,21 +52,24 @@ class ChannelHelper:
             wd.find_element_by_id(field_id).send_keys(text)
 
     def delete_first_channel(self):
+        self.delete_channel_by_index(0)
+
+    def delete_channel_by_index(self, index):
         wd = self.app.wd
         self.open_channels_page()
-        self.click_first_channel_in_list()
+        self.click_channel_in_list(index)
         wd.find_element_by_id("del").click()
         wd.find_element_by_xpath("//*[@id='content']/div/div/div/div[2]/form/div/button").click()
         self.channel_cache = None
 
-    def click_first_channel_in_list(self):
+    def click_channel_in_list(self, index):
         wd = self.app.wd
-        wd.find_element_by_xpath("//*[@id='content']/div[2]/table/tbody/tr[1]/td[2]/a").click()
+        wd.find_element_by_xpath("//*[@id='content']/div[2]/table/tbody/tr[" + str(index+1) + "]/td[2]/a").click()
 
     def edit_first_channel(self, new_channel):
         wd = self.app.wd
         self.open_channels_page()
-        self.click_first_channel_in_list()
+        self.click_channel_in_list(0)
         self.fill_channel_form(new_channel)
         wd.find_element_by_xpath("//*[@id='content']/form/fieldset/div[12]/div[2]/button").click()
         self.channel_cache = None
