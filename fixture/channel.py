@@ -67,9 +67,12 @@ class ChannelHelper:
         wd.find_element_by_xpath("//*[@id='content']/div[2]/table/tbody/tr[" + str(index+1) + "]/td[2]/a").click()
 
     def edit_first_channel(self, new_channel):
+        self.edit_channel_by_index(0, new_channel)
+
+    def edit_channel_by_index(self, index, new_channel):
         wd = self.app.wd
         self.open_channels_page()
-        self.click_channel_in_list(0)
+        self.click_channel_in_list(index)
         self.fill_channel_form(new_channel)
         wd.find_element_by_xpath("//*[@id='content']/form/fieldset/div[12]/div[2]/button").click()
         self.channel_cache = None
