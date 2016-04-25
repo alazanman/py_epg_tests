@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a8dbaa5f-938a-40f2-b51a-d8b37148c058" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/epg_tests.xlsx" afterPath="$PROJECT_DIR$/epg_tests.xlsx" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/tests/conftest.py" afterPath="$PROJECT_DIR$/conftest.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fixture/application.py" afterPath="$PROJECT_DIR$/fixture/application.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fixture/channel.py" afterPath="$PROJECT_DIR$/fixture/channel.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/conftest.py" afterPath="$PROJECT_DIR$/tests/conftest.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test_del_channel.py" afterPath="$PROJECT_DIR$/tests/test_del_channel.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test_create_channel.py" afterPath="$PROJECT_DIR$/tests/test_create_channel.py" />
     </list>
     <ignored path="py_epg.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,11 +25,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="test_create_channel.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="test_create_channel.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tests/test_create_channel.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="28" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+            <state relative-caret-position="221">
+              <caret line="13" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
               <folding>
                 <element signature="e#24#57#0" expanded="true" />
               </folding>
@@ -44,8 +40,8 @@
       <file leaf-file-name="test_edit_channel.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/test_edit_channel.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+            <state relative-caret-position="238">
+              <caret line="14" column="37" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="37" />
               <folding>
                 <element signature="e#24#57#0" expanded="true" />
               </folding>
@@ -54,10 +50,10 @@
         </entry>
       </file>
       <file leaf-file-name="conftest.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/conftest.py">
+        <entry file="file://$PROJECT_DIR$/conftest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+            <state relative-caret-position="320">
+              <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
               <folding>
                 <element signature="e#24#37#0" expanded="true" />
               </folding>
@@ -75,7 +71,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="target.json" pinned="false" current-in-tab="true">
+      <file leaf-file-name="target.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/target.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
@@ -88,8 +84,8 @@
       <file leaf-file-name="test_del_channel.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/test_del_channel.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="33" column="49" selection-start-line="33" selection-start-column="49" selection-end-line="33" selection-end-column="49" />
+            <state relative-caret-position="229">
+              <caret line="23" column="14" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
               <folding>
                 <element signature="e#24#46#0" expanded="true" />
               </folding>
@@ -177,13 +173,14 @@
         <option value="$PROJECT_DIR$/misc/bak1/fixture/application.py" />
         <option value="$PROJECT_DIR$/tests/test_edit_channel.py" />
         <option value="$PROJECT_DIR$/model/channel.py" />
-        <option value="$PROJECT_DIR$/tests/test_create_channel.py" />
         <option value="$PROJECT_DIR$/fixture/utils.py" />
         <option value="$PROJECT_DIR$/fixture/channel.py" />
         <option value="$PROJECT_DIR$/fixture/application.py" />
         <option value="$PROJECT_DIR$/tests/test_del_channel.py" />
-        <option value="$PROJECT_DIR$/tests/conftest.py" />
         <option value="$PROJECT_DIR$/target.json" />
+        <option value="$PROJECT_DIR$/tests/conftest.py" />
+        <option value="$PROJECT_DIR$/conftest.py" />
+        <option value="$PROJECT_DIR$/tests/test_create_channel.py" />
       </list>
     </option>
   </component>
@@ -306,43 +303,51 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Alexey.Tanana\Documents\workspace\satprof\py_epg_tests" />
       <recent name="C:\Users\Alexey.Tanana\Documents\workspace\satprof\py_epg_tests\tests" />
       <recent name="C:\Users\Alexey.Tanana\Documents\workspace\satprof\py_epg\tests" />
       <recent name="C:\Users\Alexey.Tanana\Documents\workspace\satprof\py_epg\model" />
       <recent name="C:\Users\Alexey.Tanana\Documents\workspace\satprof\py_epg\fixture" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.py.test in test_delete_some_channel">
-    <configuration default="false" name="application" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python tests.py.test in tests">
+    <configuration default="false" name="py.test in test_edit_first_channel_name" type="tests" factoryName="py.test" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
+      <envs />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/fixture" />
+      <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="py_epg_tests" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/fixture/application.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="testToRun" value="$PROJECT_DIR$/tests/test_edit_channel.py" />
+      <option name="keywords" value="test_edit_first_channel_name" />
+      <option name="params" value="" />
+      <option name="USE_PARAM" value="false" />
+      <option name="USE_KEYWORD" value="true" />
       <method />
     </configuration>
-    <configuration default="false" name="utils" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="conftest" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/fixture" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="py_epg_tests" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/fixture/utils.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/conftest.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -371,6 +376,30 @@
       <option name="USE_KEYWORD" value="true" />
       <method />
     </configuration>
+    <configuration default="false" name="py.test in tests" type="tests" factoryName="py.test" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="py_epg_tests" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="testToRun" value="$PROJECT_DIR$/tests" />
+      <option name="keywords" value="" />
+      <option name="params" value="" />
+      <option name="USE_PARAM" value="false" />
+      <option name="USE_KEYWORD" value="false" />
+      <method />
+    </configuration>
     <configuration default="false" name="py.test in test_create_channel.py" type="tests" factoryName="py.test" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -393,30 +422,6 @@
       <option name="params" value="" />
       <option name="USE_PARAM" value="false" />
       <option name="USE_KEYWORD" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="py.test in test_delete_some_channel" type="tests" factoryName="py.test" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="py_epg_tests" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="testToRun" value="$PROJECT_DIR$/tests/test_del_channel.py" />
-      <option name="keywords" value="test_delete_some_channel" />
-      <option name="params" value="" />
-      <option name="USE_PARAM" value="false" />
-      <option name="USE_KEYWORD" value="true" />
       <method />
     </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
@@ -578,20 +583,20 @@
       <method />
     </configuration>
     <list size="6">
-      <item index="0" class="java.lang.String" itemvalue="Python.application" />
-      <item index="1" class="java.lang.String" itemvalue="Python.utils" />
-      <item index="2" class="java.lang.String" itemvalue="Python tests.py.test in test_del_channel.py" />
+      <item index="0" class="java.lang.String" itemvalue="Python tests.py.test in test_del_channel.py" />
+      <item index="1" class="java.lang.String" itemvalue="Python tests.py.test in test_edit_first_channel_name" />
+      <item index="2" class="java.lang.String" itemvalue="Python.conftest" />
       <item index="3" class="java.lang.String" itemvalue="Python tests.py.test in test_create_channel" />
-      <item index="4" class="java.lang.String" itemvalue="Python tests.py.test in test_create_channel.py" />
-      <item index="5" class="java.lang.String" itemvalue="Python tests.py.test in test_delete_some_channel" />
+      <item index="4" class="java.lang.String" itemvalue="Python tests.py.test in tests" />
+      <item index="5" class="java.lang.String" itemvalue="Python tests.py.test in test_create_channel.py" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python tests.py.test in test_delete_some_channel" />
-        <item index="1" class="java.lang.String" itemvalue="Python.application" />
-        <item index="2" class="java.lang.String" itemvalue="Python tests.py.test in test_create_channel.py" />
+        <item index="0" class="java.lang.String" itemvalue="Python tests.py.test in tests" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.py.test in test_create_channel.py" />
+        <item index="2" class="java.lang.String" itemvalue="Python tests.py.test in test_edit_first_channel_name" />
         <item index="3" class="java.lang.String" itemvalue="Python tests.py.test in test_create_channel" />
-        <item index="4" class="java.lang.String" itemvalue="Python.utils" />
+        <item index="4" class="java.lang.String" itemvalue="Python.conftest" />
       </list>
     </recent_temporary>
   </component>
@@ -612,35 +617,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="py_test_in_test_del_channel_py - 2016.04.22 at 14h 24m 18s.xml">
-      <configuration name="py.test in test_del_channel.py" configurationId="tests" />
+    <history-entry file="py_test_in_test_create_channel - 2016.04.25 at 19h 21m 01s.xml">
+      <configuration name="py.test in test_create_channel" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_test_del_channel_py - 2016.04.22 at 14h 35m 09s.xml">
-      <configuration name="py.test in test_del_channel.py" configurationId="tests" />
+    <history-entry file="py_test_in_test_create_channel - 2016.04.25 at 19h 23m 37s.xml">
+      <configuration name="py.test in test_create_channel" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_test_del_channel_py - 2016.04.25 at 18h 25m 43s.xml">
-      <configuration name="py.test in test_del_channel.py" configurationId="tests" />
+    <history-entry file="py_test_in_test_create_channel - 2016.04.25 at 19h 24m 59s.xml">
+      <configuration name="py.test in test_create_channel" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_test_delete_some_channel - 2016.04.25 at 18h 08m 07s.xml">
+    <history-entry file="py_test_in_test_create_channel_py - 2016.04.25 at 19h 28m 08s.xml">
+      <configuration name="py.test in test_create_channel.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_in_test_delete_some_channel - 2016.04.25 at 19h 20m 28s.xml">
       <configuration name="py.test in test_delete_some_channel" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_test_delete_some_channel - 2016.04.25 at 18h 08m 51s.xml">
-      <configuration name="py.test in test_delete_some_channel" configurationId="tests" />
+    <history-entry file="py_test_in_test_edit_first_channel_name - 2016.04.25 at 19h 19m 51s.xml">
+      <configuration name="py.test in test_edit_first_channel_name" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_test_delete_some_channel - 2016.04.25 at 18h 09m 47s.xml">
-      <configuration name="py.test in test_delete_some_channel" configurationId="tests" />
+    <history-entry file="py_test_in_test_edit_first_channel_name - 2016.04.25 at 19h 25m 57s.xml">
+      <configuration name="py.test in test_edit_first_channel_name" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_test_delete_some_channel - 2016.04.25 at 18h 25m 58s.xml">
-      <configuration name="py.test in test_delete_some_channel" configurationId="tests" />
+    <history-entry file="py_test_in_tests - 2016.04.25 at 19h 26m 27s.xml">
+      <configuration name="py.test in tests" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_test_delete_some_channel - 2016.04.25 at 18h 33m 30s.xml">
-      <configuration name="py.test in test_delete_some_channel" configurationId="tests" />
+    <history-entry file="py_test_in_tests - 2016.04.25 at 19h 27m 21s.xml">
+      <configuration name="py.test in tests" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_test_delete_some_channel - 2016.04.25 at 18h 58m 25s.xml">
-      <configuration name="py.test in test_delete_some_channel" configurationId="tests" />
-    </history-entry>
-    <history-entry file="py_test_in_test_delete_some_channel - 2016.04.25 at 19h 01m 42s.xml">
-      <configuration name="py.test in test_delete_some_channel" configurationId="tests" />
+    <history-entry file="py_test_in_tests - 2016.04.25 at 19h 28m 44s.xml">
+      <configuration name="py.test in tests" configurationId="tests" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -706,7 +711,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/conftest.py">
+    <entry file="file://$PROJECT_DIR$/conftest.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="16" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
@@ -818,7 +823,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/conftest.py">
+    <entry file="file://$PROJECT_DIR$/conftest.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="5" column="32" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
@@ -998,16 +1003,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/test_edit_channel.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
-          <folding>
-            <element signature="e#24#57#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fixture/session.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="371">
@@ -1016,41 +1011,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/conftest.py">
+    <entry file="file://$PROJECT_DIR$/target.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
-          <folding>
-            <element signature="e#24#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/test_create_channel.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="28" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
-          <folding>
-            <element signature="e#24#57#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="68">
+          <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/test_del_channel.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="33" column="49" selection-start-line="33" selection-start-column="49" selection-end-line="33" selection-end-column="49" />
+        <state relative-caret-position="229">
+          <caret line="23" column="14" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
           <folding>
             <element signature="e#24#46#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/target.json">
+    <entry file="file://$PROJECT_DIR$/conftest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
-          <folding />
+        <state relative-caret-position="320">
+          <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
+          <folding>
+            <element signature="e#24#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_edit_channel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="37" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="37" />
+          <folding>
+            <element signature="e#24#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_create_channel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding>
+            <element signature="e#24#57#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
