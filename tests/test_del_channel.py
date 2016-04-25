@@ -27,6 +27,7 @@ def test_delete_some_channel(app):
         app.channel.create(Channel(name='Channel' + str(randint(0, 9999)), service_id="2345", epg_name="epg_name2", offset="3", provider="Provider"))
     old_channels = app.channel.get_channel_list()
     # print "old_channels", old_channels
+    # sleep(1)
     index = randrange(len(old_channels))
     app.channel.delete_channel_by_index(index)
     sleep(1)

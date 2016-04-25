@@ -85,7 +85,9 @@ class ChannelHelper:
         #wd.find_element_by_link_text("Каналы").click()
 
     def count(self):        # MAKE IT FROM DB
-        pass
+        wd = self.app.wd
+        self.open_channels_page()
+        return len(wd.find_elements_by_xpath("//*[@id='content']/div[2]/table/tbody/tr[.]/td[2]/a"))
 
     channel_cache = None
 
