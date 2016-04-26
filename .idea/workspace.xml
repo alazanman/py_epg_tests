@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a8dbaa5f-938a-40f2-b51a-d8b37148c058" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/channels.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utils/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utils/channels_generator.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/fixture/utils.py" afterPath="$PROJECT_DIR$/utils/string_util.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/epg_tests.xlsx" afterPath="$PROJECT_DIR$/epg_tests.xlsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/conftest.py" afterPath="$PROJECT_DIR$/conftest.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/channels.py" afterPath="$PROJECT_DIR$/data/channels.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test_create_channel.py" afterPath="$PROJECT_DIR$/tests/test_create_channel.py" />
     </list>
     <ignored path="py_epg.iws" />
@@ -31,21 +33,11 @@
       <file leaf-file-name="test_create_channel.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tests/test_create_channel.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="42" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
+            <state relative-caret-position="357">
+              <caret line="21" column="101" selection-start-line="21" selection-start-column="101" selection-end-line="21" selection-end-column="101" />
               <folding>
                 <element signature="e#24#57#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="session.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fixture/session.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="26" column="35" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -53,11 +45,33 @@
       <file leaf-file-name="channels.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/channels.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+            <state relative-caret-position="51">
+              <caret line="3" column="33" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
               <folding>
-                <element signature="e#24#57#0" expanded="true" />
+                <element signature="e#24#50#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="channels_generator.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/utils/channels_generator.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="25" column="40" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
+              <folding>
+                <element signature="e#24#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="channels.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/channels.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-758">
+              <caret line="19" column="3" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -65,8 +79,8 @@
       <file leaf-file-name="conftest.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/conftest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="373">
-              <caret line="40" column="34" selection-start-line="40" selection-start-column="34" selection-end-line="40" selection-end-column="34" />
+            <state relative-caret-position="510">
+              <caret line="56" column="42" selection-start-line="56" selection-start-column="42" selection-end-line="56" selection-end-column="42" />
               <folding>
                 <element signature="e#24#37#0" expanded="true" />
               </folding>
@@ -74,34 +88,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="channel.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fixture/channel.py">
+      <file leaf-file-name="string_util.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/utils/string_util.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1581">
-              <caret line="93" column="8" selection-start-line="93" selection-start-column="8" selection-end-line="93" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fixture/application.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="26" column="24" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
+            <state relative-caret-position="119">
+              <caret line="7" column="73" selection-start-line="7" selection-start-column="73" selection-end-line="7" selection-end-column="73" />
               <folding>
-                <element signature="e#24#54#0" expanded="true" />
+                <element signature="e#24#45#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="channel.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/channel.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="30" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -149,9 +143,10 @@
         <option value="$PROJECT_DIR$/target.json" />
         <option value="$PROJECT_DIR$/tests/conftest.py" />
         <option value="$PROJECT_DIR$/data/create_channel.py" />
-        <option value="$PROJECT_DIR$/generator/channel.py" />
         <option value="$PROJECT_DIR$/data/channels.py" />
+        <option value="$PROJECT_DIR$/generator/channel.py" />
         <option value="$PROJECT_DIR$/tests/test_create_channel.py" />
+        <option value="$PROJECT_DIR$/utils/channels_generator.py" />
         <option value="$PROJECT_DIR$/conftest.py" />
       </list>
     </option>
@@ -187,6 +182,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -202,6 +198,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="py_epg_tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="py_epg_tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="py_epg_tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="utils" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -247,10 +257,23 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="py_epg_tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="py_epg_tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -258,62 +281,21 @@
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="SearchEverywhereHistoryKey" value="app&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="random_string&#9;null&#9;null&#10;app&#9;null&#9;null" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Alexey.Tanana\Documents\workspace\satprof\py_epg_tests\tests" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Alexey.Tanana\Documents\workspace\satprof\py_epg_tests\utils" />
       <recent name="C:\Users\Alexey.Tanana\Documents\workspace\satprof\py_epg_tests" />
       <recent name="C:\Users\Alexey.Tanana\Documents\workspace\satprof\py_epg_tests\tests" />
       <recent name="C:\Users\Alexey.Tanana\Documents\workspace\satprof\py_epg\tests" />
       <recent name="C:\Users\Alexey.Tanana\Documents\workspace\satprof\py_epg\model" />
-      <recent name="C:\Users\Alexey.Tanana\Documents\workspace\satprof\py_epg\fixture" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.py.test in test_create_channel">
-    <configuration default="false" name="py.test in test_edit_first_channel_name" type="tests" factoryName="py.test" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="py_epg_tests" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="testToRun" value="$PROJECT_DIR$/tests/test_edit_channel.py" />
-      <option name="keywords" value="test_edit_first_channel_name" />
-      <option name="params" value="" />
-      <option name="USE_PARAM" value="false" />
-      <option name="USE_KEYWORD" value="true" />
-      <method />
-    </configuration>
-    <configuration default="false" name="conftest" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="py_epg_tests" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/conftest.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python tests.py.test in test_create_channel.py">
     <configuration default="false" name="py.test in test_create_channel" type="tests" factoryName="py.test" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -384,6 +366,40 @@
       <option name="params" value="" />
       <option name="USE_PARAM" value="false" />
       <option name="USE_KEYWORD" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="channel" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/generator" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="py_epg_tests" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/generator/channel.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="channels_generator" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/utils" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="py_epg_tests" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/utils/channels_generator.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
@@ -546,19 +562,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Python tests.py.test in test_del_channel.py" />
-      <item index="1" class="java.lang.String" itemvalue="Python tests.py.test in test_edit_first_channel_name" />
-      <item index="2" class="java.lang.String" itemvalue="Python.conftest" />
-      <item index="3" class="java.lang.String" itemvalue="Python tests.py.test in test_create_channel" />
-      <item index="4" class="java.lang.String" itemvalue="Python tests.py.test in tests" />
-      <item index="5" class="java.lang.String" itemvalue="Python tests.py.test in test_create_channel.py" />
+      <item index="1" class="java.lang.String" itemvalue="Python tests.py.test in test_create_channel" />
+      <item index="2" class="java.lang.String" itemvalue="Python tests.py.test in tests" />
+      <item index="3" class="java.lang.String" itemvalue="Python tests.py.test in test_create_channel.py" />
+      <item index="4" class="java.lang.String" itemvalue="Python.channel" />
+      <item index="5" class="java.lang.String" itemvalue="Python.channels_generator" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python tests.py.test in test_create_channel" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.py.test in test_create_channel.py" />
-        <item index="2" class="java.lang.String" itemvalue="Python tests.py.test in tests" />
-        <item index="3" class="java.lang.String" itemvalue="Python tests.py.test in test_edit_first_channel_name" />
-        <item index="4" class="java.lang.String" itemvalue="Python.conftest" />
+        <item index="0" class="java.lang.String" itemvalue="Python tests.py.test in test_create_channel.py" />
+        <item index="1" class="java.lang.String" itemvalue="Python.channels_generator" />
+        <item index="2" class="java.lang.String" itemvalue="Python tests.py.test in test_create_channel" />
+        <item index="3" class="java.lang.String" itemvalue="Python.channel" />
+        <item index="4" class="java.lang.String" itemvalue="Python tests.py.test in tests" />
       </list>
     </recent_temporary>
   </component>
@@ -579,22 +595,22 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="py_test_in_test_create_channel - 2016.04.26 at 15h 17m 46s.xml">
-      <configuration name="py.test in test_create_channel" configurationId="tests" />
-    </history-entry>
-    <history-entry file="py_test_in_test_create_channel - 2016.04.26 at 15h 17m 53s.xml">
-      <configuration name="py.test in test_create_channel" configurationId="tests" />
-    </history-entry>
-    <history-entry file="py_test_in_test_create_channel - 2016.04.26 at 15h 28m 59s.xml">
-      <configuration name="py.test in test_create_channel" configurationId="tests" />
-    </history-entry>
-    <history-entry file="py_test_in_test_create_channel - 2016.04.26 at 15h 29m 35s.xml">
+    <history-entry file="py_test_in_test_create_channel - 2016.04.26 at 18h 13m 15s.xml">
       <configuration name="py.test in test_create_channel" configurationId="tests" />
     </history-entry>
     <history-entry file="py_test_in_test_create_channel_py - 2016.04.25 at 19h 28m 08s.xml">
       <configuration name="py.test in test_create_channel.py" configurationId="tests" />
     </history-entry>
     <history-entry file="py_test_in_test_create_channel_py - 2016.04.26 at 14h 23m 32s.xml">
+      <configuration name="py.test in test_create_channel.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_in_test_create_channel_py - 2016.04.26 at 18h 14m 56s.xml">
+      <configuration name="py.test in test_create_channel.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_in_test_create_channel_py - 2016.04.26 at 18h 16m 01s.xml">
+      <configuration name="py.test in test_create_channel.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_in_test_create_channel_py - 2016.04.26 at 18h 19m 29s.xml">
       <configuration name="py.test in test_create_channel.py" configurationId="tests" />
     </history-entry>
     <history-entry file="py_test_in_test_edit_first_channel_name - 2016.04.25 at 19h 25m 57s.xml">
@@ -631,7 +647,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946146" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -674,21 +690,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/conftest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="16" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
-          <folding>
-            <element signature="e#24#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fixture/channel.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1241">
           <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -696,9 +701,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="10" column="149" selection-start-line="8" selection-start-column="4" selection-end-line="10" selection-end-column="149" />
-          <folding>
-            <element signature="e#24#46#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -706,9 +708,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#24#54#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -726,9 +725,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
-          <folding>
-            <element signature="e#24#57#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -736,7 +732,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="629">
           <caret line="37" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -744,7 +739,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -752,9 +746,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
-          <folding>
-            <element signature="e#24#54#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -780,9 +771,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding>
-            <element signature="e#24#46#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -800,7 +788,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="850">
           <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -808,7 +795,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -816,9 +802,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
-          <folding>
-            <element signature="e#24#54#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -878,7 +861,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="202">
           <caret line="232" column="0" selection-start-line="232" selection-start-column="0" selection-end-line="232" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -886,7 +868,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="197">
           <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -894,7 +875,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="118" column="0" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -902,7 +882,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="723" column="0" selection-start-line="723" selection-start-column="0" selection-end-line="723" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -910,7 +889,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="439">
           <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -919,17 +897,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
           <caret line="476" column="0" selection-start-line="476" selection-start-column="0" selection-end-line="476" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fixture/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding>
-            <element signature="e#24#45#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -937,7 +904,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -945,17 +911,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="229">
           <caret line="23" column="14" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
-          <folding>
-            <element signature="e#24#46#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/generator/channel.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -963,9 +918,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="37" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="37" />
-          <folding>
-            <element signature="e#24#57#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -981,17 +933,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="26" column="24" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
-          <folding>
-            <element signature="e#24#54#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fixture/channel.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1581">
-          <caret line="93" column="8" selection-start-line="93" selection-start-column="8" selection-end-line="93" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -999,17 +940,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="26" column="35" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/channels.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-          <folding>
-            <element signature="e#24#57#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1017,26 +947,68 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="926" column="13" selection-start-line="926" selection-start-column="13" selection-end-line="926" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fixture/channel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1581">
+          <caret line="93" column="8" selection-start-line="93" selection-start-column="8" selection-end-line="93" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/string_util.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="73" selection-start-line="7" selection-start-column="73" selection-end-line="7" selection-end-column="73" />
           <folding>
-            <marker date="1460653554485" expanded="true" signature="47475:47486" placeholder="..." />
+            <element signature="e#24#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/channels.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="33" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
+          <folding>
+            <element signature="e#24#50#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/conftest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="40" column="34" selection-start-line="40" selection-start-column="34" selection-end-line="40" selection-end-column="34" />
+        <state relative-caret-position="510">
+          <caret line="56" column="42" selection-start-line="56" selection-start-column="42" selection-end-line="56" selection-end-column="42" />
           <folding>
             <element signature="e#24#37#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/data/channels.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-758">
+          <caret line="19" column="3" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/channels_generator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="40" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
+          <folding>
+            <element signature="e#24#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tests/test_create_channel.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="42" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
+        <state relative-caret-position="357">
+          <caret line="21" column="101" selection-start-line="21" selection-start-column="101" selection-end-line="21" selection-end-column="101" />
           <folding>
             <element signature="e#24#57#0" expanded="true" />
           </folding>

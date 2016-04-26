@@ -6,9 +6,9 @@ from data.channels import testdata
 
 
 # @pytest.mark.parametrize("channel", testdata, ids=[repr(x) for x in testdata])
-def test_create_channel(app, data_channels):
+def test_create_channel(app, json_channels):
     # sleep(1)
-    channel = data_channels
+    channel = json_channels
     old_channels = app.channel.get_channel_list()
     # print "old_channels", old_channels
     # channel = Channel(name='Channel' + str(randint(0, 9999)), service_id="2345", epg_name="epg_name2", offset="3", provider="Provider")
