@@ -1,5 +1,14 @@
 {
-  "baseUrl": "http://10.130.8.159/epg/",
-  "username": "root",
-  "password": "123"
+  "web": {
+    "baseUrl": "http://10.130.8.159/epg/",
+    "username": "root",
+    "password": "123"
+  },
+  "db": {
+    "database": "epg",
+    "user": "epg",
+    "password": "123"
+    "host": "10.130.8.159",
+    "port": "5432"
+  }
 }
