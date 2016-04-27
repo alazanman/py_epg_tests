@@ -57,7 +57,7 @@ def pytest_addoption(parser):
 
 def pytest_generate_tests(metafunc):
     for fixture in metafunc.fixturenames:
-        print fixture
+        # print fixture
         if fixture.startswith("data_"):
             testdata = load_from_module(fixture[5:])
             metafunc.parametrize(fixture, testdata, ids=[str(x) for x in testdata])

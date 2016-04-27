@@ -91,7 +91,7 @@ class ChannelHelper:
 
     channel_cache = None
 
-    def get_channel_list(self):
+    def get_channels(self):
         if self.channel_cache is None:
             wd = self.app.wd
             self.open_channels_page()

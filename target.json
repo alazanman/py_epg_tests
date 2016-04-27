@@ -7,7 +7,7 @@
   "db": {
     "database": "epg",
     "user": "epg",
-    "password": "123"
+    "password": "123",
     "host": "10.130.8.159",
     "port": "5432"
   }

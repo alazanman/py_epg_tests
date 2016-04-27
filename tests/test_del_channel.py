@@ -25,13 +25,13 @@ def test_delete_some_channel(app):
     # CREATE IF NOT EXIST (TO IMPLEMENT VIA DB)
     if app.channel.count() == 0:
         app.channel.create(Channel(name='Channel' + str(randint(0, 9999)), service_id="2345", epg_name="epg_name2", offset="3", provider="Provider"))
-    old_channels = app.channel.get_channel_list()
+    old_channels = app.channel.get_channels()
     # print "old_channels", old_channels
     # sleep(1)
     index = randrange(len(old_channels))
     app.channel.delete_channel_by_index(index)
     sleep(1)
-    new_channels = app.channel.get_channel_list()
+    new_channels = app.channel.get_channels()
     # print "new_channels", new_channels
     # assert app.channel.count() == len(old_channels) - 1     # VIA DB
     assert len(new_channels) == len(old_channels) - 1

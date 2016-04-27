@@ -1,92 +1,15 @@
 [
   {
     "py/object": "model.channel.Channel", 
-    "epg_name": "Epg_name_2284", 
-    "name": "Channel_1979", 
-    "offset": "14", 
-    "provider": "Provider_9245", 
-    "service_id": "2862", 
-    "id": null
-  }, 
-  {
-    "py/object": "model.channel.Channel", 
-    "epg_name": "Epg_name_7830", 
-    "name": "Channel_4433", 
-    "offset": "15", 
-    "provider": "Provider_4934", 
-    "service_id": "2584", 
-    "id": null
-  }, 
-  {
-    "py/object": "model.channel.Channel", 
-    "epg_name": "Epg_name_5456", 
-    "name": "Channel_6498", 
-    "offset": "9", 
-    "provider": "Provider_9261", 
-    "service_id": "1752", 
-    "id": null
-  }, 
-  {
-    "py/object": "model.channel.Channel", 
-    "epg_name": "Epg_name_750", 
-    "name": "Channel_7719", 
-    "offset": "13", 
-    "provider": "Provider_4468", 
-    "service_id": "8039", 
-    "id": null
-  }, 
-  {
-    "py/object": "model.channel.Channel", 
-    "epg_name": "Epg_name_4058", 
-    "name": "Channel_3441", 
-    "offset": "14", 
-    "provider": "Provider_5940", 
-    "service_id": "7905", 
-    "id": null
-  }, 
-  {
-    "py/object": "model.channel.Channel", 
-    "epg_name": "Epg_name_3452", 
-    "name": "Channel_141", 
-    "offset": "10", 
-    "provider": "Provider_3555", 
-    "service_id": "2855", 
-    "id": null
-  }, 
-  {
-    "py/object": "model.channel.Channel", 
-    "epg_name": "Epg_name_4848", 
-    "name": "Channel_250", 
-    "offset": "15", 
-    "provider": "Provider_5866", 
-    "service_id": "156", 
-    "id": null
-  }, 
-  {
-    "py/object": "model.channel.Channel", 
-    "epg_name": "Epg_name_7576", 
-    "name": "Channel_5656", 
-    "offset": "-7", 
-    "provider": "Provider_3222", 
-    "service_id": "7244", 
-    "id": null
-  }, 
-  {
-    "py/object": "model.channel.Channel", 
-    "epg_name": "Epg_name_52", 
-    "name": "Channel_8600", 
-    "offset": "19", 
-    "provider": "Provider_2109", 
-    "service_id": "2234", 
-    "id": null
-  }, 
-  {
-    "py/object": "model.channel.Channel", 
-    "epg_name": "Epg_name_3910", 
-    "name": "Channel_7302", 
-    "offset": "-9", 
-    "provider": "Provider_610", 
-    "service_id": "2676", 
-    "id": null
+    "epg_name": "Epg_name_8578", 
+    "name": "Channel_7102", 
+    "wide_banner": null, 
+    "provider": "Provider_7883", 
+    "narrow_banner": null, 
+    "allow_record": null, 
+    "offset": "-19", 
+    "service_id": "5915", 
+    "id": null, 
+    "icon": null
   }
 ]
