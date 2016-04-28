@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-
+from time import sleep
 from model.channel import Channel
 
 
@@ -15,6 +15,7 @@ class ChannelHelper:
         wd.find_element_by_link_text("Добавить").click()
         self.fill_channel_form(channel)
         wd.find_element_by_css_selector("button.btn.btn-success").click()
+        sleep(1)
         self.channel_cache = None
 
     def fill_channel_form(self, channel):

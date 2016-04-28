@@ -7,7 +7,7 @@ from utils.string_util import random_string
 
 
 path_to_file = "../data/channels.json"
-channels_to_generate = 1
+channels_to_generate = 2
 
 testdata = [
     # UnicodeDecodeError: 'utf8' codec can't decode byte 0xe2 in position 15: invalid continuation byte

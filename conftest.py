@@ -11,6 +11,7 @@ from fixture.db import DbFixture
 
 fixture = None
 target = None
+dbfixture = None
 
 def load_config(file):
     global target
@@ -31,15 +32,25 @@ def app(request):
     fixture.session.ensure_login(web_config['username'], web_config['password'])
     return fixture
 
-
 @pytest.fixture(scope="session")
 def db(request):
+    global dbfixture
     db_config = load_config(request.config.getoption("--target"))['db']
-    dbfixture = DbFixture(database=db_config['database'], user=db_config['user'], password=db_config['password'], host=db_config['host'], port=db_config['port'])
+    if dbfixture is None or not dbfixture.is_valid():
+        dbfixture = DbFixture(database=db_config['database'], user=db_config['user'], password=db_config['password'], host=db_config['host'], port=db_config['port'])
     def fin():
         dbfixture.destroy()
     request.addfinalizer(fin)
     return dbfixture
+
+# @pytest.fixture(scope="session")
+# def db(request):
+#     db_config = load_config(request.config.getoption("--target"))['db']
+#     dbfixture = DbFixture(database=db_config['database'], user=db_config['user'], password=db_config['password'], host=db_config['host'], port=db_config['port'])
+#     def fin():
+#         dbfixture.destroy()
+#     request.addfinalizer(fin)
+#     return dbfixture
 
 
 @pytest.fixture(scope="session", autouse=True)

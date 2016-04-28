@@ -14,6 +14,15 @@ class DbFixture:
         self.connection = psycopg2.connect(database=database, user=user, password=password, host=host, port=port)
         self.connection.autocommit = True
 
+    def is_valid(self):
+        try:
+            cursor = self.connection.cursor()
+            cursor.execute("select now()")
+            cursor.close()
+            return True
+        except:
+            return False
+
     def get_channels(self):
         channels = []
         cursor = self.connection.cursor()
@@ -25,7 +34,7 @@ class DbFixture:
             self.connection.commit()
         finally:
             cursor.close()
-            self.connection.close()
+            # self.connection.close()
         return channels
 
     def get_channels_count(self):
@@ -36,8 +45,8 @@ class DbFixture:
             self.connection.commit()
         finally:
             cursor.close()
-            self.connection.close()
-        print count, type(count), int(count), type(count)
+            # self.connection.close()
+        # print count, type(count), int(count), type(count)
         return int(count)
 
     def destroy(self):
