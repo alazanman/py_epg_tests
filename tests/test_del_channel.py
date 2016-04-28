@@ -2,6 +2,7 @@
 from time import sleep
 from random import randint
 from random import randrange
+from random import choice
 from model.channel import Channel
 
 
@@ -20,21 +21,15 @@ from model.channel import Channel
 #     old_channels[0:1] = []
 #     assert old_channels == new_channels
 
-def test_delete_some_channel(app):
+def test_delete_some_channel(app, db):
     # CREATE IF NOT EXIST (TO IMPLEMENT VIA DB)
-    if app.channel.count() == 0:
+    if db.get_channels_count() == 0:
         app.channel.create(Channel(name='Channel' + str(randint(0, 9999)), service_id="2345", epg_name="epg_name2", offset="3", provider="Provider"))
-    old_channels = app.channel.get_channels()
-    # print "old_channels", old_channels
-    index = randrange(len(old_channels))
-    app.channel.delete_channel_by_index(index)
-    # sleep(1)
-    new_channels = app.channel.get_channels()
-    # print "new_channels", new_channels
-    # assert app.channel.count() == len(old_channels) - 1     # VIA DB
+    old_channels = db.get_channels()
+    channel = choice(old_channels)
+    app.channel.delete_channel_by_id(channel.id)
+    new_channels = db.get_channels()
+    assert db.get_channels_count() == len(old_channels) - 1     # VIA DB
     assert len(new_channels) == len(old_channels) - 1
-    old_channels[index:index+1] = []
-    # print sorted(old_channels, key=Channel.id_or_max)
-    # print sorted(new_channels, key=Channel.id_or_max)
+    old_channels.remove(channel)
     assert sorted(old_channels, key=Channel.id_or_max) == sorted(new_channels, key=Channel.id_or_max)
-    #assert old_channels == new_channels
