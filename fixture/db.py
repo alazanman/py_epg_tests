@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import psycopg2
-from model.channel import Channel
-
+# from model.channel import Channel
+from fixture.channel_db import DbChannelHelper
 
 class DbFixture:
 
@@ -13,6 +13,7 @@ class DbFixture:
         self.port = port
         self.connection = psycopg2.connect(database=database, user=user, password=password, host=host, port=port)
         self.connection.autocommit = True
+        self.channel = DbChannelHelper(self)
 
     def is_valid(self):
         try:
@@ -23,34 +24,8 @@ class DbFixture:
         except:
             return False
 
-    def get_channels(self):
-        channels = []
-        cursor = self.connection.cursor()
-        try:
-            cursor.execute("select id, name, service_id, epg_name, epg_channel.offset, provider, icon, allow_record, narrow_banner, wide_banner from epg_channel")
-            for row in cursor:
-                (id, name, service_id, epg_name, offset, provider, icon, allow_record, narrow_banner, wide_banner) = row
-                channels.append(Channel(id=str(id), name=name, service_id=str(service_id), epg_name=epg_name, offset=str(offset), provider=provider, icon=icon, allow_record=bool(allow_record), narrow_banner=narrow_banner, wide_banner=wide_banner))
-            self.connection.commit()
-        finally:
-            cursor.close()
-            # self.connection.close()
-        return channels
-
-    def get_channels_count(self):
-        cursor = self.connection.cursor()
-        try:
-            cursor.execute("select count(*) from epg_channel")
-            count = cursor.fetchone()[0]
-            self.connection.commit()
-        finally:
-            cursor.close()
-            # self.connection.close()
-        # print count, type(count), int(count), type(count)
-        return int(count)
-
     def destroy(self):
         self.connection.close()
 
 
-print DbFixture(database='epg', user='epg', password='123', host='10.130.8.159', port='5432').get_channels_count()
+# print DbFixture(database='epg', user='epg', password='123', host='10.130.8.159', port='5432').get_channels_count()

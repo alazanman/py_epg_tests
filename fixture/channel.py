@@ -63,9 +63,21 @@ class ChannelHelper:
         wd.find_element_by_xpath("//*[@id='content']/div/div/div/div[2]/form/div/button").click()
         self.channel_cache = None
 
+    def delete_channel_by_id(self, id):
+        wd = self.app.wd
+        self.open_channels_page()
+        self.click_channel_in_list_by_id(id)
+        wd.find_element_by_id("del").click()
+        wd.find_element_by_xpath("//*[@id='content']/div/div/div/div[2]/form/div/button").click()
+        self.channel_cache = None
+
     def click_channel_in_list(self, index):
         wd = self.app.wd
         wd.find_element_by_xpath("//*[@id='content']/div[2]/table/tbody/tr[" + str(index+1) + "]/td[2]/a").click()
+
+    def click_channel_in_list_by_id(self, id):
+        wd = self.app.wd
+        wd.find_element_by_xpath("//*[@href='/epg/channel/" + str(id) + "/']").click()
 
     def edit_first_channel(self, new_channel):
         self.edit_channel_by_index(0, new_channel)
@@ -114,3 +126,4 @@ class ChannelHelper:
     #         #print "id =", id
     #         channels.append(Channel(name=text, id=id))
     #     return channels
+
