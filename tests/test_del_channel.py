@@ -21,7 +21,7 @@ from model.channel import Channel
 #     old_channels[0:1] = []
 #     assert old_channels == new_channels
 
-def test_delete_some_channel(app, db):
+def test_delete_some_channel(app, db, check_ui):
     # CREATE IF NOT EXIST (TO IMPLEMENT VIA DB)
     if db.get_channels_count() == 0:
         app.channel.create(Channel(name='Channel' + str(randint(0, 9999)), service_id="2345", epg_name="epg_name2", offset="3", provider="Provider"))
@@ -33,3 +33,5 @@ def test_delete_some_channel(app, db):
     assert len(new_channels) == len(old_channels) - 1
     old_channels.remove(channel)
     assert sorted(old_channels, key=Channel.id_or_max) == sorted(new_channels, key=Channel.id_or_max)
+    if check_ui:
+        assert sorted(app.channel.get_channels(), key=Channel.id_or_max) == sorted(new_channels, key=Channel.id_or_max)

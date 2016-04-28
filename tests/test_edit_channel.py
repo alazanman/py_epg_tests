@@ -6,7 +6,6 @@ from time import sleep
 
 
 def test_edit_first_channel_name(app):
-    #sleep(1)
     # CREATE IF NOT EXIST (TO IMPLEMENT VIA DB)
     if app.channel.count() == 0:
         app.channel.create(

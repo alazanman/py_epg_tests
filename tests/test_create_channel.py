@@ -1,10 +1,7 @@
 # -*- coding: utf-8 -*-
 from model.channel import Channel
-import pytest
-from data.channels import testdata
 
 
-# @pytest.mark.parametrize("channel", testdata, ids=[repr(x) for x in testdata])
 def test_create_channel(app, db, json_channels):
     channel = json_channels
     old_channels = db.get_channels()
