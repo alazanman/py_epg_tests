@@ -25,7 +25,7 @@ class DbChannelHelper:
             # self.connection.close()
         return channels
 
-    def get_channels_count(self):
+    def count(self):
         cursor = self.db.connection.cursor()
         try:
             cursor.execute("select count(*) from epg_channel")
