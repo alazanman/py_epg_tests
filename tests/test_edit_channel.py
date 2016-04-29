@@ -5,36 +5,14 @@ from random import choice
 from time import sleep
 
 
-def test_edit_last_channel_name(app, db, check_ui):
-    pass
-
-def test_edit_first_channel_name(app, db, check_ui):
-    # CREATE IF NOT EXIST (TO IMPLEMENT VIA DB)
-    while db.channel.count() < 3:
-        # TO IMPLEMENT VIA DB
-        app.channel.create(
-            Channel(name='Channel' + str(randint(0, 9999)), service_id="12345", epg_name='Epg_name_' + str(randint(0, 9999)), offset=str(randint(-23, 23)), provider='Provider_' + str(randint(0, 9999))))
-    old_channels = app.channel.get_channels()
-    channel = Channel(name='Edited' + str(randint(0, 9999)))
-    channel.id = old_channels[0].id
-    app.channel.edit_first_channel(channel)
-    sleep(1)
-    new_channels = db.channel.get_channels()
-    #print "new_channels", new_channels
-    assert len(new_channels) == len(old_channels)
-    # print old_channels[0]
-    # print channel
-    old_channels[0] = channel
-    assert sorted(old_channels, key=Channel.id_or_max) == sorted(new_channels, key=Channel.id_or_max)
-    if check_ui:
-        assert sorted(app.channel.get_channels(), key=Channel.id_or_max) == sorted(new_channels, key=Channel.id_or_max)
-
 def test_edit_some_channel(app, db, check_ui, json_channels_edited):
     channel_edited = json_channels_edited
     while db.channel.count() < 3:
         # TO IMPLEMENT VIA DB
         app.channel.create(
-            Channel(name='Channel' + str(randint(0, 9999)), service_id="12345", epg_name='Epg_name_' + str(randint(0, 9999)), offset=str(randint(-23, 23)), provider='Provider_' + str(randint(0, 9999))))
+            Channel(name='Channel' + str(randint(0, 9999999)), service_id=str(randint(0, 65535)),
+                    epg_name='Epg_name_' + str(randint(0, 9999999)), offset=str(randint(-23, 23)),
+                    provider='Provider_' + str(randint(0, 9999999))))
     old_channels = db.channel.get_channels()
     channel = choice(old_channels)
     channel_edited.id = channel.id
@@ -50,3 +28,27 @@ def test_edit_some_channel(app, db, check_ui, json_channels_edited):
     assert sorted(old_channels, key=Channel.id_or_max) == sorted(new_channels, key=Channel.id_or_max)
     if check_ui:
         assert sorted(app.channel.get_channels(), key=Channel.id_or_max) == sorted(new_channels, key=Channel.id_or_max)
+
+
+# def test_edit_last_channel_name(app, db, check_ui):
+
+# def test_edit_first_channel_name(app, db, check_ui):
+#     # CREATE IF NOT EXIST (TO IMPLEMENT VIA DB)
+#     while db.channel.count() < 3:
+#         # TO IMPLEMENT VIA DB
+#         app.channel.create(
+#             Channel(name='Channel' + str(randint(0, 9999999)), service_id=str(randint(0, 65535)), epg_name='Epg_name_' + str(randint(0, 9999999)), offset=str(randint(-23, 23)), provider='Provider_' + str(randint(0, 9999999))))
+#     old_channels = db.channel.get_channels()
+#     channel = Channel(name='First_Edited_' + str(randint(0, 9999999)))
+#     channel.id = old_channels[0].id
+#     app.channel.edit_first_channel(channel)
+#     sleep(1)
+#     new_channels = db.channel.get_channels()
+#     #print "new_channels", new_channels
+#     assert len(new_channels) == len(old_channels)
+#     print old_channels[0]
+#     print channel
+#     old_channels[0] = channel
+#     assert sorted(old_channels, key=Channel.id_or_max) == sorted(new_channels, key=Channel.id_or_max)
+#     if check_ui:
+#         assert sorted(app.channel.get_channels(), key=Channel.id_or_max) == sorted(new_channels, key=Channel.id_or_max)

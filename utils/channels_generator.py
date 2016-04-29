@@ -7,23 +7,23 @@ from utils.string_util import random_string
 
 channels_file = "../data/channels.json"
 channels_edited_file = "../data/channels_edited.json"
-channels_to_generate = 1
+channels_to_generate = 3
 
 channels = [
     # UnicodeDecodeError: 'utf8' codec can't decode byte 0xe2 in position 15: invalid continuation byte
     # Channel(name=random_string('Channel_' + str(randint(0, 9999)), 100), service_id=str(randint(0, 9999)), epg_name='Epg_name_' + str(randint(0, 9999)), offset=str(randint(-23, 23)), provider='Provider_' + str(randint(0, 9999)))
-    Channel(name='Channel_' + str(randint(0, 9999)), service_id=str(randint(0, 9999)),
-            epg_name='Epg_name_' + str(randint(0, 9999)), offset=str(randint(-23, 23)),
-            provider='Provider_' + str(randint(0, 9999)))
+    Channel(name='Channel_' + str(randint(0, 9999999)), service_id=str(randint(0, 65535)),
+            epg_name='Epg_name_' + str(randint(0, 9999999)), offset=str(randint(-23, 23)),
+            provider='Provider_' + str(randint(0, 9999999)))
     for i in range(channels_to_generate)
     ]
 
 channels_edited = [
     # UnicodeDecodeError: 'utf8' codec can't decode byte 0xe2 in position 15: invalid continuation byte
     # Channel(name=random_string('Channel_' + str(randint(0, 9999)), 100), service_id=str(randint(0, 9999)), epg_name='Epg_name_' + str(randint(0, 9999)), offset=str(randint(-23, 23)), provider='Provider_' + str(randint(0, 9999)))
-    Channel(name='Channel_Edited_' + str(randint(0, 9999)), service_id=str(randint(0, 9999)),
-            epg_name='Epg_name_Edited_' + str(randint(0, 9999)), offset=str(randint(-23, 23)),
-            provider='Provider_Edited_' + str(randint(0, 9999)))
+    Channel(name='Channel_Edited_' + str(randint(0, 9999999)), service_id=str(randint(0, 65535)),
+            epg_name='Epg_name_Edited_' + str(randint(0, 9999999)), offset=str(randint(-23, 23)),
+            provider='Provider_Edited_' + str(randint(0, 9999999)))
     for i in range(channels_to_generate)
     ]
 
