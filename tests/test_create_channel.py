@@ -2,7 +2,9 @@
 from model.channel import Channel
 
 
+# def test_create_channel(rest, app, db, json_channels):
 def test_create_channel(app, db, json_channels):
+    # rest.auth('root', '123')
     channel = json_channels
     old_channels = db.channel.get_channels()
     app.channel.create(channel)

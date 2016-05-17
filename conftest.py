@@ -4,14 +4,16 @@ import json
 import os.path
 import importlib
 import jsonpickle
-from fixture.application import Application
 from time import sleep
+from fixture.application import Application
 from fixture.db import DbFixture
+from fixture.rest import RestApi
 
 
 fixture = None
 target = None
 dbfixture = None
+restfixture = None
 
 def load_config(file):
     global target
@@ -42,6 +44,20 @@ def db(request):
         dbfixture.destroy()
     request.addfinalizer(fin)
     return dbfixture
+
+@pytest.fixture(scope="session")
+def rest(request):
+    global restfixture
+    rest_config = load_config(request.config.getoption("--target"))['web']
+    # if restfixture is None or not restfixture.is_valid():
+    if restfixture is None:
+        restfixture = RestApi(base_url=rest_config['baseUrl'])
+    # restfixture.rest.auth(rest_config['username'], rest_config['password'])
+    # def fin():
+    #     restfixture.destroy()
+    # request.addfinalizer(fin)
+    return restfixture
+
 
 # @pytest.fixture(scope="session")
 # def db(request):

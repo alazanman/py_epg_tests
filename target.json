@@ -1,6 +1,6 @@
 {
   "web": {
-    "baseUrl": "http://10.130.8.159/epg/",
+    "baseUrl": "http://10.130.8.159/",
     "username": "root",
     "password": "123"
   },
