@@ -3,30 +3,27 @@ import requests
 from random import randint
 
 
-# url = 'http://ES_search_demo.com/document/record/_search?pretty=true'
-# data = '{"query":{"bool":{"must":[{"text":{"record.document":"SOME_JOURNAL"}},{"text":{"record.articleTitle":"farmers"}}],"must_not":[],"should":[]}},"from":0,"size":50,"sort":[],"facets":{}}'
-# response = requests.get(url, data=data)
+global token, session
 
-global token
+# def rest_auth()
+session = requests.Session()
 
-url = 'http://10.130.8.159/epg/'
-response = requests.get(url)
-for line in response.text.splitlines():
+url = 'http://10.130.8.159/auth/login/?next=/epg/'
+r = session.get(url)
+for line in r.text.splitlines():
     if 'csrfmiddlewaretoken' in line:
         token = line.split("'")[-2]
-        print token
 
-# <input type='hidden' name='csrfmiddlewaretoken' value='X5LMyCIDzEhzgdyOaftNZUjtSdKfgwyS' />
+data = {'csrfmiddlewaretoken': token,
+        'username': 'root',
+        'password': '123' }
+r = session.post(url, data=data, cookies=session.cookies)
 
-url = 'http://10.130.8.159/auth/login/'
-data = '{"csrfmiddlewaretoken": "' + token + '", ' \
-        '"username": "root", ' \
-        '"password": "123" }'
-        # "username": "' + token + '", ' \
-        # "password": "' + token + '", ' \
-response = requests.get(url, data=data)
-print response.text
-
+url = 'http://10.130.8.159/epg/'
+r = session.get(url, cookies=session.cookies)
+print r.text
+print session.cookies
+print data
 
 
 # url = 'http://10.130.8.159/epg/channel/add/'

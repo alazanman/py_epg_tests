@@ -1,0 +1,14 @@
+{
+  "web": {
+    "baseUrl": "http://192.168.139.154/epg/",
+    "username": "root",
+    "password": "123"
+  },
+  "db": {
+    "database": "epg2",
+    "user": "epg",
+    "password": "epg",
+    "host": "192.168.139.154",
+    "port": "5432"
+  }
+}
