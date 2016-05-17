@@ -5,10 +5,11 @@ import requests
 class RestApi:
 
     def __init__(self, base_url):
+        self.session = requests.Session()
         self.base_url = base_url
 
     def auth(self, username, password):
-        session = requests.Session()
+        session = self.session
         url = self.base_url + 'auth/login/?next=/epg/'
         r = session.get(url)
         for line in r.text.splitlines():
