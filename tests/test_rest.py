@@ -2,7 +2,8 @@
 from model.channel import Channel
 
 
-def test_rest(rest, app, db, json_channels):
+def test_rest(rest):
     print 'hello'
     print rest.auth('root', '123')
-    assert 1==1
+    print 'hello'
+    assert 1 == 1

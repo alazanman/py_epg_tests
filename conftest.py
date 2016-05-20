@@ -32,6 +32,21 @@ def app(request):
     if fixture is None or not fixture.is_valid():
         fixture = Application(browser=browser, base_url=web_config['baseUrl'])
     fixture.session.ensure_login(web_config['username'], web_config['password'])
+    # def fin():
+    #     sleep(1)
+    #     fixture.session.ensure_logout()
+    #     fixture.destroy()
+    # request.addfinalizer(fin)
+    return fixture
+
+@pytest.fixture(scope="session", autouse=True)
+def stop(request):
+    def fin():
+        sleep(1)
+        if fixture:
+            fixture.session.ensure_logout()
+            fixture.destroy()
+    request.addfinalizer(fin)
     return fixture
 
 @pytest.fixture(scope="session")
@@ -52,31 +67,10 @@ def rest(request):
     # if restfixture is None or not restfixture.is_valid():
     if restfixture is None:
         restfixture = RestApi(base_url=rest_config['baseUrl'])
-    # restfixture.rest.auth(rest_config['username'], rest_config['password'])
-    # def fin():
-    #     restfixture.destroy()
-    # request.addfinalizer(fin)
-    return restfixture
-
-
-# @pytest.fixture(scope="session")
-# def db(request):
-#     db_config = load_config(request.config.getoption("--target"))['db']
-#     dbfixture = DbFixture(database=db_config['database'], user=db_config['user'], password=db_config['password'], host=db_config['host'], port=db_config['port'])
-#     def fin():
-#         dbfixture.destroy()
-#     request.addfinalizer(fin)
-#     return dbfixture
-
-
-@pytest.fixture(scope="session", autouse=True)
-def stop(request):
     def fin():
-        sleep(1)
-        fixture.session.ensure_logout()
-        fixture.destroy()
+        restfixture.destroy()
     request.addfinalizer(fin)
-    return fixture
+    return restfixture
 
 @pytest.fixture
 def check_ui(request):
