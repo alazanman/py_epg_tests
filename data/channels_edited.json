@@ -1,40 +1,14 @@
 [
   {
     "py/object": "model.channel.Channel", 
-    "epg_name": "Epg_name_Edited_9999818", 
-    "name": "Channel_Edited_4037322", 
+    "epg_name": "Epg_name_Edited_9706971", 
+    "name": "Channel_Edited_3288439", 
     "wide_banner": null, 
-    "provider": "Provider_Edited_163313", 
+    "provider": "Provider_Edited_9259365", 
     "narrow_banner": null, 
     "allow_record": null, 
-    "offset": "-11", 
-    "service_id": "22073", 
-    "id": null, 
-    "icon": null
-  }, 
-  {
-    "py/object": "model.channel.Channel", 
-    "epg_name": "Epg_name_Edited_6253616", 
-    "name": "Channel_Edited_1097995", 
-    "wide_banner": null, 
-    "provider": "Provider_Edited_7998183", 
-    "narrow_banner": null, 
-    "allow_record": null, 
-    "offset": "-8", 
-    "service_id": "13739", 
-    "id": null, 
-    "icon": null
-  }, 
-  {
-    "py/object": "model.channel.Channel", 
-    "epg_name": "Epg_name_Edited_996530", 
-    "name": "Channel_Edited_9313862", 
-    "wide_banner": null, 
-    "provider": "Provider_Edited_413955", 
-    "narrow_banner": null, 
-    "allow_record": null, 
-    "offset": "-10", 
-    "service_id": "36968", 
+    "offset": "23", 
+    "service_id": "52962", 
     "id": null, 
     "icon": null
   }
