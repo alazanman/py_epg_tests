@@ -1,14 +1,27 @@
 [
   {
     "py/object": "model.channel.Channel", 
-    "epg_name": "Epg_name_Edited_9706971", 
-    "name": "Channel_Edited_3288439", 
+    "epg_name": "Epg_name_Edited_6020320", 
+    "name": "Channel_Edited_6691307", 
     "wide_banner": null, 
-    "provider": "Provider_Edited_9259365", 
+    "provider": "Provider_Edited_7237479", 
     "narrow_banner": null, 
     "allow_record": null, 
-    "offset": "23", 
-    "service_id": "52962", 
+    "offset": "-14", 
+    "service_id": "8504", 
+    "id": null, 
+    "icon": null
+  }, 
+  {
+    "py/object": "model.channel.Channel", 
+    "epg_name": "Epg_name_Edited_2779005", 
+    "name": "Channel_Edited_1070139", 
+    "wide_banner": null, 
+    "provider": "Provider_Edited_132957", 
+    "narrow_banner": null, 
+    "allow_record": null, 
+    "offset": "1", 
+    "service_id": "49401", 
     "id": null, 
     "icon": null
   }

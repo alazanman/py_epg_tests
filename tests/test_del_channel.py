@@ -1,25 +1,24 @@
 # -*- coding: utf-8 -*-
-from time import sleep
-from random import randint
-from random import randrange
 from random import choice
+from random import randint
+
 from model.channel import Channel
-from nose.tools import with_setup
-from fixture.nose import *
-
-# def nose_print():
-#     print 'TEST NOSE'
-#
-# def nose_print2():
-#     print 'TEST NOSE2'
+# from nose import with_setup
+from nose_config import *
 
 
-@with_setup(nose_print, nose_print2)
-def test_delete_some_channel(app, db, check_ui):
+def setup_module():
+    global db, app
+    db = set_db()
+    app = set_app()
+    # return db, app
+
+def test_delete_some_channel():
     # CREATE IF NOT EXIST (TO IMPLEMENT VIA DB)
+    # global db, app
     if db.channel.count() == 0:
         app.channel.create(Channel(name='Channel' + str(randint(0, 9999)), service_id="2345", epg_name="epg_name2", offset="3", provider="Provider"))
-    old_channels = db.channel.get_channels()
+    old_channels = app.channel.get_channels()
     channel = choice(old_channels)
     app.channel.delete_channel_by_id(channel.id)
     new_channels = db.channel.get_channels()
@@ -27,8 +26,24 @@ def test_delete_some_channel(app, db, check_ui):
     assert len(new_channels) == len(old_channels) - 1
     old_channels.remove(channel)
     assert sorted(old_channels, key=Channel.id_or_max) == sorted(new_channels, key=Channel.id_or_max)
-    if check_ui:
-        assert sorted(app.channel.get_channels(), key=Channel.id_or_max) == sorted(new_channels, key=Channel.id_or_max)
+    # if check_ui:
+    #     assert sorted(app.channel.get_channels(), key=Channel.id_or_max) == sorted(new_channels, key=Channel.id_or_max)
+
+
+# def test_delete_some_channel(app, db, check_ui):
+#     # CREATE IF NOT EXIST (TO IMPLEMENT VIA DB)
+#     if db.channel.count() == 0:
+#         app.channel.create(Channel(name='Channel' + str(randint(0, 9999)), service_id="2345", epg_name="epg_name2", offset="3", provider="Provider"))
+#     old_channels = db.channel.get_channels()
+#     channel = choice(old_channels)
+#     app.channel.delete_channel_by_id(channel.id)
+#     new_channels = db.channel.get_channels()
+#     assert db.channel.count() == len(old_channels) - 1     # VIA DB
+#     assert len(new_channels) == len(old_channels) - 1
+#     old_channels.remove(channel)
+#     assert sorted(old_channels, key=Channel.id_or_max) == sorted(new_channels, key=Channel.id_or_max)
+#     if check_ui:
+#         assert sorted(app.channel.get_channels(), key=Channel.id_or_max) == sorted(new_channels, key=Channel.id_or_max)
 
 
 # def test_delete_first_channel(app):

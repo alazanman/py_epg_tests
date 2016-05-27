@@ -43,11 +43,11 @@ def app(request):
 def stop(request):
     def fin():
         sleep(1)
-        if fixture:
-            fixture.session.ensure_logout()
-            fixture.destroy()
+        if app:
+            app.session.ensure_logout()
+            app.destroy()
     request.addfinalizer(fin)
-    return fixture
+    return app
 
 @pytest.fixture(scope="session")
 def db(request):
