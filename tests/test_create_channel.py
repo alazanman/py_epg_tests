@@ -1,14 +1,13 @@
 # -*- coding: utf-8 -*-
+from tests import *
 from model.channel import Channel
-from nose_config import *
-from nose_parameterized import parameterized, param
+# from nose_config import *
+# from nose_parameterized import parameterized, param
 
 
 @parameterized([param(channel) for channel in load_from_json("channels.json")])
 def test_create_channel(channel):
     # rest.auth('root', '123')
-    # channel = json_channels
-    # print channel
     old_channels = db.channel.get_channels()
     app.channel.create(channel)
     new_channels = db.channel.get_channels()
@@ -35,6 +34,3 @@ def setup_module():
     global db, app
     db = set_db()
     app = set_app()
-    # channels_new = [1,2,3]
-    # channels_new = test_generator('json_channels')
-    # json_channels = load_from_json('channels.json')

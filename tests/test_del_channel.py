@@ -1,10 +1,9 @@
 # -*- coding: utf-8 -*-
+from tests import *
 from random import choice
 from random import randint
-
 from model.channel import Channel
-# from nose import with_setup
-from nose_config import *
+# from nose_config import *
 
 
 def setup_module():
@@ -18,7 +17,7 @@ def test_delete_some_channel():
     # global db, app
     if db.channel.count() == 0:
         app.channel.create(Channel(name='Channel' + str(randint(0, 9999)), service_id="2345", epg_name="epg_name2", offset="3", provider="Provider"))
-    old_channels = app.channel.get_channels()
+    old_channels = db.channel.get_channels()
     channel = choice(old_channels)
     app.channel.delete_channel_by_id(channel.id)
     new_channels = db.channel.get_channels()
@@ -26,8 +25,8 @@ def test_delete_some_channel():
     assert len(new_channels) == len(old_channels) - 1
     old_channels.remove(channel)
     assert sorted(old_channels, key=Channel.id_or_max) == sorted(new_channels, key=Channel.id_or_max)
-    # if check_ui:
-    #     assert sorted(app.channel.get_channels(), key=Channel.id_or_max) == sorted(new_channels, key=Channel.id_or_max)
+    if check_ui():
+        assert sorted(app.channel.get_channels(), key=Channel.id_or_max) == sorted(new_channels, key=Channel.id_or_max)
 
 
 # def test_delete_some_channel(app, db, check_ui):

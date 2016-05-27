@@ -3,6 +3,7 @@
 # import nose
 # from nose import *
 # import pytest
+import nose
 import json
 import os.path
 import importlib
@@ -13,7 +14,16 @@ from fixture.db import DbFixture
 from fixture.rest import RestApi
 
 
-browser = 'chrome'
+# print nose.config.Config().options
+# # nose.config.Config().options = {"--browser":"chrome"}
+# print nose.config.Config().options
+# parser = nose.config.Config().getParser()
+# # parser.add_option("--browser")
+# parser.add_option("--browser", action="store", default="chrome")
+# parser.add_option("--config_file", action="store", default="config_file.json")
+# parser.add_option("--check_ui", action="store_true", default=True)
+# print nose.config.Config().options
+
 web_config = {
            "baseUrl": "http://10.130.8.159/",
            "username": "root",
@@ -28,100 +38,87 @@ db_config = {
     "port": "5432"
   }
 
+rest_config = {
+    "baseUrl": "http://10.130.8.159/",
+    "username": "root",
+    "password": "123"
+}
+
+config_file = None
+file = "config_file.json"
 app = None
-target = None
 db = None
-restfixture = None
+rest = None
 
 def load_config(file):
-    global target
-    if target is None:
-        config_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), file)
-        with open(config_file) as f:
-            target = json.load(f)
-    return target
+    global config_file
+    if config_file is None:
+        config_file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), file)
+        with open(config_file_path) as f:
+            config_file = json.load(f)
+    return config_file
 
 def set_app():
     global app
-    # browser = request.config.getoption("--browser")
-    # web_config = load_config(request.config.getoption("--target"))['web']
+    # browser = request.config_file.getoption("--browser")
+    # web_config = load_config(request.config.getoption("--config_file"))['web']
+    web_config = load_config(file)['web']
+    other_config = load_config(file)['other']
     if app is None or not app.is_valid():
-        app = Application(browser=browser, base_url=web_config['baseUrl'])
+        app = Application(browser=other_config['browser'], base_url=web_config['baseUrl'])
+        print 'SET_APP', app
     app.session.ensure_login(web_config['username'], web_config['password'])
-    print 'SET_APP'
     return app
 
-# @pytest.fixture(scope="session", autouse=True)
 def stop_app():
     sleep(1)
     if app:
         app.session.ensure_logout()
         app.destroy()
-    print 'STOP_APP'
+    print 'STOP_APP', app
     return app
 
-
-# @pytest.fixture(scope="session")
 def set_db():
     global db
-    # db_config = load_config(request.config.getoption("--target"))['db']
+    # db_config = load_config(request.config.getoption("--config"))['db']
+    db_config = load_config(file)['db']
     if db is None or not db.is_valid():
         db = DbFixture(database=db_config['database'], user=db_config['user'], password=db_config['password'], host=db_config['host'], port=db_config['port'])
-        print 'SET_DB'
-    print db, db.channel
+        print 'SET_DB', db
     return db
 
 def stop_db():
-    db.destroy()
-    print 'STOP_DB'
+    if db:
+        db.destroy()
+    print 'STOP_DB', db
     return db
 
-
-# @pytest.fixture(scope="session")
-def rest(request):
-    global restfixture
-    rest_config = load_config(request.config.getoption("--target"))['web']
+def set_rest():
+    global rest
+    # rest_config = load_config(request.config.getoption("--config"))['web']
+    rest_config = load_config(file)['web']
     # if restfixture is None or not restfixture.is_valid():
-    if restfixture is None:
-        restfixture = RestApi(base_url=rest_config['baseUrl'])
-    def fin():
-        restfixture.destroy()
-    request.addfinalizer(fin)
-    return restfixture
+    if rest is None:
+        rest = RestApi(base_url=rest_config['baseUrl'])
+        print 'SET_REST', rest
+    return rest
 
-# @pytest.fixture
-# def check_ui(request):
-#     return request.config.getoption("--check_ui")
+def stop_rest():
+    if rest:
+        rest.destroy()
+    print 'STOP_REST', rest
+    return rest
 
-# def pytest_addoption(parser):
-#     parser.addoption("--browser", action="store", default="chrome")
-#     parser.addoption("--target", action="store", default="target.json")
-#     parser.addoption("--check_ui", action="store_true")
-#
-# def pytest_generate_tests(metafunc):
-#     for fixture in metafunc.fixturenames:
-#         if fixture.startswith("data_"):
-#             testdata = load_from_module(fixture[5:])
-#             metafunc.parametrize(fixture, testdata, ids=[str(x) for x in testdata])
-#         elif fixture.startswith("json_"):
-#             testdata = load_from_json(fixture[5:])
-#             metafunc.parametrize(fixture, testdata, ids=[str(x) for x in testdata])
-#
-# def test_generator(func_args):
-#     for func_arg in func_args:
-#         if func_arg.startswith("json_"):
-#             testdata = load_from_json(func_arg[5:])
-#             return list(str(x) for x in testdata)
-#             # for data in testdata:
-#             #     yield func_name, data
-#             # metafunc.parametrize(fixture, testdata, ids=[str(x) for x in testdata])
 
-def load_from_module(module):
-    return importlib.import_module("data.%s" % module).testdata
+def check_ui():
+    # global config_file
+    return load_config(file)['other']['check_ui'] == 'True'
+
+# def nosetests_addoption(parser):
+#     parser.add_option("--browser", action="store", default="chrome")
+#     parser.add_option("--target", action="store", default="target.json")
+#     parser.add_option("--check_ui", action="store_true")
 
 def load_from_json(file):
     with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "data/%s" % file)) as f:
-        # for i in jsonpickle.decode(f.read()):
-        #     print i
-        # print len(jsonpickle.decode(f.read()))
         return jsonpickle.decode(f.read())

@@ -1,9 +1,19 @@
 # -*- coding: utf-8 -*-
-from model.channel import Channel
+from tests import *
 
-
-def test_rest(rest):
-    print 'hello'
+# @parameterized([param(rest)])
+# def test_rest_func(rest):
+def test_rest_func():
+    # global rest
+    print 'hello1', rest
     print rest.auth('root', '123')
-    print 'hello'
-    assert 1 == 1
+    # rest.auth('root', '123')
+    print 'hello2'
+    assert 2 == 2
+
+
+def setup_module():
+    global rest
+    rest = set_rest()
+    print rest
+    return rest
