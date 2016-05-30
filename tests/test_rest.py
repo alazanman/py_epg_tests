@@ -6,7 +6,7 @@ from tests import *
 def test_rest_func():
     # global rest
     print 'hello1', rest
-    print rest.auth('root', '123')
+    # print rest.auth('root', '123')
     # rest.auth('root', '123')
     print 'hello2'
     assert 2 == 2

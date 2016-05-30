@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from time import sleep
+from selenium.webdriver.support.wait import WebDriverWait
 from model.channel import Channel
 
 
@@ -15,7 +16,7 @@ class ChannelHelper:
         self.click_add_channel()
         self.fill_channel_form(channel)
         self.submit_channel_form()
-        sleep(1)
+        # sleep(1)
         self.channel_cache = None
 
     def delete_first_channel(self):
@@ -105,7 +106,11 @@ class ChannelHelper:
     def submit_channel_form(self):
         wd = self.app.wd
         wd.find_element_by_css_selector("button.btn.btn-success").click()
-        # wd.find_element_by_xpath("//*[@id='content']/form/fieldset/div[12]/div[2]/button").click()
+        # sleep(1)
+        self.app.wait_for_element_by_xpath("//*[@href='/epg/channel/add/']", 10)
+        # self.app.wait.until(lambda x: x.find_element_by_xpath("//*[@href='/epg/channel/add/']"))
+        # WebDriverWait(wd, 10).until(
+        #     lambda x: x.find_element_by_xpath("//*[@href='/epg/channel/add/']"))
 
     def click_delete_button(self):
         wd = self.app.wd

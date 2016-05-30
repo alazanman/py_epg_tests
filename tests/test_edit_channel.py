@@ -19,7 +19,7 @@ def test_edit_some_channel(channel_edited):
     channel = choice(old_channels)
     channel_edited.id = channel.id
     app.channel.edit_channel_by_id(channel.id, channel_edited)
-    sleep(1)
+    # sleep(1)
     new_channels = db.channel.get_channels()
     # print old_channels, type(old_channels)
     old_channels.remove(channel)

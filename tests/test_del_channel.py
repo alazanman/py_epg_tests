@@ -6,12 +6,6 @@ from model.channel import Channel
 # from nose_config import *
 
 
-def setup_module():
-    global db, app
-    db = set_db()
-    app = set_app()
-    # return db, app
-
 def test_delete_some_channel():
     # CREATE IF NOT EXIST (TO IMPLEMENT VIA DB)
     # global db, app
@@ -59,3 +53,8 @@ def test_delete_some_channel():
 #     assert len(new_channels) == len(old_channels) - 1
 #     old_channels[0:1] = []
 #     assert old_channels == new_channels
+
+def setup_module():
+    global db, app
+    db = set_db()
+    app = set_app()

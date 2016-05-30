@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from selenium import webdriver
+from selenium.webdriver.support.wait import WebDriverWait
 from fixture.session import SessionHelper
 from fixture.channel import ChannelHelper
 
@@ -14,7 +15,7 @@ class Application:
             self.wd = webdriver.Ie()
         else:
             raise ValueError("Unrecognised browser %s" % browser)
-        # self.wd.implicitly_wait(30)
+        self.wd.implicitly_wait(10)
         self.session = SessionHelper(self)
         self.channel = ChannelHelper(self)
         self.base_url = base_url
@@ -25,6 +26,13 @@ class Application:
             return True
         except:
             return False
+
+    # def wait(self):
+    #     return WebDriverWait(self.wd, 10)
+
+    def wait_for_element_by_xpath(self, xpath, secs):
+        return WebDriverWait(self.wd, secs).until(
+            lambda x: x.find_element_by_xpath(xpath))
 
     def open_home_page(self):
         wd = self.wd
