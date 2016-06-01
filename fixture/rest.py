@@ -24,7 +24,7 @@ class RestApi:
 
         url = self.base_url + 'epg/'
         r = session.get(url, cookies=session.cookies)
-        print r.text
+        print r.text[-290:-260]
         # print session.cookies
         # print data
 

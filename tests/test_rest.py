@@ -3,12 +3,10 @@ from tests import *
 
 # @parameterized([param(rest)])
 # def test_rest_func(rest):
-def test_rest_func():
-    # global rest
-    print 'hello1', rest
-    # print rest.auth('root', '123')
-    # rest.auth('root', '123')
-    print 'hello2'
+def test_rest_authentication():
+    print 'rest auth started'
+    rest.auth('root', '123')
+    print 'rest auth done'
     assert 2 == 2
 
 

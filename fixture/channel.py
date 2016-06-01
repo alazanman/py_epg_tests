@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from time import sleep
-from selenium.webdriver.support.wait import WebDriverWait
+import os
 from model.channel import Channel
 
 
@@ -81,12 +81,37 @@ class ChannelHelper:
             wd.find_element_by_xpath("//select[@id='id_languages']/option[@value='1']").click()
         if not wd.find_element_by_xpath("//select[@id='id_languages']/option[@value='4']").is_selected():
             wd.find_element_by_xpath("//select[@id='id_languages']/option[@value='4']").click()
-            # if not wd.find_element_by_id("id_allow_record").is_selected():
-            #            wd.find_element_by_id("id_allow_record").click()
-            #        wd.find_element_by_id("banner-drag").click()
-            #        wd.find_element_by_id("drop-select-input").click()
-            #        wd.find_element_by_xpath("//form[@class='epg-channel-form']/fieldset/div[11]/div/img").click()
-            #        wd.find_element_by_id("drop-select-input").click()
+        if not wd.find_element_by_id("id_allow_record").is_selected():
+            wd.find_element_by_id("id_allow_record").click()
+
+        wd.execute_script("window.scrollBy(0, 1000)")
+        # drop_area = wd.find_element_by_id("id_narrow_banner")
+        # drop_area = wd.find_element_by_css_selector("#id_narrow_banner")
+        drop_area = wd.find_element_by_xpath("//*[@id='content']/form/fieldset/div[10]/div/input")
+        wd.execute_script('arguments[0].style = ""; arguments[0].style.display = "block"; arguments[0].style.visibility = "visible";', drop_area)
+        # "file.removeAttribute('class')"
+
+        # wd.execute_script("file.removeAttribute('class')")
+
+        # drop_area.click()
+        # drop_area.send_keys("C:\\narrow_valid.jpg")
+
+        wd.execute_script("$('#id_narrow_banner').focus(function() {('#id_narrow_banner').siblings()[0].trigger('click')});")
+        drop_area.send_keys("C:\\narrow_valid.jpg")
+        # wd.execute_script(
+        #     "$('#id_narrow_banner').siblings()[0]').click(function() {('#id_narrow_banner').focus()});")
+        # wd.execute_script("return jQuery(\"" + '.ws-item-toolbar' + "\");")
+        # wd.execute_script("$('#id_narrow_banner').siblings()[0].focus(function() {trigger('click');});")
+
+
+        # print os.getcwd()
+        # drop_area.send_keys(os.getcwd() + "/data/banners/narrow_valid.jpg")
+
+        sleep(5)
+#        wd.find_element_by_id("banner-drag").click()
+#        wd.find_element_by_id("drop-select-input").click()
+#        wd.find_element_by_xpath("//form[@class='epg-channel-form']/fieldset/div[11]/div/img").click()
+#        wd.find_element_by_id("drop-select-input").click()
 
     def enter_text(self, field_id, text):
         wd = self.app.wd
@@ -107,10 +132,7 @@ class ChannelHelper:
         wd = self.app.wd
         wd.find_element_by_css_selector("button.btn.btn-success").click()
         # sleep(1)
-        self.app.wait_for_element_by_xpath("//*[@href='/epg/channel/add/']", 10)
-        # self.app.wait.until(lambda x: x.find_element_by_xpath("//*[@href='/epg/channel/add/']"))
-        # WebDriverWait(wd, 10).until(
-        #     lambda x: x.find_element_by_xpath("//*[@href='/epg/channel/add/']"))
+        self.app.wait_for_element_by_xpath("//*[@href='/epg/channel/add/']", 10)        # ensure that 'add channel' button appeared
 
     def click_delete_button(self):
         wd = self.app.wd
