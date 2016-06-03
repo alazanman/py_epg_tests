@@ -64,40 +64,49 @@ class ChannelHelper:
 
     def fill_channel_form(self, channel):
         wd = self.app.wd
-        self.enter_text("id_name", channel.name)
-        self.enter_text("id_service_id", channel.service_id)
-        self.enter_text("id_epg_name", channel.epg_name)
-        self.enter_text("id_offset", channel.offset)
-        self.enter_text("id_provider", channel.provider)
-        # wd.find_element_by_xpath("//select[@id='id_languages']/option[@value='2']").click()
-        # wd.find_element_by_xpath("//select[@id='id_languages']/option[@value='3']").click()
-        # wd.find_element_by_xpath("//select[@id='id_languages']/option[@value='1']").click()
-        # wd.find_element_by_xpath("//select[@id='id_languages']/option[@value='4']").click()
-        if not wd.find_element_by_xpath("//select[@id='id_languages']/option[@value='2']").is_selected():
-            wd.find_element_by_xpath("//select[@id='id_languages']/option[@value='2']").click()
-        if not wd.find_element_by_xpath("//select[@id='id_languages']/option[@value='3']").is_selected():
-            wd.find_element_by_xpath("//select[@id='id_languages']/option[@value='3']").click()
-        if not wd.find_element_by_xpath("//select[@id='id_languages']/option[@value='1']").is_selected():
-            wd.find_element_by_xpath("//select[@id='id_languages']/option[@value='1']").click()
-        if not wd.find_element_by_xpath("//select[@id='id_languages']/option[@value='4']").is_selected():
-            wd.find_element_by_xpath("//select[@id='id_languages']/option[@value='4']").click()
-        if not wd.find_element_by_id("id_allow_record").is_selected():
-            wd.find_element_by_id("id_allow_record").click()
+        # self.enter_text("id_name", channel.name)
+        # self.enter_text("id_service_id", channel.service_id)
+        # self.enter_text("id_epg_name", channel.epg_name)
+        # self.enter_text("id_offset", channel.offset)
+        # self.enter_text("id_provider", channel.provider)
+        # # wd.find_element_by_xpath("//select[@id='id_languages']/option[@value='2']").click()
+        # # wd.find_element_by_xpath("//select[@id='id_languages']/option[@value='3']").click()
+        # # wd.find_element_by_xpath("//select[@id='id_languages']/option[@value='1']").click()
+        # # wd.find_element_by_xpath("//select[@id='id_languages']/option[@value='4']").click()
+        # if not wd.find_element_by_xpath("//select[@id='id_languages']/option[@value='2']").is_selected():
+        #     wd.find_element_by_xpath("//select[@id='id_languages']/option[@value='2']").click()
+        # if not wd.find_element_by_xpath("//select[@id='id_languages']/option[@value='3']").is_selected():
+        #     wd.find_element_by_xpath("//select[@id='id_languages']/option[@value='3']").click()
+        # if not wd.find_element_by_xpath("//select[@id='id_languages']/option[@value='1']").is_selected():
+        #     wd.find_element_by_xpath("//select[@id='id_languages']/option[@value='1']").click()
+        # if not wd.find_element_by_xpath("//select[@id='id_languages']/option[@value='4']").is_selected():
+        #     wd.find_element_by_xpath("//select[@id='id_languages']/option[@value='4']").click()
+        # if not wd.find_element_by_id("id_allow_record").is_selected():
+        #     wd.find_element_by_id("id_allow_record").click()
 
         wd.execute_script("window.scrollBy(0, 1000)")
-        # drop_area = wd.find_element_by_id("id_narrow_banner")
-        # drop_area = wd.find_element_by_css_selector("#id_narrow_banner")
-        drop_area = wd.find_element_by_xpath("//*[@id='content']/form/fieldset/div[10]/div/input")
-        wd.execute_script('arguments[0].style = ""; arguments[0].style.display = "block"; arguments[0].style.visibility = "visible";', drop_area)
+        # narrow_banner_input = wd.find_element_by_id("id_narrow_banner")
+        # narrow_banner_input = wd.find_element_by_css_selector("#id_narrow_banner")
+        # narrow_banner_input = wd.find_element_by_xpath("//*[@id='content']/form/fieldset/div[10]/div/input")
+        narrow_banner_input = wd.find_element_by_xpath("//*[@id='id_narrow_banner']")
+        narrow_banner_img = wd.find_element_by_xpath("//*[@id='content']/form/fieldset/div[10]/div/img")
+        wd.execute_script('arguments[0].style = ""; arguments[0].style.display = "block"; arguments[0].style.visibility = "visible";', narrow_banner_input)
         # "file.removeAttribute('class')"
 
         # wd.execute_script("file.removeAttribute('class')")
 
-        # drop_area.click()
-        # drop_area.send_keys("C:\\narrow_valid.jpg")
+        # narrow_banner_input.click()
+        # narrow_banner_input.send_keys("C:\\narrow_valid.jpg")
 
-        wd.execute_script("$('#id_narrow_banner').focus(function() {('#id_narrow_banner').siblings()[0].trigger('click')});")
-        drop_area.send_keys("C:\\narrow_valid.jpg")
+        # wd.execute_script("$('#id_narrow_banner').focus(function() {('#id_narrow_banner').siblings()[0].trigger('unload')});")
+        # wd.execute_script("alert('here');$('#id_narrow_banner').focus(function() {alert('here');('#id_narrow_banner').siblings()[0].load(function() {alert('here')}).attr('src', 'C:\\narrow_valid.jpg')});")
+        # wd.find_element_by_xpath("//*[@id='content']/form/fieldset/div[10]/div/img").click()
+        # narrow_banner_input.send_keys("C:\\narrow_valid.jpg")
+        # sleep(3)
+        wd.execute_script("placeChooser('C:\\narrow_valid.jpg');")
+        wd.execute_script("$('#id_narrow_banner').each(function() {$(this).trigger('onload');alert('here');});")
+
+        # onclick = "showImageModal(this); return false;"
         # wd.execute_script(
         #     "$('#id_narrow_banner').siblings()[0]').click(function() {('#id_narrow_banner').focus()});")
         # wd.execute_script("return jQuery(\"" + '.ws-item-toolbar' + "\");")
@@ -105,7 +114,7 @@ class ChannelHelper:
 
 
         # print os.getcwd()
-        # drop_area.send_keys(os.getcwd() + "/data/banners/narrow_valid.jpg")
+        # narrow_banner_input.send_keys(os.getcwd() + "/data/banners/narrow_valid.jpg")
 
         sleep(5)
 #        wd.find_element_by_id("banner-drag").click()
