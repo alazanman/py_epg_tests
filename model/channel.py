@@ -3,7 +3,7 @@ from sys import maxsize
 
 
 class Channel:
-    def __init__(self, id=None, name=None, service_id=None, epg_name=None, offset=None, provider=None, icon=None, allow_record=None, narrow_banner=None, wide_banner=None):
+    def __init__(self, id=None, name=None, service_id=None, epg_name=None, offset="0", provider=None, icon=None, allow_record=None, narrow_banner=None, wide_banner=None):
         self.id = id
         self.name = name
         self.service_id = service_id
@@ -29,6 +29,7 @@ class Channel:
     def __eq__(self, other):
         # return (self.id is None or other.id is None or self.id == other.id) and self.name == other.name
         # print "self.id, self.name, other.id, other.name: %s, %s, %s, %s" % (self.id, other.id, self.name, other.name)
+        # print "self.offset, other.offset: %s, %s" % (self.offset, other.offset)
         return self.name == other.name and \
                (self.id is None or other.id is None or self.id == other.id) and \
                (self.service_id is None or other.service_id is None or self.service_id == other.service_id) and \
