@@ -23,8 +23,8 @@ class Channel:
             return maxsize
 
     def __repr__(self):
-        return "%s, %s" % (self.id, self.name)
-        # return "%s, %s, %s, %s" % (self.id, self.name, self.service_id, self.epg_name)
+        # return "%s, %s" % (self.id, self.name)
+        return "%s, %s, %s, %s, %s, %s" % (self.id, self.name, self.service_id, self.epg_name, self.languages, self.icon)
         # return "%s, %s, %s, %s" % (self.id, unicode(self.name, 'utf-8').encode('utf-8'), self.service_id, self.epg_name)
 
     def __eq__(self, other):

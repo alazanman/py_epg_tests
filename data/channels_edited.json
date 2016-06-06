@@ -1,15 +1,15 @@
 [
   {
     "py/object": "model.channel.Channel", 
-    "epg_name": "Epg_name_Edited_74515", 
-    "name": "Channel_Edited_3154532", 
+    "epg_name": "Epg_name_Edited_1240262", 
+    "name": "Channel_Edited_2210000", 
     "wide_banner": null, 
-    "provider": "Provider_Edited_5323147", 
+    "provider": "Provider_Edited_3999030", 
     "narrow_banner": null, 
     "languages": null, 
     "allow_record": false, 
-    "offset": "-3", 
-    "service_id": "10963", 
+    "offset": "18", 
+    "service_id": "57460", 
     "id": null, 
     "icon": null
   }
