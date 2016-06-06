@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import jsonpickle
 import os.path
-from random import randint
+from random import randint, randrange
 from model.channel import Channel
 from utils.string_util import random_string
 
@@ -14,7 +14,9 @@ channels = [
     # Channel(name=random_string('Channel_' + str(randint(0, 9999)), 100), service_id=str(randint(0, 9999)), epg_name='Epg_name_' + str(randint(0, 9999)), offset=str(randint(-23, 23)), provider='Provider_' + str(randint(0, 9999)))
     Channel(name='Channel_' + str(randint(0, 9999999)), service_id=str(randint(0, 65535)),
             epg_name='Epg_name_' + str(randint(0, 9999999)), offset=str(randint(-23, 23)),
-            provider='Provider_' + str(randint(0, 9999999)))
+            provider='Provider_' + str(randint(0, 9999999)), languages=str(randint(1,4)),
+            icon="../data/banners/icon_valid.jpg", narrow_banner="../data/banners/narrow_valid.jpg",
+            wide_banner="../data/banners/wide_valid.jpg")
     for i in range(channels_to_generate)
     ]
 

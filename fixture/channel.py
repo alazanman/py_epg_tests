@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from time import sleep
 import os
+import pyautogui
 from model.channel import Channel
 
 
@@ -73,13 +74,34 @@ class ChannelHelper:
         #     wd.find_element_by_xpath("//select[@id='id_languages']/option[@value='2']").click()
         # if not wd.find_element_by_xpath("//select[@id='id_languages']/option[@value='3']").is_selected():
         #     wd.find_element_by_xpath("//select[@id='id_languages']/option[@value='3']").click()
-        if not wd.find_element_by_xpath("//select[@id='id_languages']/option[@value='1']").is_selected():
-            wd.find_element_by_xpath("//select[@id='id_languages']/option[@value='1']").click()
+        if not wd.find_element_by_xpath("//select[@id='id_languages']/option[@value='" + channel.languages + "']").is_selected():
+            wd.find_element_by_xpath("//select[@id='id_languages']/option[@value='" + channel.languages + "']").click()
         # if not wd.find_element_by_xpath("//select[@id='id_languages']/option[@value='4']").is_selected():
         #     wd.find_element_by_xpath("//select[@id='id_languages']/option[@value='4']").click()
         # if not wd.find_element_by_id("id_allow_record").is_selected():
         #     wd.find_element_by_id("id_allow_record").click()
         wd.execute_script("window.scrollBy(0, 1000)")
+        wd.find_element_by_xpath("//*[@id='content']/form/fieldset/div[9]/div/img").click()
+        sleep(1)
+        pyautogui.typewrite(os.path.abspath(os.path.join(os.getcwd(), channel.icon)))
+        # pyautogui.typewrite('C:\\icon_valid.jpg')
+        pyautogui.press('enter')
+        wd.find_element_by_xpath("//*[@id='content']/form/fieldset/div[10]/div/img").click()
+        sleep(1)
+        # narrow_banner_input = os.path.abspath(os.path.join(os.getcwd(), "../data/banners/narrow_valid.jpg"))
+        pyautogui.typewrite(os.path.abspath(os.path.join(os.getcwd(), channel.narrow_banner)))
+        pyautogui.press('enter')
+        wd.find_element_by_xpath("//*[@id='content']/form/fieldset/div[11]/div/img").click()
+        sleep(1)
+        pyautogui.typewrite(os.path.abspath(os.path.join(os.getcwd(), channel.wide_banner)))
+        # pyautogui.typewrite('C:\\wide_valid.jpg')
+        pyautogui.press('enter')
+        # sleep(3)
+
+        # "icons/channel_416.jpeg"
+        # "banners/416/narrow_banner.jpeg"
+        # "banners/416/wide_banner.jpeg"
+
         # # narrow_banner_input = wd.find_element_by_id("id_narrow_banner")
         # # narrow_banner_input = wd.find_element_by_css_selector("#id_narrow_banner")
         # # narrow_banner_input = wd.find_element_by_xpath("//*[@id='content']/form/fieldset/div[10]/div/input")

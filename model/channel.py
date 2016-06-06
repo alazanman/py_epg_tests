@@ -3,15 +3,16 @@ from sys import maxsize
 
 
 class Channel:
-    def __init__(self, id=None, name=None, service_id=None, epg_name=None, offset="0", provider=None, icon=None, allow_record=None, narrow_banner=None, wide_banner=None):
+    def __init__(self, id=None, name=None, service_id=None, epg_name=None, offset="0", provider=None, languages=None, allow_record=False, icon=None, narrow_banner=None, wide_banner=None):
         self.id = id
         self.name = name
         self.service_id = service_id
         self.epg_name = epg_name
         self.offset = offset
         self.provider = provider
-        self.icon = icon
+        self.languages = languages
         self.allow_record = allow_record
+        self.icon = icon
         self.narrow_banner = narrow_banner
         self.wide_banner = wide_banner
 
@@ -36,7 +37,9 @@ class Channel:
                (self.epg_name is None or other.epg_name is None or self.epg_name == other.epg_name) and \
                (self.offset is None or other.offset is None or self.offset == other.offset) and \
                (self.provider is None or other.provider is None or self.provider == other.provider) and \
-               (self.icon is None or other.icon is None or self.icon == other.icon) and \
-               (self.allow_record is None or other.allow_record is None or self.allow_record == other.allow_record) and \
-               (self.narrow_banner is None or other.narrow_banner is None or self.narrow_banner == other.narrow_banner) and \
-               (self.wide_banner is None or other.wide_banner is None or self.wide_banner == other.wide_banner)
+               (self.languages is None or other.languages is None or self.languages == other.languages) and \
+               (self.allow_record is None or other.allow_record is None or self.allow_record == other.allow_record)
+        # and \
+               # (self.icon is None or other.icon is None or self.icon == other.icon) and \
+               # (self.narrow_banner is None or other.narrow_banner is None or self.narrow_banner == other.narrow_banner) and \
+               # (self.wide_banner is None or other.wide_banner is None or self.wide_banner == other.wide_banner)
