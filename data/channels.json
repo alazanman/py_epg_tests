@@ -1,17 +1,19 @@
 [
   {
     "py/object": "model.channel.Channel", 
-    "epg_name": "Epg_name_2296841", 
-    "name": "Channel_6073900", 
+    "epg_name": "Epg_name_6297615", 
+    "name": "Channel_6534881", 
     "wide_banner": "../data/banners/wide_valid.jpg", 
-    "provider": "Provider_5028988", 
+    "provider": "Provider_5217445", 
     "narrow_banner": "../data/banners/narrow_valid.jpg", 
     "languages": [
-      "2"
+      "1", 
+      "3", 
+      "4"
     ], 
     "allow_record": false, 
-    "offset": "-12", 
-    "service_id": "53452", 
+    "offset": "12", 
+    "service_id": "50353", 
     "id": null, 
     "icon": "../data/banners/icon_valid.jpg"
   }

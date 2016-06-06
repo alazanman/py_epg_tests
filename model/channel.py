@@ -24,7 +24,7 @@ class Channel:
 
     def __repr__(self):
         # return "%s, %s" % (self.id, self.name)
-        return "%s, %s, %s, %s, %s, %s" % (self.id, self.name, self.service_id, self.epg_name, self.languages, self.icon)
+        return "%s, %s, %s, %s, %s, %s, %s, %s" % (self.id, self.name, self.service_id, self.epg_name, self.languages, self.icon, self.narrow_banner, self.wide_banner)
         # return "%s, %s, %s, %s" % (self.id, unicode(self.name, 'utf-8').encode('utf-8'), self.service_id, self.epg_name)
 
     def __eq__(self, other):
