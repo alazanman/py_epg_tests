@@ -25,6 +25,20 @@ class DbChannelHelper:
             # self.connection.close()
         return channels
 
+
+    def get_channel_languages(self, channel_id):
+        languages = []
+        cursor = self.db.connection.cursor()
+        try:
+            cursor.execute(
+                "select language_id from epg_channel_languages where channel_id=" + channel_id)
+            for row in cursor:
+                languages.append(row)
+            self.db.connection.commit()
+        finally:
+            cursor.close()
+        return languages
+
     def count(self):
         cursor = self.db.connection.cursor()
         try:

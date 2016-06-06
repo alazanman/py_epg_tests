@@ -74,8 +74,9 @@ class ChannelHelper:
         #     wd.find_element_by_xpath("//select[@id='id_languages']/option[@value='2']").click()
         # if not wd.find_element_by_xpath("//select[@id='id_languages']/option[@value='3']").is_selected():
         #     wd.find_element_by_xpath("//select[@id='id_languages']/option[@value='3']").click()
-        if not wd.find_element_by_xpath("//select[@id='id_languages']/option[@value='" + channel.languages + "']").is_selected():
-            wd.find_element_by_xpath("//select[@id='id_languages']/option[@value='" + channel.languages + "']").click()
+        for language in channel.languages:
+            if not wd.find_element_by_xpath("//select[@id='id_languages']/option[@value='" + language + "']").is_selected():
+                wd.find_element_by_xpath("//select[@id='id_languages']/option[@value='" + language + "']").click()
         # if not wd.find_element_by_xpath("//select[@id='id_languages']/option[@value='4']").is_selected():
         #     wd.find_element_by_xpath("//select[@id='id_languages']/option[@value='4']").click()
         # if not wd.find_element_by_id("id_allow_record").is_selected():
