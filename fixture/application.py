@@ -1,6 +1,9 @@
 # -*- coding: utf-8 -*-
+import binascii
 from selenium import webdriver
 from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.common.keys import Keys
 from fixture.session import SessionHelper
 from fixture.channel import ChannelHelper
 
@@ -33,6 +36,13 @@ class Application:
     def wait_for_element_by_xpath(self, xpath, secs):
         return WebDriverWait(self.wd, secs).until(
             lambda x: x.find_element_by_xpath(xpath))
+
+    def ctrl_click(self, element):
+        ActionChains(self.wd) \
+            .key_down(Keys.CONTROL) \
+            .click(element) \
+            .key_up(Keys.CONTROL) \
+            .perform()
 
     def open_home_page(self):
         wd = self.wd

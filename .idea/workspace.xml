@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a8dbaa5f-938a-40f2-b51a-d8b37148c058" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/channels.json" afterPath="$PROJECT_DIR$/data/channels.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/channels_edited.json" afterPath="$PROJECT_DIR$/data/channels_edited.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/channels_generator.py" afterPath="$PROJECT_DIR$/data/channels_generator.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fixture/application.py" afterPath="$PROJECT_DIR$/fixture/application.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fixture/channel.py" afterPath="$PROJECT_DIR$/fixture/channel.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/channel.py" afterPath="$PROJECT_DIR$/model/channel.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test_edit_channel.py" afterPath="$PROJECT_DIR$/tests/test_edit_channel.py" />
     </list>
     <ignored path="py_epg.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,18 +33,18 @@
       <file leaf-file-name="test_create_channel.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/test_create_channel.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="16" column="30" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="30" />
+            <state relative-caret-position="561">
+              <caret line="34" column="17" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="channel.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="channel.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fixture/channel.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="78" column="59" selection-start-line="78" selection-start-column="59" selection-end-line="78" selection-end-column="59" />
+            <state relative-caret-position="261">
+              <caret line="99" column="81" selection-start-line="99" selection-start-column="28" selection-end-line="99" selection-end-column="81" />
               <folding>
                 <element signature="e#24#46#0" expanded="true" />
               </folding>
@@ -48,31 +52,35 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="channel_db.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fixture/channel_db.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="36" column="44" selection-start-line="36" selection-start-column="44" selection-end-line="36" selection-end-column="44" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="channels.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/channels.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="channel.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="channel.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/model/channel.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="36" column="70" selection-start-line="36" selection-start-column="70" selection-end-line="36" selection-end-column="70" />
+            <state relative-caret-position="476">
+              <caret line="43" column="48" selection-start-line="43" selection-start-column="48" selection-end-line="43" selection-end-column="48" />
+              <folding>
+                <element signature="e#24#47#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fixture/application.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="472">
+              <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+              <folding>
+                <element signature="e#24#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test_edit_channel.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/test_edit_channel.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="493">
+              <caret line="33" column="17" selection-start-line="32" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -81,8 +89,8 @@
       <file leaf-file-name="channels_generator.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/channels_generator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="17" column="55" selection-start-line="17" selection-start-column="55" selection-end-line="17" selection-end-column="55" />
+            <state relative-caret-position="305">
+              <caret line="18" column="66" selection-start-line="18" selection-start-column="66" selection-end-line="18" selection-end-column="66" />
               <folding>
                 <element signature="e#24#41#0" expanded="true" />
               </folding>
@@ -139,24 +147,24 @@
         <option value="$PROJECT_DIR$/fixture/nose_fixtures.py" />
         <option value="$PROJECT_DIR$/fixture/nose.py" />
         <option value="$PROJECT_DIR$/tests/test_create_channel.py" />
-        <option value="$PROJECT_DIR$/data/channels_edited.json" />
         <option value="$PROJECT_DIR$/target.json" />
         <option value="$PROJECT_DIR$/conftest.py" />
         <option value="$PROJECT_DIR$/nose.cfg" />
         <option value="$PROJECT_DIR$/config.json" />
         <option value="$PROJECT_DIR$/tests/__init__.py" />
         <option value="$PROJECT_DIR$/tests/test_del_channel.py" />
-        <option value="$PROJECT_DIR$/tests/test_edit_channel.py" />
         <option value="$PROJECT_DIR$/config_file.json" />
         <option value="$PROJECT_DIR$/tests/test_rest.py" />
         <option value="$PROJECT_DIR$/fixture/rest.py" />
-        <option value="$PROJECT_DIR$/fixture/application.py" />
         <option value="$PROJECT_DIR$/nose_config.py" />
         <option value="$PROJECT_DIR$/data/channels.json" />
-        <option value="$PROJECT_DIR$/data/channels_generator.py" />
         <option value="$PROJECT_DIR$/fixture/channel_db.py" />
-        <option value="$PROJECT_DIR$/model/channel.py" />
+        <option value="$PROJECT_DIR$/data/channels_generator.py" />
+        <option value="$PROJECT_DIR$/data/channels_edited.json" />
+        <option value="$PROJECT_DIR$/tests/test_edit_channel.py" />
         <option value="$PROJECT_DIR$/fixture/channel.py" />
+        <option value="$PROJECT_DIR$/fixture/application.py" />
+        <option value="$PROJECT_DIR$/model/channel.py" />
       </list>
     </option>
   </component>
@@ -316,7 +324,7 @@
       <recent name="C:\Users\Alexey.Tanana\Documents\workspace\satprof\py_epg_tests\data" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.nosetests in test_create_channel.py">
+  <component name="RunManager" selected="Python tests.nosetests in test_edit_channel.py">
     <configuration default="false" name="channels_generator (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -539,6 +547,27 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
+    <configuration default="false" name="nosetests in test_edit_channel.py" type="tests" factoryName="Nosetests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="py_epg_tests" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/test_edit_channel.py" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PARAMS" value="-s -v" />
+      <option name="USE_PARAM" value="true" />
+      <method />
+    </configuration>
     <configuration default="false" name="nosetests in tests" type="tests" factoryName="Nosetests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -581,12 +610,13 @@
       <option name="USE_PARAM" value="true" />
       <method />
     </configuration>
-    <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python tests.nosetests in tests" />
-      <item index="1" class="java.lang.String" itemvalue="Python tests.nosetests in test_create_channel.py" />
-      <item index="2" class="java.lang.String" itemvalue="Python.channels_generator (1)" />
-      <item index="3" class="java.lang.String" itemvalue="Python.test_create_channel" />
-      <item index="4" class="java.lang.String" itemvalue="Python.channel" />
+    <list size="6">
+      <item index="0" class="java.lang.String" itemvalue="Python.channels_generator (1)" />
+      <item index="1" class="java.lang.String" itemvalue="Python.test_create_channel" />
+      <item index="2" class="java.lang.String" itemvalue="Python.channel" />
+      <item index="3" class="java.lang.String" itemvalue="Python tests.nosetests in test_edit_channel.py" />
+      <item index="4" class="java.lang.String" itemvalue="Python tests.nosetests in tests" />
+      <item index="5" class="java.lang.String" itemvalue="Python tests.nosetests in test_create_channel.py" />
     </list>
     <recent_temporary>
       <list size="3">
@@ -616,35 +646,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="nosetests_in_test_create_channel_py - 2016.06.06 at 18h 32m 18s.xml">
-      <configuration name="nosetests in test_create_channel.py" configurationId="tests" />
+    <history-entry file="nosetests_in_test_edit_channel_py - 2016.06.07 at 16h 16m 37s.xml">
+      <configuration name="nosetests in test_edit_channel.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="nosetests_in_test_create_channel_py - 2016.06.06 at 18h 33m 01s.xml">
-      <configuration name="nosetests in test_create_channel.py" configurationId="tests" />
+    <history-entry file="nosetests_in_test_edit_channel_py - 2016.06.07 at 16h 17m 14s.xml">
+      <configuration name="nosetests in test_edit_channel.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="nosetests_in_test_create_channel_py - 2016.06.06 at 18h 55m 17s.xml">
-      <configuration name="nosetests in test_create_channel.py" configurationId="tests" />
+    <history-entry file="nosetests_in_test_edit_channel_py - 2016.06.07 at 16h 17m 29s.xml">
+      <configuration name="nosetests in test_edit_channel.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="nosetests_in_test_create_channel_py - 2016.06.06 at 18h 56m 33s.xml">
-      <configuration name="nosetests in test_create_channel.py" configurationId="tests" />
+    <history-entry file="nosetests_in_test_edit_channel_py - 2016.06.07 at 16h 18m 26s.xml">
+      <configuration name="nosetests in test_edit_channel.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="nosetests_in_test_create_channel_py - 2016.06.06 at 18h 57m 10s.xml">
-      <configuration name="nosetests in test_create_channel.py" configurationId="tests" />
+    <history-entry file="nosetests_in_test_edit_channel_py - 2016.06.07 at 16h 18m 58s.xml">
+      <configuration name="nosetests in test_edit_channel.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="nosetests_in_test_create_channel_py - 2016.06.06 at 19h 00m 07s.xml">
-      <configuration name="nosetests in test_create_channel.py" configurationId="tests" />
+    <history-entry file="nosetests_in_test_edit_channel_py - 2016.06.07 at 16h 19m 25s.xml">
+      <configuration name="nosetests in test_edit_channel.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="nosetests_in_test_create_channel_py - 2016.06.06 at 19h 02m 23s.xml">
-      <configuration name="nosetests in test_create_channel.py" configurationId="tests" />
+    <history-entry file="nosetests_in_test_edit_channel_py - 2016.06.07 at 16h 19m 53s.xml">
+      <configuration name="nosetests in test_edit_channel.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="nosetests_in_test_create_channel_py - 2016.06.06 at 19h 05m 10s.xml">
-      <configuration name="nosetests in test_create_channel.py" configurationId="tests" />
+    <history-entry file="nosetests_in_test_edit_channel_py - 2016.06.07 at 16h 20m 15s.xml">
+      <configuration name="nosetests in test_edit_channel.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="nosetests_in_test_create_channel_py - 2016.06.06 at 19h 06m 52s.xml">
-      <configuration name="nosetests in test_create_channel.py" configurationId="tests" />
+    <history-entry file="nosetests_in_test_edit_channel_py - 2016.06.07 at 16h 22m 18s.xml">
+      <configuration name="nosetests in test_edit_channel.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="nosetests_in_test_create_channel_py - 2016.06.06 at 19h 21m 05s.xml">
-      <configuration name="nosetests in test_create_channel.py" configurationId="tests" />
+    <history-entry file="nosetests_in_test_edit_channel_py - 2016.06.07 at 16h 44m 19s.xml">
+      <configuration name="nosetests in test_edit_channel.py" configurationId="tests" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -766,13 +796,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/channels_edited.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
         </state>
       </provider>
     </entry>
@@ -932,16 +955,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fixture/application.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding>
-            <element signature="e#24#54#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/conftest.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -957,51 +970,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/test_edit_channel.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pycharm/nose_utils.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="62">
           <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/channels_generator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="17" column="55" selection-start-line="17" selection-start-column="55" selection-end-line="17" selection-end-column="55" />
-          <folding>
-            <element signature="e#24#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/channels.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/test_create_channel.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="16" column="30" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/channel.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" column="70" selection-start-line="36" selection-start-column="70" selection-end-line="36" selection-end-column="70" />
           <folding />
         </state>
       </provider>
@@ -1014,12 +986,74 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/data/channels_edited.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/channels.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_edit_channel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="33" column="17" selection-start-line="32" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fixture/application.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="472">
+          <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+          <folding>
+            <element signature="e#24#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/channels_generator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="18" column="66" selection-start-line="18" selection-start-column="66" selection-end-line="18" selection-end-column="66" />
+          <folding>
+            <element signature="e#24#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/fixture/channel.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="78" column="59" selection-start-line="78" selection-start-column="59" selection-end-line="78" selection-end-column="59" />
+        <state relative-caret-position="261">
+          <caret line="99" column="81" selection-start-line="99" selection-start-column="28" selection-end-line="99" selection-end-column="81" />
           <folding>
             <element signature="e#24#46#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_create_channel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="34" column="17" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/channel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="43" column="48" selection-start-line="43" selection-start-column="48" selection-end-line="43" selection-end-column="48" />
+          <folding>
+            <element signature="e#24#47#0" expanded="true" />
           </folding>
         </state>
       </provider>

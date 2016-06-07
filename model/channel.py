@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 from sys import maxsize
+import hashlib
+import binascii
 
 
 class Channel:
@@ -38,8 +40,14 @@ class Channel:
                (self.offset is None or other.offset is None or self.offset == other.offset) and \
                (self.provider is None or other.provider is None or self.provider == other.provider) and \
                (self.languages is None or other.languages is None or self.languages == other.languages) and \
-               (self.allow_record is None or other.allow_record is None or self.allow_record == other.allow_record)
+               (self.allow_record is None or other.allow_record is None or self.allow_record == other.allow_record) and \
+               (self.icon is None or other.icon is None or self.CRC32_from_file(self.icon) == self.CRC32_from_file(other.icon))
         # and \
                # (self.icon is None or other.icon is None or self.icon == other.icon) and \
                # (self.narrow_banner is None or other.narrow_banner is None or self.narrow_banner == other.narrow_banner) and \
                # (self.wide_banner is None or other.wide_banner is None or self.wide_banner == other.wide_banner)
+
+    def CRC32_from_file(filename):
+        buf = open(filename, 'rb').read()
+        buf = (binascii.crc32(buf) & 0xFFFFFFFF)
+        return "%08X" % buf

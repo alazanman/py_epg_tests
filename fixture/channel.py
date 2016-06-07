@@ -70,15 +70,29 @@ class ChannelHelper:
         self.enter_text("id_epg_name", channel.epg_name)
         self.enter_text("id_offset", channel.offset)
         self.enter_text("id_provider", channel.provider)
+        # deselect languages
+        for element in wd.find_elements_by_xpath("//select[@id='id_languages']/option"):
+            if element.is_selected():
+                element.click()
+        # select languages
         for language in channel.languages:
-            if not wd.find_element_by_xpath("//select[@id='id_languages']/option[@value='" + language + "']").is_selected():
-                wd.find_element_by_xpath("//select[@id='id_languages']/option[@value='" + language + "']").click()
-        # if not wd.find_element_by_id("id_allow_record").is_selected():
-        #     wd.find_element_by_id("id_allow_record").click()
+            wd.find_element_by_xpath("//select[@id='id_languages']/option[@value='" + language + "']").click()
+        # select/deselect allow_record if needed
+        if channel.allow_record != wd.find_element_by_id("id_allow_record").is_selected():
+            wd.find_element_by_id("id_allow_record").click()
         wd.execute_script("window.scrollBy(0, 1000)")
-        self.add_file_pyautogui("//*[@id='content']/form/fieldset/div[9]/div/img", channel.icon)
-        self.add_file_pyautogui("//*[@id='content']/form/fieldset/div[10]/div/img", channel.narrow_banner)
-        self.add_file_pyautogui("//*[@id='content']/form/fieldset/div[11]/div/img", channel.wide_banner)
+        # remove existing icon, narrow and wide banners
+        picture_del_buttons = ["//*/label[@for='icon-clear_id']", "//*/label[@for='narrow_banner-clear_id']", "//*/label[@for='wide_banner-clear_id']"]
+        for button in picture_del_buttons:
+            if wd.find_elements_by_xpath(button):
+                wd.find_element_by_xpath(button).click()
+        # add new icon, narrow and wide banners
+        if channel.icon:
+            self.add_file_pyautogui("//*[@id='content']/form/fieldset/div[9]/div/img", channel.icon)
+        if channel.narrow_banner:
+            self.add_file_pyautogui("//*[@id='content']/form/fieldset/div[10]/div/img", channel.narrow_banner)
+        if channel.wide_banner:
+            self.add_file_pyautogui("//*[@id='content']/form/fieldset/div[11]/div/img", channel.wide_banner)
 
     def add_file_pyautogui(self, xpath, file_path):
         self.app.wd.find_element_by_xpath(xpath).click()

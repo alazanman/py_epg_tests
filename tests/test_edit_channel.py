@@ -27,9 +27,11 @@ def test_edit_some_channel(channel_edited):
     assert len(new_channels) == len(old_channels)
     # print sorted(old_channels, key=Channel.id_or_max)
     # print sorted(new_channels, key=Channel.id_or_max)
+    print sorted(old_channels, key=Channel.id_or_max)
+    print sorted(new_channels, key=Channel.id_or_max)
     assert sorted(old_channels, key=Channel.id_or_max) == sorted(new_channels, key=Channel.id_or_max)
-    if check_ui():
-        assert sorted(app.channel.get_channels(), key=Channel.id_or_max) == sorted(new_channels, key=Channel.id_or_max)
+    # if check_ui():
+    #     assert sorted(app.channel.get_channels(), key=Channel.id_or_max) == sorted(new_channels, key=Channel.id_or_max)
 
     # def test_edit_some_channel(app, db, check_ui, json_channels_edited):
     #     channel_edited = json_channels_edited
