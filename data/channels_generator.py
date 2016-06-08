@@ -8,6 +8,12 @@ from utils.string_util import random_string
 channels_file = "../data/channels.json"
 channels_edited_file = "../data/channels_edited.json"
 channels_to_generate = 1
+# current_path = os.getcwd()
+
+
+def abs_path_to_file(relative_path):
+    return os.path.abspath(os.path.join(os.getcwd(), relative_path))
+
 
 channels = [
     # UnicodeDecodeError: 'utf8' codec can't decode byte 0xe2 in position 15: invalid continuation byte
@@ -16,9 +22,9 @@ channels = [
             epg_name='Epg_name_' + str(randint(0, 9999999)), offset=str(randint(-23, 23)),
             provider='Provider_' + str(randint(0, 9999999)), languages=sorted(set([str(randint(1,4)) for l in range(randint(1,4))])),
             allow_record=choice([bool(True), bool(False)]),
-            icon=os.path.abspath(os.path.join(os.getcwd(), "../data/banners/icon_valid.jpg")),
-            narrow_banner=os.path.abspath(os.path.join(os.getcwd(), "../data/banners/narrow_valid.jpg")),
-            wide_banner=os.path.abspath(os.path.join(os.getcwd(), "../data/banners/wide_valid.jpg")))
+            icon={"user_file": abs_path_to_file("../data/banners/icon_valid.jpg"), "server_file": None},
+            narrow_banner=abs_path_to_file("../data/banners/narrow_valid.jpg"),
+            wide_banner=abs_path_to_file("../data/banners/wide_valid.jpg"))
     for i in range(channels_to_generate)
     ]
 

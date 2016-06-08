@@ -1,18 +1,21 @@
 [
   {
     "py/object": "model.channel.Channel", 
-    "epg_name": "Epg_name_4335946", 
-    "name": "Channel_8611061", 
+    "epg_name": "Epg_name_3981296", 
+    "name": "Channel_964272", 
     "wide_banner": "C:\\Users\\Alexey.Tanana\\Documents\\workspace\\satprof\\py_epg_tests\\data\\banners\\wide_valid.jpg", 
-    "provider": "Provider_4523072", 
+    "provider": "Provider_6269511", 
     "narrow_banner": "C:\\Users\\Alexey.Tanana\\Documents\\workspace\\satprof\\py_epg_tests\\data\\banners\\narrow_valid.jpg", 
     "languages": [
-      "2"
+      "3"
     ], 
-    "allow_record": true, 
-    "offset": "21", 
-    "service_id": "39425", 
+    "allow_record": false, 
+    "offset": "-10", 
+    "service_id": "52296", 
     "id": null, 
-    "icon": "C:\\Users\\Alexey.Tanana\\Documents\\workspace\\satprof\\py_epg_tests\\data\\banners\\icon_valid.jpg"
+    "icon": {
+      "server_file": null, 
+      "user_file": "C:\\Users\\Alexey.Tanana\\Documents\\workspace\\satprof\\py_epg_tests\\data\\banners\\icon_valid.jpg"
+    }
   }
 ]

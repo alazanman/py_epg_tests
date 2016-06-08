@@ -10,6 +10,7 @@ def test_create_channel(channel):
     # rest.auth('root', '123')
     old_channels = db.channel.get_channels()
     app.channel.create(channel)
+    # rest.validate_channel_banners(channel)
     new_channels = db.channel.get_channels()
     assert db.channel.count() == len(old_channels) + 1
     assert len(new_channels) == len(old_channels) + 1
@@ -31,6 +32,7 @@ def test_create_channel(channel):
 #     assert sorted(old_channels, key=Channel.id_or_max) == sorted(new_channels, key=Channel.id_or_max)
 
 def setup_module():
-    global db, app
+    global db, app, rest
     db = set_db()
+    rest = set_rest()
     app = set_app()

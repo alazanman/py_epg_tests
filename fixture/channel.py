@@ -17,7 +17,6 @@ class ChannelHelper:
         self.click_add_channel()
         self.fill_channel_form(channel)
         self.submit_channel_form()
-        # sleep(1)
         self.channel_cache = None
 
     def delete_first_channel(self):
@@ -88,7 +87,7 @@ class ChannelHelper:
                 wd.find_element_by_xpath(button).click()
         # add new icon, narrow and wide banners
         if channel.icon:
-            self.add_file_pyautogui("//*[@id='content']/form/fieldset/div[9]/div/img", channel.icon)
+            self.add_file_pyautogui("//*[@id='content']/form/fieldset/div[9]/div/img", channel.icon["user_file"])
         if channel.narrow_banner:
             self.add_file_pyautogui("//*[@id='content']/form/fieldset/div[10]/div/img", channel.narrow_banner)
         if channel.wide_banner:

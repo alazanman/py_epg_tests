@@ -5,7 +5,7 @@ import binascii
 
 
 class Channel:
-    def __init__(self, id=None, name=None, service_id=None, epg_name=None, offset="0", provider=None, languages=None, allow_record=False, icon=None, narrow_banner=None, wide_banner=None):
+    def __init__(self, id=None, name=None, service_id=None, epg_name=None, offset="0", provider=None, languages=None, allow_record=False, icon={"user_file": None, "server_file": None}, narrow_banner=None, wide_banner=None):
         self.id = id
         self.name = name
         self.service_id = service_id
@@ -32,7 +32,8 @@ class Channel:
     def __eq__(self, other):
         # return (self.id is None or other.id is None or self.id == other.id) and self.name == other.name
         # print "self.id, self.name, other.id, other.name: %s, %s, %s, %s" % (self.id, other.id, self.name, other.name)
-        # print "self.offset, other.offset: %s, %s" % (self.offset, other.offset)
+        print "self.icon, other.icon: %s, %s" % (self.icon, other.icon)
+
         return self.name == other.name and \
                (self.id is None or other.id is None or self.id == other.id) and \
                (self.service_id is None or other.service_id is None or self.service_id == other.service_id) and \
@@ -41,7 +42,8 @@ class Channel:
                (self.provider is None or other.provider is None or self.provider == other.provider) and \
                (self.languages is None or other.languages is None or self.languages == other.languages) and \
                (self.allow_record is None or other.allow_record is None or self.allow_record == other.allow_record) and \
-               (self.icon is None or other.icon is None or self.CRC32_from_file(self.icon) == self.CRC32_from_file(other.icon))
+               (self.icon["server_file"] is None or other.icon["server_file"] is None or self.icon["server_file"] == other.icon["server_file"])
+               # (self.icon is None or other.icon is None or self.CRC32_from_file(self.icon) == self.CRC32_from_file(other.icon))
         # and \
                # (self.icon is None or other.icon is None or self.icon == other.icon) and \
                # (self.narrow_banner is None or other.narrow_banner is None or self.narrow_banner == other.narrow_banner) and \
