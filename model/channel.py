@@ -47,7 +47,7 @@ class Channel:
                # (self.narrow_banner is None or other.narrow_banner is None or self.narrow_banner == other.narrow_banner) and \
                # (self.wide_banner is None or other.wide_banner is None or self.wide_banner == other.wide_banner)
 
-    def CRC32_from_file(filename):
+    def CRC32_from_file(self, filename):
         buf = open(filename, 'rb').read()
         buf = (binascii.crc32(buf) & 0xFFFFFFFF)
         return "%08X" % buf

@@ -50,7 +50,7 @@ app = None
 db = None
 rest = None
 
-def load_config(file_name):
+def load_config(file_name='config_file.json'):
     global config_file
     if config_file is None:
         config_file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), file_name)
