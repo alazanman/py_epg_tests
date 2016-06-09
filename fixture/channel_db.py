@@ -1,9 +1,6 @@
 # -*- coding: utf-8 -*-
 from model.channel import Channel
-import nose_config
 
-
-# base_media_url = nose_config.load_config()['web']['baseUrl'] + "media/"
 
 class DbChannelHelper:
 

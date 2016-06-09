@@ -5,7 +5,7 @@ import os.path
 import importlib
 import jsonpickle
 from time import sleep
-from fixture.application import Application
+from fixture.app import Application
 from fixture.db import DbFixture
 from fixture.rest import RestApi
 

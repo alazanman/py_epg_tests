@@ -2,10 +2,10 @@
 import psycopg2
 # from model.channel import Channel
 from fixture.channel_db import DbChannelHelper
-import nose_config
+# import nose_config
 
-global base_media_url
-base_media_url = nose_config.load_config()['web']['baseUrl'] + "media/"
+# global base_media_url
+# base_media_url = nose_config.load_config()['web']['baseUrl'] + "media/"
 
 class DbFixture:
 

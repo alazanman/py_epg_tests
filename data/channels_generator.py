@@ -23,8 +23,8 @@ channels = [
             provider='Provider_' + str(randint(0, 9999999)), languages=sorted(set([str(randint(1,4)) for l in range(randint(1,4))])),
             allow_record=choice([bool(True), bool(False)]),
             icon={"user_file": abs_path_to_file("../data/banners/icon_valid.jpg"), "server_file": None},
-            narrow_banner=abs_path_to_file("../data/banners/narrow_valid.jpg"),
-            wide_banner=abs_path_to_file("../data/banners/wide_valid.jpg"))
+            narrow_banner={"user_file": abs_path_to_file("../data/banners/narrow_valid.jpg"), "server_file": None},
+            wide_banner={"user_file": abs_path_to_file("../data/banners/wide_valid.jpg"), "server_file": None})
     for i in range(channels_to_generate)
     ]
 

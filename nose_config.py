@@ -9,7 +9,7 @@ import os.path
 import importlib
 import jsonpickle
 from time import sleep
-from fixture.application import Application
+from fixture.app import Application
 from fixture.db import DbFixture
 from fixture.rest import RestApi
 
@@ -50,6 +50,7 @@ app = None
 db = None
 rest = None
 
+
 def load_config(file_name='config_file.json'):
     global config_file
     if config_file is None:
@@ -57,6 +58,8 @@ def load_config(file_name='config_file.json'):
         with open(config_file_path) as f:
             config_file = json.load(f)
     return config_file
+
+base_media_url = load_config()['web']['baseUrl'] + "media/"
 
 def set_app():
     global app
@@ -96,11 +99,12 @@ def stop_db():
 def set_rest():
     global rest
     # rest_config = load_config(request.config.getoption("--config"))['web']
-    rest_config = load_config(config_file_name)['web']
+    web_config = load_config(config_file_name)['web']
     # if restfixture is None or not restfixture.is_valid():
     if rest is None:
-        rest = RestApi(base_url=rest_config['baseUrl'])
+        rest = RestApi(base_url=web_config['baseUrl'])
         print 'SET_REST', rest
+    rest.auth(web_config['username'], web_config['password'])
     return rest
 
 def stop_rest():

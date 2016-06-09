@@ -7,11 +7,17 @@ from model.channel import Channel
 
 @parameterized([param(channel) for channel in load_from_json("channels.json")])
 def test_create_channel(channel):
-    # rest.auth('root', '123')
     old_channels = db.channel.get_channels()
     app.channel.create(channel)
-    # rest.validate_channel_banners(channel)
     new_channels = db.channel.get_channels()
+    # banners validation
+    for ch in new_channels:
+        if ch == channel:
+            rest.compare_user_and_server_files(channel.icon["user_file"], ch.icon["server_file"])
+            rest.compare_user_and_server_files(channel.narrow_banner["user_file"], ch.narrow_banner["server_file"])
+            rest.compare_user_and_server_files(channel.wide_banner["user_file"], ch.wide_banner["server_file"])
+            break
+    # assertion
     assert db.channel.count() == len(old_channels) + 1
     assert len(new_channels) == len(old_channels) + 1
     old_channels.append(channel)
