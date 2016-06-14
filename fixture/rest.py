@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import requests
+import binascii
 # from fixture.session_rest import RestSessionHelper
 
 
@@ -10,11 +11,12 @@ class RestApi:
         # self.rest_session = RestSessionHelper(self)
         self.session = requests.session()
         self.base_url = base_url
+        self.base_media_url = self.base_url + "media/"
 
     def auth(self, username, password):
         # global base_url
         session = self.session
-        url = self.base_url + 'auth/login/?next=/epg/'  # ???????????????????????????????????????????????????????????????????????????????????????
+        url = self.base_url + 'auth/login/?next=/epg/'
         print url
         r = session.get(url)
         for line in r.text.splitlines():
@@ -29,19 +31,52 @@ class RestApi:
 
         url = self.base_url + 'epg/'
         r = session.get(url, cookies=session.cookies)
-        print r.text[-290:-260]
+        # print r.text[-290:-260]
         return session
 
+    def download_file(self, url):
+        session = self.session
+        r = session.get(url)
+        return r.content
 
-    # def open_home_page(self):
+    def compare_files_CRC(self, file_path1, file_path2):
+        if (file_path1 == None or file_path1 == '') and (file_path2 == None or file_path2 == ''):
+            return True
+        elif file_path1 == None or file_path2 == None:
+            return False
+        else:
+            try:
+                file1 = open(file_path1, 'rb').read()
+                # print "1", (binascii.crc32(file1) & 0xFFFFFFFF)
+            except:
+                try:
+                    file1 = self.download_file(self.base_media_url + file_path1)
+                    # print "2", (binascii.crc32(file1) & 0xFFFFFFFF)
+                except:
+                    print "Something went wrong while trying to read file_1!"
+                    # raise "5"
+                    return
+            file1_crc = (binascii.crc32(file1) & 0xFFFFFFFF)
+            try:
+                file2 = open(file_path2, 'rb').read()
+                # print "3", (binascii.crc32(file2) & 0xFFFFFFFF)
+            except:
+                try:
+                    file2 = self.download_file(self.base_media_url + file_path2)
+                    # print "4", (binascii.crc32(file2) & 0xFFFFFFFF)
+                except:
+                    print "Something went wrong while trying to read file_2!"
+                    # raise "6"
+                    return
+            file2_crc = (binascii.crc32(file2) & 0xFFFFFFFF)
+            return file1_crc == file2_crc
+
+
+        # def open_home_page(self):
     #     # session = self.session
     #     url = self.base_url + 'epg/'
     #     # url = self.base_url + 'auth/login/?next=/epg/'
     #     r = self.session.get(url, cookies=self.session.cookies)
-
-    # def compare_user_and_server_files(self, user_file_path, server_file_path):
-        # session = self.auth()
-
 
     # def auth(self, username, password):
     #     session = self.session

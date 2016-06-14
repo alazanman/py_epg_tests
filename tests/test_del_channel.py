@@ -19,8 +19,8 @@ def test_delete_some_channel():
     assert len(new_channels) == len(old_channels) - 1
     old_channels.remove(channel)
     assert sorted(old_channels, key=Channel.id_or_max) == sorted(new_channels, key=Channel.id_or_max)
-    if check_ui():
-        assert sorted(app.channel.get_channels(), key=Channel.id_or_max) == sorted(new_channels, key=Channel.id_or_max)
+    # if check_ui():
+    #     assert sorted(app.channel.get_channels(), key=Channel.id_or_max) == sorted(new_channels, key=Channel.id_or_max)
 
 
 # def test_delete_some_channel(app, db, check_ui):

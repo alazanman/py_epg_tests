@@ -6,7 +6,7 @@ from random import choice
 from time import sleep
 
 
-@parameterized([param(channel) for channel in load_from_json("channels_edited.json")])
+@parameterized([param(channel_edited) for channel_edited in load_from_json("channels_edited.json")])
 def test_edit_some_channel(channel_edited):
     # channel_edited = json_channels_edited
     while db.channel.count() < 3:
@@ -18,17 +18,20 @@ def test_edit_some_channel(channel_edited):
     old_channels = db.channel.get_channels()
     channel = choice(old_channels)
     channel_edited.id = channel.id
-    app.channel.edit_channel_by_id(channel.id, channel_edited)
+    app.channel.edit_channel_by_id(channel_edited)
     # sleep(1)
     new_channels = db.channel.get_channels()
+    # banners validation
+    for ch in new_channels:
+        if ch == channel_edited:
+            assert rest.compare_files_CRC(channel_edited.icon["user_file"], ch.icon["server_file"])
+            assert rest.compare_files_CRC(channel_edited.narrow_banner["user_file"], ch.narrow_banner["server_file"])
+            assert rest.compare_files_CRC(channel_edited.wide_banner["user_file"], ch.wide_banner["server_file"])
+            break
     # print old_channels, type(old_channels)
     old_channels.remove(channel)
     old_channels.append(channel_edited)
     assert len(new_channels) == len(old_channels)
-    # print sorted(old_channels, key=Channel.id_or_max)
-    # print sorted(new_channels, key=Channel.id_or_max)
-    print sorted(old_channels, key=Channel.id_or_max)
-    print sorted(new_channels, key=Channel.id_or_max)
     assert sorted(old_channels, key=Channel.id_or_max) == sorted(new_channels, key=Channel.id_or_max)
     # if check_ui():
     #     assert sorted(app.channel.get_channels(), key=Channel.id_or_max) == sorted(new_channels, key=Channel.id_or_max)
@@ -82,6 +85,7 @@ def test_edit_some_channel(channel_edited):
 #         assert sorted(app.channel.get_channels(), key=Channel.id_or_max) == sorted(new_channels, key=Channel.id_or_max)
 
 def setup_module():
-    global db, app
+    global db, app, rest
     db = set_db()
+    rest = set_rest()
     app = set_app()

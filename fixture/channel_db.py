@@ -17,8 +17,12 @@ class DbChannelHelper:
                 (id, name, service_id, epg_name, offset, provider, icon, allow_record, narrow_banner, wide_banner) = row
                 channels.append(
                     Channel(id=str(id), name=name, service_id=str(service_id), epg_name=epg_name, offset=str(offset),
-                            provider=provider, languages=self.get_channel_languages(id), allow_record=bool(allow_record), icon={"server_file": self.full_path_if_exists(icon), "user_file": None}, narrow_banner=self.full_path_if_exists(narrow_banner),
-                            wide_banner=self.full_path_if_exists(wide_banner)))
+                            provider=provider, languages=self.get_channel_languages(id), allow_record=bool(allow_record),
+                            icon={"server_file": icon, "user_file": None}, narrow_banner={"server_file": narrow_banner, "user_file": None},
+                            wide_banner={"server_file": wide_banner, "user_file": None}))
+                            # provider=provider, languages=self.get_channel_languages(id), allow_record=bool(allow_record),
+                            # icon={"server_file": self.full_path_if_exists(icon), "user_file": None}, narrow_banner=self.full_path_if_exists(narrow_banner),
+                            # wide_banner=self.full_path_if_exists(wide_banner)))
             self.db.connection.commit()
         finally:
             cursor.close()
@@ -52,8 +56,8 @@ class DbChannelHelper:
         # print count, type(count), int(count), type(count)
         return int(count)
 
-    def full_path_if_exists(self, relative_path):
-        # base_media_url = nose_config.load_config()['web']['baseUrl'] + "media/"
-        global base_media_url
-        if relative_path:
-            return base_media_url + relative_path
+    # def full_path_if_exists(self, relative_path):
+    #     # base_media_url = nose_config.load_config()['web']['baseUrl'] + "media/"
+    #     global base_media_url
+    #     if relative_path:
+    #         return base_media_url + relative_path

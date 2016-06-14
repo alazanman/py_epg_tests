@@ -38,11 +38,11 @@ class ChannelHelper:
         self.confirm_delete_button()
         self.channel_cache = None
 
-    def edit_channel_by_id(self, id, new_channel):
+    def edit_channel_by_id(self, channel_edited):
         wd = self.app.wd
         self.open_channels_page()
-        self.click_channel_in_list_by_id(id)
-        self.fill_channel_form(new_channel)
+        self.click_channel_in_list_by_id(channel_edited.id)
+        self.fill_channel_form(channel_edited)
         self.submit_channel_form()
         self.channel_cache = None
 
@@ -80,24 +80,49 @@ class ChannelHelper:
         if channel.allow_record != wd.find_element_by_id("id_allow_record").is_selected():
             wd.find_element_by_id("id_allow_record").click()
         wd.execute_script("window.scrollBy(0, 1000)")
-        # remove existing icon, narrow and wide banners
-        picture_del_buttons = ["//*/label[@for='icon-clear_id']", "//*/label[@for='narrow_banner-clear_id']", "//*/label[@for='wide_banner-clear_id']"]
-        for button in picture_del_buttons:
-            if wd.find_elements_by_xpath(button):
-                wd.find_element_by_xpath(button).click()
-        # add new icon, narrow and wide banners
-        if channel.icon:
-            self.add_file_pyautogui("//*[@id='content']/form/fieldset/div[9]/div/img", channel.icon["user_file"])
-        if channel.narrow_banner:
-            self.add_file_pyautogui("//*[@id='content']/form/fieldset/div[10]/div/img", channel.narrow_banner)
-        if channel.wide_banner:
-            self.add_file_pyautogui("//*[@id='content']/form/fieldset/div[11]/div/img", channel.wide_banner)
+
+        # icon, narrow_banner, wide_banner elements in series
+        pictures = [channel.icon["user_file"],
+                    channel.narrow_banner["user_file"],
+                    channel.wide_banner["user_file"]]
+        drop_field_new = ["//*[@id='content']/form/fieldset/div[9]/div/img",
+                          "//*[@id='content']/form/fieldset/div[10]/div/img",
+                          "//*[@id='content']/form/fieldset/div[11]/div/img"]
+        picture_delete_buttons = ["//*/label[@for='icon-clear_id']",
+                               "//*/label[@for='narrow_banner-clear_id']",
+                               "//*/label[@for='wide_banner-clear_id']"]
+        drop_field_after_delete_pic = ["//*[@id='content']/form/fieldset/div[9]/div[2]/div[1]/div[1]/img[2]",
+                                       "//*[@id='content']/form/fieldset/div[10]/div[2]/div[1]/div[1]/img[2]",
+                                       "//*[@id='content']/form/fieldset/div[11]/div[2]/div[1]/div[1]/img[2]"]
+        for i in range(0, 3):
+            if pictures[0]:
+                if wd.find_elements_by_xpath(drop_field_new[i]):
+                    self.add_file_pyautogui(drop_field_new[i], pictures[i])
+                elif wd.find_elements_by_xpath(picture_delete_buttons[i]):
+                    wd.find_element_by_xpath(picture_delete_buttons[i]).click()
+                    self.add_file_pyautogui(drop_field_after_delete_pic[i], pictures[i])
+            else:
+                if wd.find_elements_by_xpath(picture_delete_buttons[i]):
+                    wd.find_element_by_xpath(picture_delete_buttons[i]).click()
+
+
+        #     self.add_file_pyautogui("//*[@id='content']/form/fieldset/div[9]/div/img", channel.icon["user_file"])
+        #     elif wd.find_elements_by_xpath(picture_delete_buttons[i]):
+        #         wd.find_element_by_xpath(picture_delete_buttons[i]).click()
+        # # add new icon, narrow and wide banners
+        # if channel.icon:
+        #     self.add_file_pyautogui("//*[@id='content']/form/fieldset/div[9]/div/img", channel.icon["user_file"])
+        # if channel.narrow_banner:
+        #     self.add_file_pyautogui("//*[@id='content']/form/fieldset/div[10]/div/img", channel.narrow_banner)
+        # if channel.wide_banner:
+        #     self.add_file_pyautogui("//*[@id='content']/form/fieldset/div[11]/div/img", channel.wide_banner)
 
     def add_file_pyautogui(self, xpath, file_path):
-        self.app.wd.find_element_by_xpath(xpath).click()
-        sleep(1)
-        pyautogui.typewrite(os.path.abspath(os.path.join(os.getcwd(), file_path)))
-        pyautogui.press('enter')
+        if file_path:
+            self.app.wd.find_element_by_xpath(xpath).click()
+            sleep(1)
+            pyautogui.typewrite(os.path.abspath(os.path.join(os.getcwd(), file_path)))
+            pyautogui.press('enter')
 
     def enter_text(self, field_id, text):
         wd = self.app.wd

@@ -1,20 +1,29 @@
 [
   {
     "py/object": "model.channel.Channel", 
-    "epg_name": "Epg_name_Edited_9147195", 
-    "name": "Channel_Edited_5832759", 
-    "wide_banner": "C:\\Users\\Alexey.Tanana\\Documents\\workspace\\satprof\\py_epg_tests\\data\\banners\\wide_valid.jpg", 
-    "provider": "Provider_Edited_3202982", 
-    "narrow_banner": "C:\\Users\\Alexey.Tanana\\Documents\\workspace\\satprof\\py_epg_tests\\data\\banners\\narrow_valid.jpg", 
+    "epg_name": "Epg_name_Edited_8358594", 
+    "name": "Channel_Edited_8388632", 
+    "wide_banner": {
+      "server_file": null, 
+      "user_file": "C:\\Users\\Alexey.Tanana\\Documents\\workspace\\satprof\\py_epg_tests\\data\\banners\\wide_valid_edited.jpg"
+    }, 
+    "provider": "Provider_Edited_7780592", 
+    "narrow_banner": {
+      "server_file": null, 
+      "user_file": "C:\\Users\\Alexey.Tanana\\Documents\\workspace\\satprof\\py_epg_tests\\data\\banners\\narrow_valid_edited.jpg"
+    }, 
     "languages": [
+      "1", 
       "2", 
-      "3", 
-      "4"
+      "3"
     ], 
-    "allow_record": false, 
-    "offset": "10", 
-    "service_id": "52551", 
+    "allow_record": true, 
+    "offset": "-15", 
+    "service_id": "44594", 
     "id": null, 
-    "icon": "C:\\Users\\Alexey.Tanana\\Documents\\workspace\\satprof\\py_epg_tests\\data\\banners\\icon_valid.jpg"
+    "icon": {
+      "server_file": null, 
+      "user_file": "C:\\Users\\Alexey.Tanana\\Documents\\workspace\\satprof\\py_epg_tests\\data\\banners\\icon_valid_edited.jpg"
+    }
   }
 ]

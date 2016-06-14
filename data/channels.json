@@ -1,24 +1,23 @@
 [
   {
     "py/object": "model.channel.Channel", 
-    "epg_name": "Epg_name_4261691", 
-    "name": "Channel_7660292", 
+    "epg_name": "Epg_name_7438663", 
+    "name": "Channel_8194666", 
     "wide_banner": {
       "server_file": null, 
       "user_file": "C:\\Users\\Alexey.Tanana\\Documents\\workspace\\satprof\\py_epg_tests\\data\\banners\\wide_valid.jpg"
     }, 
-    "provider": "Provider_6410008", 
+    "provider": "Provider_8154645", 
     "narrow_banner": {
       "server_file": null, 
       "user_file": "C:\\Users\\Alexey.Tanana\\Documents\\workspace\\satprof\\py_epg_tests\\data\\banners\\narrow_valid.jpg"
     }, 
     "languages": [
-      "2", 
       "4"
     ], 
     "allow_record": false, 
-    "offset": "-21", 
-    "service_id": "44012", 
+    "offset": "10", 
+    "service_id": "31637", 
     "id": null, 
     "icon": {
       "server_file": null, 

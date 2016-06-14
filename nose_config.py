@@ -59,8 +59,6 @@ def load_config(file_name='config_file.json'):
             config_file = json.load(f)
     return config_file
 
-base_media_url = load_config()['web']['baseUrl'] + "media/"
-
 def set_app():
     global app
     # browser = request.config_file.getoption("--browser")
