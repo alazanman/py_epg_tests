@@ -126,9 +126,9 @@ class ChannelHelper:
 
     def enter_text(self, field_id, text):
         wd = self.app.wd
+        wd.find_element_by_id(field_id).click()
+        wd.find_element_by_id(field_id).clear()
         if text is not None:
-            wd.find_element_by_id(field_id).click()
-            wd.find_element_by_id(field_id).clear()
             wd.find_element_by_id(field_id).send_keys(text)
 
     def click_channel_in_list(self, index):

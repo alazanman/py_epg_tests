@@ -14,23 +14,17 @@ class RestApi:
         self.base_media_url = self.base_url + "media/"
 
     def auth(self, username, password):
-        # global base_url
         session = self.session
-        url = self.base_url + 'auth/login/?next=/epg/'
-        print url
+        url = self.base_url + 'epg/'
         r = session.get(url)
         for line in r.text.splitlines():
             if 'csrfmiddlewaretoken' in line:
                 token = line.split("'")[-2]
                 break
-
         data = {'csrfmiddlewaretoken': token,
                 'username': username,
                 'password': password}
-        r = session.post(url, data=data, cookies=session.cookies)
-
-        url = self.base_url + 'epg/'
-        r = session.get(url, cookies=session.cookies)
+        session.post(url, data=data, cookies=session.cookies)
         # print r.text[-290:-260]
         return session
 
@@ -41,32 +35,34 @@ class RestApi:
 
     def compare_files_CRC(self, file_path1, file_path2):
         if (file_path1 == None or file_path1 == '') and (file_path2 == None or file_path2 == ''):
+            print "1:", file_path1, file_path2
             return True
         elif file_path1 == None or file_path2 == None:
+            print "2:", file_path1, file_path2
             return False
         else:
             try:
                 file1 = open(file_path1, 'rb').read()
-                # print "1", (binascii.crc32(file1) & 0xFFFFFFFF)
+                print "1", (binascii.crc32(file1) & 0xFFFFFFFF)
             except:
                 try:
                     file1 = self.download_file(self.base_media_url + file_path1)
-                    # print "2", (binascii.crc32(file1) & 0xFFFFFFFF)
+                    print "2", (binascii.crc32(file1) & 0xFFFFFFFF)
                 except:
                     print "Something went wrong while trying to read file_1!"
-                    # raise "5"
+                    raise "5"
                     return
             file1_crc = (binascii.crc32(file1) & 0xFFFFFFFF)
             try:
                 file2 = open(file_path2, 'rb').read()
-                # print "3", (binascii.crc32(file2) & 0xFFFFFFFF)
+                print "3", (binascii.crc32(file2) & 0xFFFFFFFF)
             except:
                 try:
                     file2 = self.download_file(self.base_media_url + file_path2)
-                    # print "4", (binascii.crc32(file2) & 0xFFFFFFFF)
+                    print "4", (binascii.crc32(file2) & 0xFFFFFFFF)
                 except:
                     print "Something went wrong while trying to read file_2!"
-                    # raise "6"
+                    raise "6"
                     return
             file2_crc = (binascii.crc32(file2) & 0xFFFFFFFF)
             return file1_crc == file2_crc

@@ -1,8 +1,8 @@
 [
   {
     "py/object": "model.channel.Channel", 
-    "epg_name": "Epg_name_7802108", 
-    "name": "Channel_4816719", 
+    "epg_name": "Epg_name_1160551", 
+    "name": "Channel_7037228", 
     "wide_banner": {
       "server_file": null, 
       "user_file": null
@@ -13,11 +13,12 @@
       "user_file": null
     }, 
     "languages": [
-      "3"
+      "3", 
+      "4"
     ], 
     "allow_record": false, 
-    "offset": "-12", 
-    "service_id": "30166", 
+    "offset": "-17", 
+    "service_id": "43251", 
     "id": null, 
     "icon": {
       "server_file": null, 
