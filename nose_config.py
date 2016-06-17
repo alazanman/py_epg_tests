@@ -14,36 +14,6 @@ from fixture.db import DbFixture
 from fixture.rest import RestApi
 
 
-# print nose.config.Config().options
-# # nose.config.Config().options = {"--browser":"chrome"}
-# print nose.config.Config().options
-# parser = nose.config.Config().getParser()
-# # parser.add_option("--browser")
-# parser.add_option("--browser", action="store", default="chrome")
-# parser.add_option("--config_file", action="store", default="config_file.json")
-# parser.add_option("--check_ui", action="store_true", default=True)
-# print nose.config.Config().options
-
-# web_config = {
-#            "baseUrl": "http://10.130.8.159/",
-#            "username": "root",
-#            "password": "123"
-#        }
-#
-# db_config = {
-#     "database": "epg",
-#     "user": "epg",
-#     "password": "123",
-#     "host": "10.130.8.159",
-#     "port": "5432"
-#   }
-#
-# rest_config = {
-#     "baseUrl": "http://10.130.8.159/",
-#     "username": "root",
-#     "password": "123"
-# }
-
 config_file = None
 config_file_name = "config_file.json"
 app = None
@@ -121,6 +91,23 @@ def check_ui():
 #     parser.add_option("--target", action="store", default="target.json")
 #     parser.add_option("--check_ui", action="store_true")
 
+# print nose.config.Config().options
+# # nose.config.Config().options = {"--browser":"chrome"}
+# print nose.config.Config().options
+# parser = nose.config.Config().getParser()
+# # parser.add_option("--browser")
+# parser.add_option("--browser", action="store", default="chrome")
+# parser.add_option("--config_file", action="store", default="config_file.json")
+# parser.add_option("--check_ui", action="store_true", default=True)
+# print nose.config.Config().options
+
+
 def load_from_json(file):
     with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "data/%s" % file)) as f:
         return jsonpickle.decode(f.read())
+
+def write_generated_data(file_path, data_list):
+    json_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), file_path)
+    with open(json_file, "w") as f:
+        jsonpickle.set_encoder_options("json", indent=2)
+        f.write(jsonpickle.encode(data_list))

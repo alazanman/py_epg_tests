@@ -1,5 +1,9 @@
 # -*- coding: utf-8 -*-
 from sys import maxsize
+# from random import randint
+import os.path
+from random import randint, choice
+from utils.file_util import abs_path_to_file
 import hashlib
 import binascii
 # from fixture.rest import RestApi
@@ -28,7 +32,7 @@ class Channel:
 
     def __repr__(self):
         # return "%s, %s" % (self.id, self.name)
-        return "%s, %s, %s, %s, %s, %s, %s" % (self.id, self.name, self.service_id, self.epg_name, self.provider, self.languages, self.icon)
+        return "%s, %s, %s, %s, %s, %s, %s, %s, %s, %s" % (self.id, self.name, self.service_id, self.epg_name, self.provider, self.languages, self.allow_record, self.icon, self.narrow_banner, self.wide_banner)
         # return "%s, %s, %s, %s" % (self.id, unicode(self.name, 'utf-8').encode('utf-8'), self.service_id, self.epg_name)
 
     def __eq__(self, other):
@@ -49,3 +53,14 @@ class Channel:
                  ((self.wide_banner["server_file"] == other.wide_banner["server_file"]) or \
                   (self.wide_banner["server_file"] is None or self.wide_banner["server_file"] is '') or \
                    (other.wide_banner["server_file"] is None or other.wide_banner["server_file"] is ''))
+
+def random():
+    return Channel(name='Channel_random' + str(randint(0, 9999999)), service_id=str(randint(0, 65535)),
+            epg_name='Epg_name_' + str(randint(0, 9999999)), offset=str(randint(-23, 23)),
+            provider='Provider_' + str(randint(0, 9999999)),
+            languages=sorted(set([str(randint(1,4)) for l in range(randint(1,4))])),
+            allow_record=choice([bool(True), bool(False)]),
+            icon={"user_file": abs_path_to_file("data/banners/icon_valid.jpg"), "server_file": None},
+            narrow_banner={"user_file": abs_path_to_file("data/banners/narrow_valid.jpg"), "server_file": None},
+            wide_banner={"user_file": abs_path_to_file("data/banners/wide_valid.jpg"), "server_file": None}
+                   )

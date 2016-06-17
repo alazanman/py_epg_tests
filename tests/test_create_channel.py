@@ -1,30 +1,50 @@
 # -*- coding: utf-8 -*-
 from tests import *
 from model.channel import Channel
+from model.channel import random
+import copy
 
 
 # @parameterized([param(channel) for channel in load_from_json("channels_required_fields_only.json")])
-@parameterized(
-                [param(channel) for channel in load_from_json("channels.json")]
-               # + [param(channel) for channel in load_from_json("channels_required_fields_only.json")]
-               )
-def test_create_channel(channel):
+@parameterized([param(channel) for channel in load_from_json("channels.json")])
+def test_create_channel_positive(channel):
     old_channels = db.channel.get_channels()
     app.channel.create(channel)
     new_channels = db.channel.get_channels()
-    # banners validation
-    for ch in new_channels:
-        if ch == channel:
-            print channel.icon["user_file"], ch.icon["server_file"]
-            assert rest.compare_files_CRC(channel.icon["user_file"], ch.icon["server_file"])
-            assert rest.compare_files_CRC(channel.narrow_banner["user_file"], ch.narrow_banner["server_file"])
-            assert rest.compare_files_CRC(channel.wide_banner["user_file"], ch.wide_banner["server_file"])
-            break
+    rest.channel.validate_banners(channel, new_channels)
     # assertion
     assert db.channel.count() == len(old_channels) + 1
     # assert len(new_channels) == len(old_channels) + 1
     old_channels.append(channel)
     assert sorted(old_channels, key=Channel.id_or_max) == sorted(new_channels, key=Channel.id_or_max)
+
+
+def test_create_channel_with_not_unique_not_required_fields():
+    # ENSURE EXIST FEW CHANNELS
+    while db.channel.count() < 380:
+        rest.channel.create(Channel(name='Channel_random' + str(randint(0, 9999999)), service_id=str(randint(0, 65535)),
+            epg_name='Epg_name_' + str(randint(0, 9999999)), offset=str(randint(-23, 23)),
+            provider='Provider_' + str(randint(0, 9999999)),
+            languages=str(randint(1,4))))
+    old_channels = db.channel.get_channels()
+    new_channel = copy.copy(choice(old_channels))
+    new_channel.id = None
+    new_channel.name = 'Channel_not_unique_not_required_fields_' + str(randint(0, 9999999))
+    new_channel.epg_name = 'Epg_name_not_unique_not_required_fields_' + str(randint(0, 9999999))
+    app.channel.create(new_channel)
+    new_channels = db.channel.get_channels()
+    rest.channel.validate_banners(new_channel, new_channels)
+    assert db.channel.count() == len(old_channels) + 1
+    old_channels.append(new_channel)
+    assert sorted(old_channels, key=Channel.id_or_max) == sorted(new_channels, key=Channel.id_or_max)
+
+
+
+
+@parameterized([param(channel) for channel in load_from_json("channels.json")])
+def test_create_channel_negative():
+    pass
+
 
 
 def setup_module():

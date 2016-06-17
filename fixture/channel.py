@@ -179,6 +179,13 @@ class ChannelHelper:
                 self.channel_cache.append(Channel(name=text, id=id))
         return list(self.channel_cache)
 
+    def create_random_channel(self):
+            # TO IMPLEMENT VIA REST
+            self.create(
+                Channel(name='Channel' + str(randint(0, 9999999)), service_id=str(randint(0, 65535)),
+                        epg_name='Epg_name_' + str(randint(0, 9999999)), offset=str(randint(-23, 23)),
+                        provider='Provider_' + str(randint(0, 9999999))))
+
     # def get_channel_list(self):
     #     wd = self.app.wd
     #     self.open_channels_page()

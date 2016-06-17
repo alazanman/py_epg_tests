@@ -7,10 +7,8 @@ from model.channel import Channel
 
 
 def test_delete_some_channel():
-    # CREATE IF NOT EXIST (TO IMPLEMENT VIA DB)
-    # global db, app
-    if db.channel.count() == 0:
-        app.channel.create(Channel(name='Channel' + str(randint(0, 9999)), service_id="2345", epg_name="epg_name2", offset="3", provider="Provider"))
+    while db.channel.count() < 3:
+        app.create_random_channel()
     old_channels = db.channel.get_channels()
     channel = choice(old_channels)
     app.channel.delete_channel_by_id(channel.id)
