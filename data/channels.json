@@ -1,13 +1,13 @@
 [
   {
     "py/object": "model.channel.Channel", 
-    "epg_name": "Epg_name_6001361", 
-    "name": "Channel_random2929035", 
+    "epg_name": "Epg_name_9398701", 
+    "name": "Channel_random4410621", 
     "wide_banner": {
       "server_file": null, 
       "user_file": "C:\\Users\\Alexey.Tanana\\Documents\\workspace\\satprof\\py_epg_tests\\data\\banners\\wide_valid.jpg"
     }, 
-    "provider": "Provider_3774193", 
+    "provider": "Provider_1071212", 
     "narrow_banner": {
       "server_file": null, 
       "user_file": "C:\\Users\\Alexey.Tanana\\Documents\\workspace\\satprof\\py_epg_tests\\data\\banners\\narrow_valid.jpg"
@@ -16,8 +16,8 @@
       "1"
     ], 
     "allow_record": true, 
-    "offset": "-10", 
-    "service_id": "49126", 
+    "offset": "-6", 
+    "service_id": "9", 
     "id": null, 
     "icon": {
       "server_file": null, 
@@ -26,8 +26,8 @@
   }, 
   {
     "py/object": "model.channel.Channel", 
-    "epg_name": "Epg_name_3776272", 
-    "name": "Channel_required_fields_only_9181004", 
+    "epg_name": "Epg_name_7589802", 
+    "name": "Channel_required_fields_only_8346415", 
     "wide_banner": {
       "server_file": null, 
       "user_file": null
@@ -42,8 +42,8 @@
       "4"
     ], 
     "allow_record": false, 
-    "offset": "18", 
-    "service_id": "50428", 
+    "offset": "-17", 
+    "service_id": "11585", 
     "id": null, 
     "icon": {
       "server_file": null, 
@@ -52,13 +52,13 @@
   }, 
   {
     "py/object": "model.channel.Channel", 
-    "epg_name": "2", 
-    "name": "7", 
+    "epg_name": "3", 
+    "name": "5", 
     "wide_banner": {
       "server_file": null, 
       "user_file": null
     }, 
-    "provider": "7", 
+    "provider": "4", 
     "narrow_banner": {
       "server_file": null, 
       "user_file": null
@@ -77,13 +77,13 @@
   }, 
   {
     "py/object": "model.channel.Channel", 
-    "epg_name": "_3_5_7_9_12_15_18_21_24_27_30_33_36_39_42_49602545", 
-    "name": "_3_5_7_9_12_15_18_21_24_27_30_33_36_39_42_45_48_51_54_57_60_63_66_69_72_75_78_81_84_87_90_93_96_100_104_108_112_116_120_19935853", 
+    "epg_name": "_3_5_7_9_12_15_18_21_24_27_30_33_36_39_42_49226592", 
+    "name": "_3_5_7_9_12_15_18_21_24_27_30_33_36_39_42_45_48_51_54_57_60_63_66_69_72_75_78_81_84_87_90_93_96_100_104_108_112_116_120_19916314", 
     "wide_banner": {
       "server_file": null, 
       "user_file": null
     }, 
-    "provider": "_3_5_7_9_12_15_18_21_24_27_30_33_36_39_42_45_48_51_54_57_60_63_66_69_72_75_78_81_84_87_90_93_96_100_104_108_112_116_120_19767148", 
+    "provider": "_3_5_7_9_12_15_18_21_24_27_30_33_36_39_42_45_48_51_54_57_60_63_66_69_72_75_78_81_84_87_90_93_96_100_104_108_112_116_120_19484852", 
     "narrow_banner": {
       "server_file": null, 
       "user_file": null

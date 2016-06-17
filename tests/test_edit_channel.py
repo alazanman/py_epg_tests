@@ -1,15 +1,14 @@
 # -*- coding: utf-8 -*-
 from tests import *
-from model.channel import Channel
-from random import randint
-from random import choice
+from model.channel import Channel, random_channel
+from random import randint, choice
 from time import sleep
 
 
 @parameterized([param(channel_edited) for channel_edited in load_from_json("channels_edited.json")])
 def test_edit_channel(channel_edited):
     while db.channel.count() < 3:
-        app.create_random_channel()
+        rest.channel.create(random_channel())
     old_channels = db.channel.get_channels()
     channel_to_edit = choice(old_channels)
     channel_edited.id = channel_to_edit.id

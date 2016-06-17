@@ -27,7 +27,7 @@ class RestChannelHelper:
                 'epg_name': channel.epg_name,
                 'offset': channel.offset,
                 'provider': channel.provider,
-                'languages': channel.languages
+                'languages': channel.languages  # takes only one value!
                 }
         for l in channel.languages:
             data.update({'languages': l})
@@ -37,13 +37,12 @@ class RestChannelHelper:
                     'narrow_banner': channel.narrow_banner["user_file"],
                     'wide_banner': channel.wide_banner["user_file"]
                 }
-        print pics
+        # print pics
         for key in pics:
-            print key, pics[key]
-
+            # print key, pics[key]
             if pics[key] > 0:
                 data.update({key: r"data:image/jpeg;base64," + encode_base64(pics[key])})
-                print "added", key
-                print data[key]
+                # print "added", key
+                # print data[key]
         r = session.post(url, data=data, cookies=session.cookies)
         print "Channel created via rest:", channel

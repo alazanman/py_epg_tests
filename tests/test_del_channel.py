@@ -3,17 +3,17 @@ from tests import *
 from random import choice
 from random import randint
 from model.channel import Channel
-# from nose_config import *
+from model.channel import random_channel
 
 
 def test_delete_some_channel():
     while db.channel.count() < 3:
-        app.create_random_channel()
+        rest.channel.create(random_channel())
     old_channels = db.channel.get_channels()
     channel = choice(old_channels)
     app.channel.delete_channel_by_id(channel.id)
     new_channels = db.channel.get_channels()
-    assert db.channel.count() == len(old_channels) - 1     # VIA DB
+    assert db.channel.count() == len(old_channels) - 1
     assert len(new_channels) == len(old_channels) - 1
     old_channels.remove(channel)
     assert sorted(old_channels, key=Channel.id_or_max) == sorted(new_channels, key=Channel.id_or_max)

@@ -54,13 +54,13 @@ class Channel:
                   (self.wide_banner["server_file"] is None or self.wide_banner["server_file"] is '') or \
                    (other.wide_banner["server_file"] is None or other.wide_banner["server_file"] is ''))
 
-def random():
-    return Channel(name='Channel_random' + str(randint(0, 9999999)), service_id=str(randint(0, 65535)),
+def random_channel():
+    return Channel(name='Channel_random_' + str(randint(0, 9999999)), service_id=str(randint(0, 65535)),
             epg_name='Epg_name_' + str(randint(0, 9999999)), offset=str(randint(-23, 23)),
             provider='Provider_' + str(randint(0, 9999999)),
-            languages=sorted(set([str(randint(1,4)) for l in range(randint(1,4))])),
+            # languages=sorted(set([str(randint(1,4)) for l in range(randint(1,4))])),
+            languages=str(randint(1,4)),
             allow_record=choice([bool(True), bool(False)]),
-            icon={"user_file": abs_path_to_file("data/banners/icon_valid.jpg"), "server_file": None},
-            narrow_banner={"user_file": abs_path_to_file("data/banners/narrow_valid.jpg"), "server_file": None},
-            wide_banner={"user_file": abs_path_to_file("data/banners/wide_valid.jpg"), "server_file": None}
-                   )
+            icon={"user_file": abs_path_to_file(r"data/banners/icon_valid.jpg"), "server_file": None},
+            narrow_banner={"user_file": abs_path_to_file(r"data/banners/narrow_valid.jpg"), "server_file": None},
+            wide_banner={"user_file": abs_path_to_file(r"data/banners/wide_valid.jpg"), "server_file": None})

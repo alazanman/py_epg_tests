@@ -46,19 +46,48 @@ Channel(name=str(randint(0, 9)),
         narrow_banner={"user_file": None, "server_file": None},
         wide_banner={"user_file": None, "server_file": None}),
 # BOUNDARY MAX POSITIVE VALUES
-Channel(name='_3_5_7_9_12_15_18_21_24_27_30_33_36_39_42_45_48_51_54_57_60_63_66_69_72_75_78_81_84_87_90_93_96_100_104_108_112_116_120_1' + str(randint(9000000, 9999999)),
+Channel(name=random_string('128_symbols_string_', 128),
         service_id=str(65535),
-        epg_name='_3_5_7_9_12_15_18_21_24_27_30_33_36_39_42_4' + str(randint(9000000, 9999999)),
+        epg_name='50_symbols_string_21_24_27_30_33_36_39_42__' + str(randint(9000000, 9999999)),
         offset=str(23),
-        provider='_3_5_7_9_12_15_18_21_24_27_30_33_36_39_42_45_48_51_54_57_60_63_66_69_72_75_78_81_84_87_90_93_96_100_104_108_112_116_120_1' + str(randint(9000000, 9999999)),
+        provider='128_symbols_string_1_24_27_30_33_36_39_42_45_48_51_54_57_60_63_66_69_72_75_78_81_84_87_90_93_96_100_104_108_112_116_120__' + str(randint(9000000, 9999999)),
         languages=sorted(set([str(4)])),
-        allow_record=False,
+        allow_record=True,
         icon={"user_file": None, "server_file": None},
         narrow_banner={"user_file": None, "server_file": None},
         wide_banner={"user_file": None, "server_file": None})
 ])
 
 channels_negative = [
+    # TOO LONG CHANNEL NAME
+    Channel(name=random_string('129_symbols_string_', 129),
+            service_id=str(randint(0, 65535)),
+            epg_name=random_string('Epg_name_', 20), offset=str(randint(-23, 23)),
+            provider=random_string('Provider_', 20), languages=sorted(set([str(randint(1, 4)) for l in range(randint(1, 4))])),
+            allow_record=choice([bool(True), bool(False)]),
+            icon={"user_file": None, "server_file": None},
+            narrow_banner={"user_file": None, "server_file": None},
+            wide_banner={"user_file": None, "server_file": None}),
+    # TOO LONG EPG_NAME
+    Channel(name=random_string('Channel_name_', 25),
+            service_id=str(randint(0, 65535)),
+            epg_name=random_string('51_symbols_string_', 51), offset=str(randint(-23, 23)),
+            provider=random_string('Provider_', 20),
+            languages=sorted(set([str(randint(1, 4)) for l in range(randint(1, 4))])),
+            allow_record=choice([bool(True), bool(False)]),
+            icon={"user_file": None, "server_file": None},
+            narrow_banner={"user_file": None, "server_file": None},
+            wide_banner={"user_file": None, "server_file": None}),
+    # TOO LONG PROVIDER
+    Channel(name=random_string('Channel_name_', 25),
+            service_id=str(randint(0, 65535)),
+            epg_name=random_string('EPG_name_', 20), offset=str(randint(-23, 23)),
+            provider=random_string('129_symbols_string_', 129),
+            languages=sorted(set([str(randint(1, 4)) for l in range(randint(1, 4))])),
+            allow_record=choice([bool(True), bool(False)]),
+            icon={"user_file": None, "server_file": None},
+            narrow_banner={"user_file": None, "server_file": None},
+            wide_banner={"user_file": None, "server_file": None}),
 
 ]
 

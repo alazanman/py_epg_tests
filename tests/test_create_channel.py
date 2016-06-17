@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 from tests import *
-from model.channel import Channel
-from model.channel import random
+from model.channel import Channel, random_channel
 import copy
 
 
@@ -21,11 +20,8 @@ def test_create_channel_positive(channel):
 
 def test_create_channel_with_not_unique_not_required_fields():
     # ENSURE EXIST FEW CHANNELS
-    while db.channel.count() < 380:
-        rest.channel.create(Channel(name='Channel_random' + str(randint(0, 9999999)), service_id=str(randint(0, 65535)),
-            epg_name='Epg_name_' + str(randint(0, 9999999)), offset=str(randint(-23, 23)),
-            provider='Provider_' + str(randint(0, 9999999)),
-            languages=str(randint(1,4))))
+    while db.channel.count() < 1:
+        rest.channel.create(random_channel())
     old_channels = db.channel.get_channels()
     new_channel = copy.copy(choice(old_channels))
     new_channel.id = None
@@ -39,12 +35,13 @@ def test_create_channel_with_not_unique_not_required_fields():
     assert sorted(old_channels, key=Channel.id_or_max) == sorted(new_channels, key=Channel.id_or_max)
 
 
-
-
 @parameterized([param(channel) for channel in load_from_json("channels.json")])
 def test_create_channel_negative():
     pass
 
+
+def test_channel_with_spec_symbols():
+    pass
 
 
 def setup_module():
