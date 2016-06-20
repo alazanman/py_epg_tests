@@ -1,0 +1,181 @@
+[
+  {
+    "py/object": "model.channel.Channel", 
+    "epg_name": "Epg_name_Xn6JnMsXsgDDYrkKqaWs3LyymsW2bwuI2VleTc332bYlYUqJYkJY2ktDIdD4kO", 
+    "name": "", 
+    "wide_banner": {
+      "server_file": null, 
+      "user_file": null
+    }, 
+    "provider": "", 
+    "narrow_banner": {
+      "server_file": null, 
+      "user_file": null
+    }, 
+    "languages": [
+      "4"
+    ], 
+    "allow_record": false, 
+    "offset": null, 
+    "service_id": "13014", 
+    "id": null, 
+    "icon": {
+      "server_file": null, 
+      "user_file": null
+    }
+  }, 
+  {
+    "py/object": "model.channel.Channel", 
+    "epg_name": "", 
+    "name": "Channel_blank_epgname_Hkt4V2bJZhk88pMCI7LvRhUsqkyisAQk8KgzgxL1jSVcNYByZ5U72MQaMRY07rs1mu254XZav5Qe5TgE", 
+    "wide_banner": {
+      "server_file": null, 
+      "user_file": null
+    }, 
+    "provider": "", 
+    "narrow_banner": {
+      "server_file": null, 
+      "user_file": null
+    }, 
+    "languages": [
+      "2", 
+      "3"
+    ], 
+    "allow_record": false, 
+    "offset": null, 
+    "service_id": "15369", 
+    "id": null, 
+    "icon": {
+      "server_file": null, 
+      "user_file": null
+    }
+  }, 
+  {
+    "py/object": "model.channel.Channel", 
+    "epg_name": "Epg_name_1v5KrR4h44KHeUO5lWnERL", 
+    "name": "Channel_blank_offset_uTC7mmVpdnc4u3yTd2QKQ0iIujtcolOwBcCoIxhr9QvHzXPnzx0GM8RoyVXGqRJJ5B4WXZNOIUIfdzPDc4Ir9GuJEF", 
+    "wide_banner": {
+      "server_file": null, 
+      "user_file": null
+    }, 
+    "provider": "", 
+    "narrow_banner": {
+      "server_file": null, 
+      "user_file": null
+    }, 
+    "languages": [
+      "1", 
+      "2", 
+      "3", 
+      "4"
+    ], 
+    "allow_record": false, 
+    "offset": "", 
+    "service_id": "16195", 
+    "id": null, 
+    "icon": {
+      "server_file": null, 
+      "user_file": null
+    }
+  }, 
+  {
+    "py/object": "model.channel.Channel", 
+    "epg_name": "Epg_name_733318Ny", 
+    "name": "Channel_no_langs_0lSbKqBuC3IfBDZd8nqhMZkWoVP7dFG9yGYjw8Lx0B1o70QNMIZSZJU29uJa8Ma3FQi3s", 
+    "wide_banner": {
+      "server_file": null, 
+      "user_file": null
+    }, 
+    "provider": "", 
+    "narrow_banner": {
+      "server_file": null, 
+      "user_file": null
+    }, 
+    "languages": [], 
+    "allow_record": true, 
+    "offset": null, 
+    "service_id": null, 
+    "id": null, 
+    "icon": {
+      "server_file": null, 
+      "user_file": null
+    }
+  }, 
+  {
+    "py/object": "model.channel.Channel", 
+    "epg_name": "Epg_name_6B7EIxYzVFoj1ZvstW0NoTpRCzG5Z9XF", 
+    "name": "129_symbols_string_4E6UAIxOc2sTeoRBFnU5HSJXh6EeHMDJEFkHk9N0meuIYkq4Zf3x7xloYdqLvfJldk7JqpbofTow5cqvRvURU6hYreyePxI8tjnKgFX5nTr9rc", 
+    "wide_banner": {
+      "server_file": null, 
+      "user_file": null
+    }, 
+    "provider": "Provider_XfflhIAi8k1RZmoyRmY0Eawd9ZXOEg3JzTukOQGAwQ04Q9yBYS", 
+    "narrow_banner": {
+      "server_file": null, 
+      "user_file": null
+    }, 
+    "languages": [
+      "4"
+    ], 
+    "allow_record": false, 
+    "offset": "-4", 
+    "service_id": "25460", 
+    "id": null, 
+    "icon": {
+      "server_file": null, 
+      "user_file": null
+    }
+  }, 
+  {
+    "py/object": "model.channel.Channel", 
+    "epg_name": "51_symbols_string_4lwz3E2SRZFY5gqJKbQxleqOCXgBYaQof", 
+    "name": "Channel_name_ACiRi3GQyfxR0eOH6HCrFbhJgs4Z2gjtjy9CuRXCRs9p5J9IvHJjlymVg9Kgeol", 
+    "wide_banner": {
+      "server_file": null, 
+      "user_file": null
+    }, 
+    "provider": "Provider_aLhbUDiJ9DnNqfihW8D05FKrfVy0oHl2RVwN42gJ65kb43qW", 
+    "narrow_banner": {
+      "server_file": null, 
+      "user_file": null
+    }, 
+    "languages": [
+      "3", 
+      "4"
+    ], 
+    "allow_record": true, 
+    "offset": "3", 
+    "service_id": "45220", 
+    "id": null, 
+    "icon": {
+      "server_file": null, 
+      "user_file": null
+    }
+  }, 
+  {
+    "py/object": "model.channel.Channel", 
+    "epg_name": "EPG_name_nbPaByTFruN3OO", 
+    "name": "Channel_name_kADqDFCvHyOFVC4oJ44uH5xxUyGehyZuEJGkRfXtbOdxrtyzWCLdZpmpDoLbI57n4L70Kbw9kJ9GxpSg4iG6iXgajNEE2mkG", 
+    "wide_banner": {
+      "server_file": null, 
+      "user_file": null
+    }, 
+    "provider": "129_symbols_string_ZCiFcOQdJpGMaRFOXTSxQLNKinxNi55iHMHnHDWhoLcIgowp1P6EbaNM1ZzIsNKxrEKFqSlNjyfMFkLeaZrYxLRgXxfYTVBXkDDDVm3roDfgjo", 
+    "narrow_banner": {
+      "server_file": null, 
+      "user_file": null
+    }, 
+    "languages": [
+      "3", 
+      "4"
+    ], 
+    "allow_record": true, 
+    "offset": "22", 
+    "service_id": "12255", 
+    "id": null, 
+    "icon": {
+      "server_file": null, 
+      "user_file": null
+    }
+  }
+]

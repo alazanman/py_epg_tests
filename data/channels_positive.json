@@ -1,8 +1,8 @@
 [
   {
     "py/object": "model.channel.Channel", 
-    "epg_name": "Epg_name_jFeCbJvhFT4", 
-    "name": "Channel_required_fields_only_hNCNqxl8NMsrBmIBo9LUZEZoKnvTvChViUQdtzpEG0UoH6w0HxMkEnKS0zRWLlZK", 
+    "epg_name": "Epg_name_afpCVgbcOIQgCFxNzujgPFdMClwAQkKSeqWekSCfTxCSEtDFPd2JE5J3nl2Rgr1YFcLvCFWqnzH", 
+    "name": "Channel_required_fields_only_7HhUBh3rYhD4dOA54fu7Hli9xcXCRovNZ1XMGr0IdNmkkczhkphWzG9UQM", 
     "wide_banner": {
       "server_file": null, 
       "user_file": null
@@ -14,11 +14,12 @@
     }, 
     "languages": [
       "1", 
+      "2", 
       "3"
     ], 
     "allow_record": false, 
     "offset": "0", 
-    "service_id": "24895", 
+    "service_id": "33895", 
     "id": null, 
     "icon": {
       "server_file": null, 
@@ -27,13 +28,13 @@
   }, 
   {
     "py/object": "model.channel.Channel", 
-    "epg_name": "p", 
-    "name": "T", 
+    "epg_name": "O", 
+    "name": "Z", 
     "wide_banner": {
       "server_file": null, 
       "user_file": null
     }, 
-    "provider": "y", 
+    "provider": "q", 
     "narrow_banner": {
       "server_file": null, 
       "user_file": null
@@ -52,13 +53,13 @@
   }, 
   {
     "py/object": "model.channel.Channel", 
-    "epg_name": "128_symbols_string_jmzqN7R2euWUa6QAIEYOojk5d0XXTGW", 
-    "name": "128_symbols_string_RmzTolazSoFGV1UKV0YMWD4LMcPJMQc3EZYGCjWBK6ueByTTTBeJWpTtXuw8rHY3gfCzDq4DPqDrJ1FO8kbl8nz2WELjkwLZYorE6xLSA0I0J", 
+    "epg_name": "128_symbols_string_UwijQFK9gRLUaX7b2aFwYE53rpzToDN", 
+    "name": "128_symbols_string_Kg6Hpg7tmP5cBaYi6QHMNVRPfq6LTumK6b8RaFMno7RyLijj7ApnODBUyigpZQUswrFrUnrh0R001rLzpXIUYJhtdffyZRVdQMpWOppXec4I7", 
     "wide_banner": {
       "server_file": null, 
       "user_file": null
     }, 
-    "provider": "128_symbols_string_OcwfNHvvNbkI1r3QGPCZ6DZqKLi9k3Z7jWTDpoSaucO6uLaWjUZRh2nriMDWmrLfl03J2DzO4zb3lmkX2hVch1mdziiAzlV54LCHw6MVEwyfH", 
+    "provider": "128_symbols_string_uvTFhoKLPSvyWXwSu28GVBiU3LC5NQsXdkBDpkDpDQ6mkqgkvSXyca0by3PlbNP0YgwLyOAcouhpOXGArEFYirMY7tEr7x0useWQB5JVakIVP", 
     "narrow_banner": {
       "server_file": null, 
       "user_file": null

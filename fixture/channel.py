@@ -143,7 +143,7 @@ class ChannelHelper:
         wd = self.app.wd
         wd.find_element_by_css_selector("button.btn.btn-success").click()
         # sleep(1)
-        self.app.wait_for_element_by_xpath("//*[@href='/epg/channel/add/']", 10)        # ensure that 'add channel' button appeared
+        self.app.wait_for_element_by_xpath("//*[@href='/epg/channel/add/']", 3)        # ensure that 'add channel' button appeared
 
     def click_delete_button(self):
         wd = self.app.wd
@@ -180,11 +180,16 @@ class ChannelHelper:
         return list(self.channel_cache)
 
     def create_random_channel(self):
-            # TO IMPLEMENT VIA REST
-            self.create(
-                Channel(name='Channel' + str(randint(0, 9999999)), service_id=str(randint(0, 65535)),
-                        epg_name='Epg_name_' + str(randint(0, 9999999)), offset=str(randint(-23, 23)),
-                        provider='Provider_' + str(randint(0, 9999999))))
+        # TO IMPLEMENT VIA REST
+        self.create(
+            Channel(name='Channel' + str(randint(0, 9999999)), service_id=str(randint(0, 65535)),
+                    epg_name='Epg_name_' + str(randint(0, 9999999)), offset=str(randint(-23, 23)),
+                    provider='Provider_' + str(randint(0, 9999999))))
+
+    def is_submit_button_present(self):
+        print "SUBMIT:", self.app.wd.find_elements_by_xpath("//*[@id='content']/form/fieldset/div[12]/div[2]/button")
+        return self.app.wd.find_elements_by_xpath("//*[@id='content']/form/fieldset/div[12]/div[2]/button")
+
 
     # def get_channel_list(self):
     #     wd = self.app.wd

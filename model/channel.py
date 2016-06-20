@@ -11,7 +11,7 @@ import binascii
 
 
 class Channel:
-    def __init__(self, id=None, name=None, service_id=None, epg_name=None, offset="0", provider='', languages=None, allow_record=False, icon={"user_file": None, "server_file": None}, narrow_banner={"user_file": '', "server_file": ''}, wide_banner={"user_file": '', "server_file": ''}):
+    def __init__(self, id=None, name=None, service_id=None, epg_name=None, offset=None, provider=None, languages=None, allow_record=None, icon={"user_file": None, "server_file": None}, narrow_banner={"user_file": None, "server_file": None}, wide_banner={"user_file": None, "server_file": None}):
         self.id = id
         self.name = name
         self.service_id = service_id

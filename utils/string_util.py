@@ -3,18 +3,31 @@ import random, string
 from model.channel import Channel
 
 
-def random_string(prefix, maxlen):
+def random_string(prefix, maxlen, spec=False):
     # spec_symbols = r'“[|]’~<!--@/*$%^&#*/()?>,.*/\№_={":' + r"';`}"
+    # channel_name, Provider = '[|]~<!--@/*$%^&#*/()?>,.*/\№_={":' + r"';`}"
+    # symbols = string.ascii_letters + string.digits + " "*10 + string.punctuation + spec_symbols
+    spec_symbols = r'[|]~<!--@/*$%^&#*/()?>,.*/\№_={":' + r"';`}"
     symbols = string.ascii_letters + string.digits
-    return prefix + "".join([random.choice(symbols) for i in range(random.randrange(maxlen))])
+    if spec:
+        symbols = symbols + spec_symbols
+    if maxlen > len(prefix):
+        random_len = maxlen - len(prefix)
+    else:
+        random_len = 0
+    return prefix + "".join([random.choice(symbols) for i in range(random.randrange(1, random_len + 1))])
 
-# def random_string(prefix, maxlen):
-#     spec_symbols = r'“[|]’~<!--@/*$%^&#*/()?>,.*/\№_={":' + r"';`}"
-#     symbols = string.ascii_letters + string.digits + " "*10 + string.punctuation + spec_symbols
-#     return prefix + "".join([random.choice(symbols) for i in range(random.randrange(maxlen))])
-# # print random_string("test", 1000)
-#
-#
+def random_string_fixed_len(prefix, maxlen):
+    # spec_symbols = r'“[|]’~<!--@/*$%^&#*/()?>,.*/\№_={":' + r"';`}"
+    # symbols = string.ascii_letters + string.digits + " "*10 + string.punctuation + spec_symbols
+    symbols = string.ascii_letters + string.digits
+    if maxlen > len(prefix):
+        random_len = maxlen - len(prefix)
+    else:
+        print "Prefix is longer than whole string!"
+        random_len = 0
+    return prefix + "".join([random.choice(symbols) for i in range(random_len)])
+
 # # pairwise
 # testdata2 = [
 #     Channel(name=name, service_id=service_id, epg_name=epg_name, offset=offset, provider=provider)
