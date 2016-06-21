@@ -45,17 +45,17 @@ Channel(name=random_string_fixed_len('128_symbols_string_', 128), service_id=str
 
 channels_create_negative_required_fields = [
     # BLANK CHANNEL NAME
-    Channel(name='', service_id=str(randint(0, 65535)), epg_name=random_string('Epg_name_', 50), provider='',
+    Channel(name='', service_id=str(randint(0, 65535)), epg_name=random_string('Epg_name_', 50), provider=random_string('Provider_', 128),
             languages=sorted(set([str(randint(1, 4)) for l in range(randint(1, 4))])), allow_record=choice([bool(True), bool(False)])),
     # BLANK EPG NAME
     Channel(name=random_string('Channel_blank_epgname_', 128), service_id=str(randint(0, 65535)), epg_name='',
-            provider='', languages=sorted(set([str(randint(1, 4)) for l in range(randint(1, 4))])), allow_record=choice([bool(True), bool(False)])),
+            provider=random_string('Provider_', 128), languages=sorted(set([str(randint(1, 4)) for l in range(randint(1, 4))])), allow_record=choice([bool(True), bool(False)])),
     # BLANK OFFSET
     Channel(name=random_string('Channel_blank_offset_', 128), service_id=str(randint(0, 65535)),
-            epg_name=random_string('Epg_name_', 50), offset='', provider='',
+            epg_name=random_string('Epg_name_', 50), offset='', provider=random_string('Provider_', 128),
             languages=sorted(set([str(randint(1, 4)) for l in range(randint(1, 4))])), allow_record=choice([bool(True), bool(False)])),
     # NO LANGUAGES
-    Channel(name=random_string('Channel_no_langs_', 128), epg_name=random_string('Epg_name_', 50), provider='',
+    Channel(name=random_string('Channel_no_langs_', 128), epg_name=random_string('Epg_name_', 50), provider=random_string('Provider_', 128),
             languages=[], allow_record=choice([bool(True), bool(False)])),
 ]
 
@@ -105,8 +105,12 @@ channels_create_negative_incorrect_banners = [
             provider=random_string('Provider_', 128),
             languages=sorted(set([str(randint(1,4)) for l in range(randint(1,4))])),
             allow_record=choice([bool(True), bool(False)]),
-            icon={"user_file": abs_path_to_file("data/banners/incorrect/icons/icon.bmp"), "server_file": None}),
+            icon={"user_file": abs_path_to_file("data/banners/incorrect/icons/" + f), "server_file": None})
+    for f in (os.listdir(os.path.join(os.getcwd(), "data/banners/incorrect/icons/")))
 ]
+# channels_create_positive.extend([
+# # REQUIRED FIELDS ONLY
+#     ])
 # narrow_banner = {"user_file": abs_path_to_file("data/banners/narrow_valid.jpg"), "server_file": None},
 #                 wide_banner = {"user_file": abs_path_to_file("data/banners/wide_valid.jpg"), "server_file": None}),
 

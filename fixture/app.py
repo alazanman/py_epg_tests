@@ -6,6 +6,8 @@ from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.keys import Keys
 from fixture.session import SessionHelper
 from fixture.channel import ChannelHelper
+from selenium.common.exceptions import NoAlertPresentException
+from time import sleep
 
 class Application:
 
@@ -51,6 +53,24 @@ class Application:
     # def current_url(self):
     #     wd = self.wd
     #     return wd.current_url()
+
+    def is_alert_present(self):
+        try:
+            self.wd.switch_to_alert()
+        except NoAlertPresentException:
+            return False
+        return True
+
+    def close_alert(self):
+        if self.is_alert_present():
+            # sleep(3)
+            try:
+                alert = self.wd.switch_to_alert()
+            except:
+                print "Unable to locate alert message!"
+            alert.accept()
+            # return alert.text
+            return True
 
     def destroy(self):
         self.wd.quit()

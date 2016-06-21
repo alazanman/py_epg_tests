@@ -1,23 +1,24 @@
 [
   {
     "py/object": "model.channel.Channel", 
-    "epg_name": "Epg_name_5ZRmHh", 
+    "epg_name": "Epg_name_SaBOkj3cvqkXkfoZ3bfyRvJTI", 
     "name": "", 
     "wide_banner": {
       "server_file": null, 
       "user_file": null
     }, 
-    "provider": "", 
+    "provider": "Provider_D3ntGWlbtp8A883UVteeDREAFIkV17k", 
     "narrow_banner": {
       "server_file": null, 
       "user_file": null
     }, 
     "languages": [
-      "1"
+      "2", 
+      "3"
     ], 
-    "allow_record": true, 
+    "allow_record": false, 
     "offset": null, 
-    "service_id": "7803", 
+    "service_id": "41118", 
     "id": null, 
     "icon": {
       "server_file": null, 
@@ -27,24 +28,23 @@
   {
     "py/object": "model.channel.Channel", 
     "epg_name": "", 
-    "name": "Channel_blank_epgname_Guc3eWtCJMCK70A5YWxd8", 
+    "name": "Channel_blank_epgname_NaoPX5JpaikwyeNkoqkUgiGv5hq2qUXj5q3DU0bs3JIbSSpv", 
     "wide_banner": {
       "server_file": null, 
       "user_file": null
     }, 
-    "provider": "", 
+    "provider": "Provider_RzkuF2f0xcVoTUbtAFOJJWXB0kkB", 
     "narrow_banner": {
       "server_file": null, 
       "user_file": null
     }, 
     "languages": [
       "1", 
-      "2", 
       "4"
     ], 
-    "allow_record": false, 
+    "allow_record": true, 
     "offset": null, 
-    "service_id": "53417", 
+    "service_id": "41402", 
     "id": null, 
     "icon": {
       "server_file": null, 
@@ -53,23 +53,24 @@
   }, 
   {
     "py/object": "model.channel.Channel", 
-    "epg_name": "Epg_name_vkCdITiZFyxE6fqmkUCe", 
-    "name": "Channel_blank_offset_HPFsFS9giS5xb7zNeBqhlnJMJB3u4IYj", 
+    "epg_name": "Epg_name_7Ifgq", 
+    "name": "Channel_blank_offset_WwcwHg4gtBMRHYSBkpOeGjn7ZXcsdvNLwdrX1XR7Yxhy02l8IroNsexE", 
     "wide_banner": {
       "server_file": null, 
       "user_file": null
     }, 
-    "provider": "", 
+    "provider": "Provider_RCgzkBFJ5RCeJAQoK8Ti7iQWJ9ZNcVljdh3z3b5DVnHZmp5ToVYE6ENyTgazY9BRQ2V9IZLOtIGGS540j60MWT0Xv3VI1GxnHeUoh", 
     "narrow_banner": {
       "server_file": null, 
       "user_file": null
     }, 
     "languages": [
-      "3"
+      "1", 
+      "2"
     ], 
-    "allow_record": true, 
+    "allow_record": false, 
     "offset": "", 
-    "service_id": "567", 
+    "service_id": "55659", 
     "id": null, 
     "icon": {
       "server_file": null, 
@@ -78,13 +79,13 @@
   }, 
   {
     "py/object": "model.channel.Channel", 
-    "epg_name": "Epg_name_qEOXH8QqFeRli2YsJckBH", 
-    "name": "Channel_no_langs_nZGTDuxeEbmlXoaJuZm0jxQmZhTHjIgQMQG3HBuv1AA3msKsmbLVIjJxQhDsF2cesUvy1xFhp92CzVjJnpoKc3BT4C", 
+    "epg_name": "Epg_name_lqo7oRpkAaEOR8h869feAEbGa", 
+    "name": "Channel_no_langs_Owy1DnJytyYoHKs2rv1rWkkYa4vwoHAsWonYvuUJToHSU6N0HY8EUKrvkDo7l67RMmYXlhbs8K2vW", 
     "wide_banner": {
       "server_file": null, 
       "user_file": null
     }, 
-    "provider": "", 
+    "provider": "Provider_PFsIcBWGDHksCUL2sdt6f0pU3ghM6srYhmUKj1TsDavOux8ciX0Hkgpe54k5r1d46WFdH9rY3M8v7lq6t5ZrCPO5Vp", 
     "narrow_banner": {
       "server_file": null, 
       "user_file": null

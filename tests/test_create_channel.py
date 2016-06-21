@@ -2,7 +2,7 @@
 from tests import *
 from model.channel import Channel, random_channel
 import copy
-from selenium.common.exceptions import TimeoutException
+from selenium.common.exceptions import TimeoutException, UnexpectedAlertPresentException
 
 
 #POSITIVE TESTS
@@ -11,7 +11,7 @@ def test_create_channel_positive(channel):
     old_channels = db.channel.get_channels()
     for ch in old_channels:
         if ch.name == channel.name:
-            raise Exception("The channel with such name already exists!")
+            raise Exception("The channel with such name already exists! This channеl wasn't created:", channel.name)
     app.channel.create(channel)
     new_channels = db.channel.get_channels()
     rest.channel.validate_banners(channel, new_channels)
@@ -49,20 +49,24 @@ def test_create_channel_negative_required_field(channel):
     old_channels = db.channel.get_channels()
     try:
         app.channel.create(channel)
-    except TimeoutException:
+    except TimeoutException, e:
         print "Incorrect channel [%s, %s] wasn't saved (it's OK)" % (channel.name, channel.service_id)
     new_channels = db.channel.get_channels()
     assert app.channel.is_submit_button_present() and sorted(old_channels, key=Channel.id_or_max) == sorted(new_channels, key=Channel.id_or_max)
 
-# @parameterized([param(channel) for channel in load_from_json("channels_create_negative_incorrect_banners.json")])
-# def test_create_channel_negative_incorrect_banner(channel):
-#     old_channels = db.channel.get_channels()
-#     try:
-#         app.channel.create(channel)
-#     except TimeoutException:
-#         print "Incorrect channel [%s, %s] wasn't saved (it's OK)" % (channel.name, channel.service_id)
-#     new_channels = db.channel.get_channels()
-#     assert app.channel.is_submit_button_present() and sorted(old_channels, key=Channel.id_or_max) == sorted(new_channels, key=Channel.id_or_max)
+@parameterized([param(channel) for channel in load_from_json("channels_create_negative_incorrect_banners.json")])
+def test_create_channel_negative_incorrect_banner(channel):
+    old_channels = db.channel.get_channels()
+    try:
+        app.channel.create(channel)
+    except UnexpectedAlertPresentException, e:
+        # sleep(3)
+        # alert_text = app.close_alert()
+        app.close_alert()
+        print "Channel [%s, %s] with incorrect picture wasn't saved (it's OK)" % (channel.name, channel.service_id)
+        # print "There was alert with text:", alert_text
+    new_channels = db.channel.get_channels()
+    assert app.channel.is_submit_button_present() and sorted(old_channels, key=Channel.id_or_max) == sorted(new_channels, key=Channel.id_or_max)
 
 @parameterized([param(channel) for channel in load_from_json("channels_create_negative_input_field_limits.json")])
 def test_create_channel_negative_required_field(channel):

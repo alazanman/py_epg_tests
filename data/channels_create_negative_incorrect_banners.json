@@ -1,27 +1,106 @@
 [
   {
     "py/object": "model.channel.Channel", 
-    "epg_name": "Epg_name_nViCQNeaIabIWfLdpVjgLj", 
-    "name": "Channel_random_lh8Sx1asTtdha9hFRA5SiThaovUVt05ZLF6f9KwjQ1ZghHpwv0efdqm2ZN", 
+    "epg_name": "Epg_name_nRiBv9Ia9vqK8gPUN9kFXv2Z7eGbY9w2i", 
+    "name": "Channel_random_nVxmxWaf9y", 
     "wide_banner": {
       "server_file": null, 
-      "user_file": "C:\\Users\\Alexey.Tanana\\Documents\\workspace\\satprof\\py_epg_tests\\data\\banners\\wide_valid.jpg"
+      "user_file": null
     }, 
-    "provider": "Provider_a1lIOQn1j1SHJLJ", 
+    "provider": "Provider_EYt3EdrIVIrYoe3rW7RDlBrR8PRh", 
     "narrow_banner": {
       "server_file": null, 
-      "user_file": "C:\\Users\\Alexey.Tanana\\Documents\\workspace\\satprof\\py_epg_tests\\data\\banners\\narrow_valid.jpg"
+      "user_file": null
+    }, 
+    "languages": [
+      "1", 
+      "2", 
+      "4"
+    ], 
+    "allow_record": false, 
+    "offset": "-15", 
+    "service_id": "32050", 
+    "id": null, 
+    "icon": {
+      "server_file": null, 
+      "user_file": "C:\\Users\\Alexey.Tanana\\Documents\\workspace\\satprof\\py_epg_tests\\data\\banners\\incorrect\\icons\\icon.bmp"
+    }
+  }, 
+  {
+    "py/object": "model.channel.Channel", 
+    "epg_name": "Epg_name_O3f3S8t9Oc2OL6RF1ypO", 
+    "name": "Channel_random_ELlDXJBuKl1bGoKY1VYudo4xC0Aj", 
+    "wide_banner": {
+      "server_file": null, 
+      "user_file": null
+    }, 
+    "provider": "Provider_6lpL3EWJJY8wryvZ9emVR20hiAHXdN8vMq2qSe3S2Xj5smjn96O3njVbcC8Gjz1AU", 
+    "narrow_banner": {
+      "server_file": null, 
+      "user_file": null
+    }, 
+    "languages": [
+      "2", 
+      "4"
+    ], 
+    "allow_record": true, 
+    "offset": "-9", 
+    "service_id": "14317", 
+    "id": null, 
+    "icon": {
+      "server_file": null, 
+      "user_file": "C:\\Users\\Alexey.Tanana\\Documents\\workspace\\satprof\\py_epg_tests\\data\\banners\\incorrect\\icons\\icon.gif"
+    }
+  }, 
+  {
+    "py/object": "model.channel.Channel", 
+    "epg_name": "Epg_name_WsFNSnkTV", 
+    "name": "Channel_random_DFzgpp6TaRZzJODHlI6IhAjedVjdjrM043hqGTI1", 
+    "wide_banner": {
+      "server_file": null, 
+      "user_file": null
+    }, 
+    "provider": "Provider_G0OaNW5xkhsvkonVzjToBPXTR6Wu2mApTUYhRVMgsNm6zZCX0TkEoqbGOKGkEDhWAVp", 
+    "narrow_banner": {
+      "server_file": null, 
+      "user_file": null
+    }, 
+    "languages": [
+      "3", 
+      "4"
+    ], 
+    "allow_record": true, 
+    "offset": "16", 
+    "service_id": "29474", 
+    "id": null, 
+    "icon": {
+      "server_file": null, 
+      "user_file": "C:\\Users\\Alexey.Tanana\\Documents\\workspace\\satprof\\py_epg_tests\\data\\banners\\incorrect\\icons\\icon.png"
+    }
+  }, 
+  {
+    "py/object": "model.channel.Channel", 
+    "epg_name": "Epg_name_N4DKn7EDaBkXHBNP7Vv92gNoFl", 
+    "name": "Channel_random_dWTpuiQgQSrnylcdk0u15FX20tZyrldkCbITGGLeE7I1Kz1aHKypDhwlcngVNFzvLNiRfP4gYL2jOmCA7fO2EEOqJBjDsYqUKSw", 
+    "wide_banner": {
+      "server_file": null, 
+      "user_file": null
+    }, 
+    "provider": "Provider_pOXcaV6ifdeh36AgyHF7fYdssogc1FS2OOfpCqCeZi", 
+    "narrow_banner": {
+      "server_file": null, 
+      "user_file": null
     }, 
     "languages": [
       "2"
     ], 
-    "allow_record": true, 
-    "offset": "-5", 
-    "service_id": "8533", 
+    "allow_record": false, 
+    "offset": "-12", 
+    "service_id": "38465", 
     "id": null, 
     "icon": {
       "server_file": null, 
-      "user_file": "C:\\Users\\Alexey.Tanana\\Documents\\workspace\\satprof\\py_epg_tests\\data\\banners\\other_sizes\\icon_valid.jpg"
+      "user_file": "C:\\Users\\Alexey.Tanana\\Documents\\workspace\\satprof\\py_epg_tests\\data\\banners\\incorrect\\icons\\icon.tif"
     }
   }
 ]
