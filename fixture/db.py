@@ -18,6 +18,8 @@ class DbFixture:
         self.connection = psycopg2.connect(database=database, user=user, password=password, host=host, port=port)
         self.connection.autocommit = True
         self.channel = DbChannelHelper(self)
+        psycopg2.extensions.register_type(psycopg2.extensions.UNICODE)
+        psycopg2.extensions.register_type(psycopg2.extensions.UNICODEARRAY)
 
     def is_valid(self):
         try:

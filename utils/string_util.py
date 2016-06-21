@@ -7,7 +7,7 @@ def random_string(prefix, maxlen, spec=False):
     # spec_symbols = r'“[|]’~<!--@/*$%^&#*/()?>,.*/\№_={":' + r"';`}"
     # channel_name, Provider = '[|]~<!--@/*$%^&#*/()?>,.*/\№_={":' + r"';`}"
     # symbols = string.ascii_letters + string.digits + " "*10 + string.punctuation + spec_symbols
-    spec_symbols = r'[|]~<!--@/*$%^&#*/()?>,.*/\№_={":' + r"';`}"
+    spec_symbols = ur'[|]~<!--@/*$%^&#*/()?>,.*/\№_={":' + r"';`}"
     symbols = string.ascii_letters + string.digits
     if spec:
         symbols = symbols + spec_symbols

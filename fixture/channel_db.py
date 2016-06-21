@@ -27,7 +27,7 @@ class DbChannelHelper:
         finally:
             cursor.close()
             # self.connection.close()
-        print channels
+        # print channels
         return channels
 
 

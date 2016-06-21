@@ -19,8 +19,8 @@ class ChannelHelper:
         self.submit_channel_form()
         self.channel_cache = None
 
-    def delete_first_channel(self):
-        self.delete_channel_by_index(0)
+    # def delete_first_channel(self):
+    #     self.delete_channel_by_index(0)
 
     def delete_channel_by_index(self, index):
         wd = self.app.wd
@@ -105,18 +105,6 @@ class ChannelHelper:
                 if wd.find_elements_by_xpath(picture_delete_buttons[i]):
                     wd.find_element_by_xpath(picture_delete_buttons[i]).click()
 
-
-        #     self.add_file_pyautogui("//*[@id='content']/form/fieldset/div[9]/div/img", channel.icon["user_file"])
-        #     elif wd.find_elements_by_xpath(picture_delete_buttons[i]):
-        #         wd.find_element_by_xpath(picture_delete_buttons[i]).click()
-        # # add new icon, narrow and wide banners
-        # if channel.icon:
-        #     self.add_file_pyautogui("//*[@id='content']/form/fieldset/div[9]/div/img", channel.icon["user_file"])
-        # if channel.narrow_banner:
-        #     self.add_file_pyautogui("//*[@id='content']/form/fieldset/div[10]/div/img", channel.narrow_banner)
-        # if channel.wide_banner:
-        #     self.add_file_pyautogui("//*[@id='content']/form/fieldset/div[11]/div/img", channel.wide_banner)
-
     def add_file_pyautogui(self, xpath, file_path):
         if file_path:
             self.app.wd.find_element_by_xpath(xpath).click()
@@ -187,7 +175,7 @@ class ChannelHelper:
                     provider='Provider_' + str(randint(0, 9999999))))
 
     def is_submit_button_present(self):
-        print "SUBMIT:", self.app.wd.find_elements_by_xpath("//*[@id='content']/form/fieldset/div[12]/div[2]/button")
+        # print "SUBMIT:", self.app.wd.find_elements_by_xpath("//*[@id='content']/form/fieldset/div[12]/div[2]/button")
         return self.app.wd.find_elements_by_xpath("//*[@id='content']/form/fieldset/div[12]/div[2]/button")
 
 

@@ -6,6 +6,7 @@ from random import randint, choice
 from utils.file_util import abs_path_to_file
 import hashlib
 import binascii
+import sys
 # from fixture.rest import RestApi
 # from tests import *
 
@@ -31,6 +32,19 @@ class Channel:
             return maxsize
 
     def __repr__(self):
+        reload(sys)
+        sys.setdefaultencoding('utf8')
+        # id = None
+        # name = None
+        # try:
+        #     id = self.id.encode("ascii", "replace")
+        # except:
+        #     pass
+        # try:
+        #     name = self.name.encode("ascii", "replace")
+        # except:
+        #     pass
+        # return "%s, %s" % (id, name)
         # return "%s, %s" % (self.id, self.name)
         return "%s, %s, %s, %s, %s, %s, %s, %s, %s, %s" % (self.id, self.name, self.service_id, self.epg_name, self.provider, self.languages, self.allow_record, self.icon, self.narrow_banner, self.wide_banner)
         # return "%s, %s, %s, %s" % (self.id, unicode(self.name, 'utf-8').encode('utf-8'), self.service_id, self.epg_name)

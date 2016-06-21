@@ -20,7 +20,7 @@ class RestApi:
                 'username': username,
                 'password': password}
         session.post(self.base_url + "auth/login/?next=/epg/", data=data, cookies=session.cookies)
-        print session.get(self.base_url + "epg/", cookies=session.cookies).text[-290:-260]
+        # print session.get(self.base_url + "epg/", cookies=session.cookies).text[-290:-260]
         return session
 
     def download_file(self, url):

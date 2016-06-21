@@ -5,7 +5,7 @@ from random import randint, choice
 from time import sleep
 
 
-@parameterized([param(channel_edited) for channel_edited in load_from_json("channels_edited.json")])
+@parameterized([param(channel_edited) for channel_edited in load_from_json("channels_edit_positive.json")])
 def test_edit_channel(channel_edited):
     while db.channel.count() < 3:
         rest.channel.create(random_channel())

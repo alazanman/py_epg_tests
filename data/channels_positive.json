@@ -1,8 +1,8 @@
 [
   {
     "py/object": "model.channel.Channel", 
-    "epg_name": "Epg_name_afpCVgbcOIQgCFxNzujgPFdMClwAQkKSeqWekSCfTxCSEtDFPd2JE5J3nl2Rgr1YFcLvCFWqnzH", 
-    "name": "Channel_required_fields_only_7HhUBh3rYhD4dOA54fu7Hli9xcXCRovNZ1XMGr0IdNmkkczhkphWzG9UQM", 
+    "epg_name": "Epg_name_BEQOeNVKqax7qi9k5Sl", 
+    "name": "Channel_required_fields_only_ftdXAXa60NXwFObuhU1PjHi8SmED0uhGfHaYBcU8iGatEBrs5uRMhw", 
     "wide_banner": {
       "server_file": null, 
       "user_file": null
@@ -14,12 +14,12 @@
     }, 
     "languages": [
       "1", 
-      "2", 
-      "3"
+      "3", 
+      "4"
     ], 
     "allow_record": false, 
     "offset": "0", 
-    "service_id": "33895", 
+    "service_id": "37883", 
     "id": null, 
     "icon": {
       "server_file": null, 
@@ -28,13 +28,13 @@
   }, 
   {
     "py/object": "model.channel.Channel", 
-    "epg_name": "O", 
-    "name": "Z", 
+    "epg_name": "P", 
+    "name": "D", 
     "wide_banner": {
       "server_file": null, 
       "user_file": null
     }, 
-    "provider": "q", 
+    "provider": "h", 
     "narrow_banner": {
       "server_file": null, 
       "user_file": null
@@ -53,13 +53,13 @@
   }, 
   {
     "py/object": "model.channel.Channel", 
-    "epg_name": "128_symbols_string_UwijQFK9gRLUaX7b2aFwYE53rpzToDN", 
-    "name": "128_symbols_string_Kg6Hpg7tmP5cBaYi6QHMNVRPfq6LTumK6b8RaFMno7RyLijj7ApnODBUyigpZQUswrFrUnrh0R001rLzpXIUYJhtdffyZRVdQMpWOppXec4I7", 
+    "epg_name": "128_symbols_string_CAjDaqQA3B0GVsvokHjPlWb0UxZb97X", 
+    "name": "128_symbols_string_IyB7hAVi20jz8pKL0fXDq6k7cApx5I9Qx8Z0Y6dtKkOgzSn3NkCctaVs4xjYZqOW4QMbe9YYLjLKD7QtuGakNFtIVLC2aNQcHMlFYTdbtK1bl", 
     "wide_banner": {
       "server_file": null, 
       "user_file": null
     }, 
-    "provider": "128_symbols_string_uvTFhoKLPSvyWXwSu28GVBiU3LC5NQsXdkBDpkDpDQ6mkqgkvSXyca0by3PlbNP0YgwLyOAcouhpOXGArEFYirMY7tEr7x0useWQB5JVakIVP", 
+    "provider": "128_symbols_string_zpYgEleFot8Uj4RhmAIID4vPFHGZjL35ObTwTe68i6mBqzKJOWiFTPMANLId8BdZAEEbVcaDQGxCZhyCiAqHwDtFadLZwYFKnNrxbKkz0DH4H", 
     "narrow_banner": {
       "server_file": null, 
       "user_file": null
