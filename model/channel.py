@@ -3,7 +3,7 @@ from sys import maxsize
 # from random import randint
 import os.path
 from random import randint, choice
-from utils.file_util import abs_path_to_file
+from utils.file_util import random_file_from_dir
 import hashlib
 import binascii
 import sys
@@ -75,6 +75,6 @@ def random_channel():
             # languages=sorted(set([str(randint(1,4)) for l in range(randint(1,4))])),
             languages=str(randint(1,4)),
             allow_record=choice([bool(True), bool(False)]),
-            icon={"user_file": abs_path_to_file(r"data/banners/icon_valid.jpg"), "server_file": None},
-            narrow_banner={"user_file": abs_path_to_file(r"data/banners/narrow_valid.jpg"), "server_file": None},
-            wide_banner={"user_file": abs_path_to_file(r"data/banners/wide_valid.jpg"), "server_file": None})
+            icon={"user_file": random_file_from_dir("data/banners/valid/icon/"), "server_file": None},
+            narrow_banner={"user_file": random_file_from_dir("data/banners/valid/narrow_banner/"), "server_file": None},
+            wide_banner={"user_file": random_file_from_dir("data/banners/valid/wide_banner/"), "server_file": None})

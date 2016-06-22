@@ -95,7 +95,7 @@ class ChannelHelper:
                                        "//*[@id='content']/form/fieldset/div[10]/div[2]/div[1]/div[1]/img[2]",
                                        "//*[@id='content']/form/fieldset/div[11]/div[2]/div[1]/div[1]/img[2]"]
         for i in range(0, 3):
-            if pictures[0]:
+            if pictures[i]:
                 if wd.find_elements_by_xpath(drop_field_new[i]):
                     self.add_file_pyautogui(drop_field_new[i], pictures[i])
                 elif wd.find_elements_by_xpath(picture_delete_buttons[i]):
@@ -129,8 +129,8 @@ class ChannelHelper:
 
     def submit_channel_form(self):
         wd = self.app.wd
+        sleep(1)
         wd.find_element_by_css_selector("button.btn.btn-success").click()
-        # sleep(1)
         self.app.wait_for_element_by_xpath("//*[@href='/epg/channel/add/']", 3)        # ensure that 'add channel' button appeared
 
     def click_delete_button(self):

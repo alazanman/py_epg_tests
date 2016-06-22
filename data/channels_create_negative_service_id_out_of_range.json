@@ -1,0 +1,52 @@
+[
+  {
+    "py/object": "model.channel.Channel", 
+    "epg_name": "Epg_name_wZOdo6Luru9yaT7jjg", 
+    "name": "129_symbols_string_o0eMvXvyH6rFSpdEsNsTlwUbH4XP9xoDgOhqJFKSR6d983oQzKyRHntXjqE3n4qrBfEsGWNvqTYZF5LAcuSBcy1OcMl9tMJLIABrK7A2jCkGy", 
+    "wide_banner": {
+      "server_file": null, 
+      "user_file": null
+    }, 
+    "provider": "Provider_lDP7x9ysd0M4L6rXY7qxQpWyccrVXfJVWb3G5l3qpVTR1bEyZgFBXEk0jAq8K9NR4LYQKoIfaPutL2tmC3g8qPmYMFyH3", 
+    "narrow_banner": {
+      "server_file": null, 
+      "user_file": null
+    }, 
+    "languages": [
+      "4"
+    ], 
+    "allow_record": false, 
+    "offset": "-21", 
+    "service_id": "65536", 
+    "id": null, 
+    "icon": {
+      "server_file": null, 
+      "user_file": null
+    }
+  }, 
+  {
+    "py/object": "model.channel.Channel", 
+    "epg_name": "Epg_name_2c6qocD015moDQm5wPV", 
+    "name": "129_symbols_string_dx1aLlmp1WjAwv4rGZfpOD44uzKK4grMKEyP1qWgGJamKU4de", 
+    "wide_banner": {
+      "server_file": null, 
+      "user_file": null
+    }, 
+    "provider": "Provider_Ds45m9DK3NOpXhmP6WJdpUVVFI39U8LjaE7KtU1oseta1VUre1zzTmuSAuhflNSJJXTSlPQwlIyUyxZs9Me7axJGsvL3OzomT9", 
+    "narrow_banner": {
+      "server_file": null, 
+      "user_file": null
+    }, 
+    "languages": [
+      "3"
+    ], 
+    "allow_record": false, 
+    "offset": "-21", 
+    "service_id": "-1", 
+    "id": null, 
+    "icon": {
+      "server_file": null, 
+      "user_file": null
+    }
+  }
+]

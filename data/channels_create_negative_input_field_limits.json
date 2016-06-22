@@ -1,49 +1,25 @@
 [
   {
     "py/object": "model.channel.Channel", 
-    "epg_name": "Epg_name_apRWKrsqAFKjZP50GLU8xWS9YhrmkwsX8wl8GK", 
-    "name": "129_symbols_string_9dHLxzgOVsvi4XuzBOSU1LqK2pzTbur58q1FHEJt0qiGRwZ9lhCRcdp9WJQgVWGAsIJfsrhv9MkiKievxW0dyIIXjs3tyaLDUH7kVcmAODoKJJ", 
+    "epg_name": "Epg_name_0W3qN7s5Q0aAHcX4cX0FOiWBzbustI7r7LYKs8yWx", 
+    "name": "129_symbols_string_5726YnHCPkhMOgc1vBEOctWbCV88cS0ZmWzk8Yfe99xufo8kTYX9FASEe8X8dtYrg9JUxdH8yQQvH72RFngwltXwIH6Tz3Zf6rTMT48UAnpd11", 
     "wide_banner": {
       "server_file": null, 
       "user_file": null
     }, 
-    "provider": "Provider_PEQL2BOxcOkc6i34U1uY1F0zfxKuoVeaoGMiP9SausMpp1yBz39Be5M3BInqncB9jm4qhdBFWWGjoN0Iz29Yb1DERvlg5H6aKnEEnGMwfezpjDs", 
+    "provider": "Provider_nkZGBjSr9T4cOFrE8MSzt3bhEmRxkqUdCLlKZ99xj1LIc2Z1x", 
     "narrow_banner": {
       "server_file": null, 
       "user_file": null
     }, 
     "languages": [
       "1", 
+      "2", 
       "4"
     ], 
-    "allow_record": true, 
-    "offset": "-6", 
-    "service_id": "55034", 
-    "id": null, 
-    "icon": {
-      "server_file": null, 
-      "user_file": null
-    }
-  }, 
-  {
-    "py/object": "model.channel.Channel", 
-    "epg_name": "51_symbols_string_0iN9UNA8t2koDb3DkyMF5imJnjYg0xfTi", 
-    "name": "Channel_name_yGjr3IorcqO9o1W6YQOWph5KfZaCc5Pvsc1Xv8I", 
-    "wide_banner": {
-      "server_file": null, 
-      "user_file": null
-    }, 
-    "provider": "Provider_FpcSlGUwn7VZtIV5mkkqmGeDz6RCjlobDzr0N6ZK4kMg1rvBYBsiHkDivY4lLEaahjTx5LFEXKuPaSKKNpW0vDs8wm4bHHlMi77Hb4EnnQ4bLqnwpGKG", 
-    "narrow_banner": {
-      "server_file": null, 
-      "user_file": null
-    }, 
-    "languages": [
-      "3"
-    ], 
     "allow_record": false, 
-    "offset": "-3", 
-    "service_id": "63718", 
+    "offset": "-18", 
+    "service_id": "24630", 
     "id": null, 
     "icon": {
       "server_file": null, 
@@ -52,13 +28,13 @@
   }, 
   {
     "py/object": "model.channel.Channel", 
-    "epg_name": "EPG_name_NGdmEZ7Bw16Owto", 
-    "name": "Channel_name_X6GcjNlK3jBoPr3KKOxgrtwevTDcncJKdxU27gL1DwDyogpVGMiE6Fi6iszj7lqa4tKozu8tBpqwnyBtXEhNYWGX14uplkeTFVmsY0PQuLpu", 
+    "epg_name": "51_symbols_string_jAJhhDGvnbQyVyJqdqtfWjVM9OjwkvfMx", 
+    "name": "Channel_name_qzlp0v22kyqPHnZZF7ZmUQvmEREGUIywV3muNdoGeVwVJoJcXLwgSgdUqXyK789Ip8wQnZFkkVUBQl", 
     "wide_banner": {
       "server_file": null, 
       "user_file": null
     }, 
-    "provider": "129_symbols_string_vaQpVuDhG2aHAlkRij9XfC2efWecWeNyWHIzzfdKg8lYfUa8fzWNgeXoQNc5Qx2WT5nlDhKzvL9KnPedjuUP0g1Tlix5nCAl1ykioijjGRI6uB", 
+    "provider": "Provider_N1XOdqzgFen4GRwgghdO0yOnsNLdSoNyw8Uj", 
     "narrow_banner": {
       "server_file": null, 
       "user_file": null
@@ -68,8 +44,8 @@
       "3"
     ], 
     "allow_record": true, 
-    "offset": "-7", 
-    "service_id": "61540", 
+    "offset": "-2", 
+    "service_id": "57624", 
     "id": null, 
     "icon": {
       "server_file": null, 
@@ -78,24 +54,23 @@
   }, 
   {
     "py/object": "model.channel.Channel", 
-    "epg_name": "Epg_name_3AUwz7z6tKmCODI9fyXBho01hSQIEKaVLMqxTzXM", 
-    "name": "1000_symbols_string_uq4MUXLp5UWIq4LitSNEbaMVEm5CL7Xvdq5FKjMxH5Smk3FYDd8KwtXR5iLaJTIC9To1DefuL173vyz35MOZGc0GhFYTXnoXrXdigRezMTh9tS7lAgusCj7hjX4n991xUoFIYx0n1mEoY7oGv2NZ5Qqw8vZT6p0Jb9UlMNUKU76BLYHs29MqeITG4syLFsM2W6tCEKtrsI5ruWcGwI5B7Ql08eQVaHsNWRTB4ZIeSlQDleqL4cI2V3ZPSdopwOZpNFA3eZH5RCA8pD1Apdph3sPzeSPY1dl05BERydz91EGJf53rPs8PcCw3Xd3DJ9nnCvnBbYQ74aOgeZKLLR2Af2cZPQdyb6mXd7eF3BRwpZiqKU1VuEsWs3iICIHUnZGhQI8znnr44x25felZMf54NHpq55KV7NhqcHQ0pUVBe2bT5m2ucJMisXjZo3EpvdpRDHF53AT0UQDAdZhYo72uEdcQRq7TQnkTBBqTjXU0gOnxtXF7mCk3QvxxNJYcnYGnpoDq91uKISPHCXTSOXYqjWk7m3gfTERMkEpGbvzZCW2q3L5ipGtlIHQO3IygcjdxDtYlaPGA4QI9bfMd6wHWhepciSynNWD2eAF8HguFIWuaAtH4M9GgCpLvDjkMM75uIUDWzcajalvpiCaYJyJNQdK1ckWBNAv7pRuTPVLV9XA15WSCrvwYLUJkGFJSslHXvEhXDGqsOfTh2DqiGZDO7UCv718APIIxzkX0uJhjYBUylo5bPYpHLQViWogNzWEQrj9YJIi9q8KdeFNKX0JZNBjm2htJdszgs5UbApafJbqRyElpUJsG8INv6rTa6NmZfnsCfJBkq8fV94u3ebddr2TtoXqGtNlBDrTocAQJ3ToWviq7fUciDgO8lGK7puhfx9FT7XJlAGRsw81SwN3WvC1vzRLDpyANge844mPj66ymG5BMQrTDfhT0A091tbgHTd3uIxObJtlPxOCI8SDz", 
+    "epg_name": "EPG_name_dr43JNlFgv5M8wM8InEoV9Dc5mSdzLzYvL", 
+    "name": "Channel_name_iapDswPfqDD5O1tYJg5Lq5ysz3QURxPDOjJAiFGxM7fXgQB", 
     "wide_banner": {
       "server_file": null, 
       "user_file": null
     }, 
-    "provider": "Provider_ZXIPucQ7OQsfBJUcvEoalXTY2LI3tWYhvjXFGljR6ycINsowTMUL4EUFMpZMO8SXIsLbbBPaokCbL7swb", 
+    "provider": "129_symbols_string_aFA69jhDquatKy6tfc4jaUVXjKDzWP1i8QvdR2TF4IQOQiV6aiGoSYTLzYDY08JzoRAD6RsLwYse2ICadef2OJXkbYusUa3YIax99tIFpH8kbx", 
     "narrow_banner": {
       "server_file": null, 
       "user_file": null
     }, 
     "languages": [
-      "2", 
-      "3"
+      "1"
     ], 
-    "allow_record": false, 
-    "offset": "-21", 
-    "service_id": "19455", 
+    "allow_record": true, 
+    "offset": "9", 
+    "service_id": "46144", 
     "id": null, 
     "icon": {
       "server_file": null, 
@@ -104,24 +79,24 @@
   }, 
   {
     "py/object": "model.channel.Channel", 
-    "epg_name": "1000_symbols_string_eoxwXTWPRiZbkik1ceWQTFZpns1tcMDgd3uMMAI8y9sKIDw87wUrDoouvGP4cT1rvVNn5exVa9Bwr0zw3eNUSUIp1GTGsjoFkPZ9QdsjvcjrDee0xa3lOoMCLoiPXpM7rDFaXkEH9T8RrfRKSUcCA2oQhlrVh2DXQSMSH3vf68nc5lzhFuD7HSjlYntAzPViCrdx8JKSvEsb8GStnndlNq06Y6kMNDKcohQSs7usqeLBjFBPlMvSdv44GHVuFjb5OhV11WGYsK0sfXyY8DyW5LbqelaK89BMOgJb21rJjCDcABOPQ6zu7c5wFptgeCjvZoxHzLFnwL3lfco1hKLf1nUtcXFVunJ7O68rLJ74kZYRGaYTm4KIclsQbWyLI6vdN77MpmbsQMQZvMQpEfA51OAV1jTK9wPCL9uQYNWHcJbUsmSDbe46FyUS3FefX2dPygL9u76FAODt5J9OtAZYVzd15BO2kq3Zy6gaVacle04vypo5r4vER9aHqvA8LSiGJ0ON8FKUPfIXlJNcPIiEj8zL8Jq2SyPKIRIJ4GIkMmJldMUFZNO2viK7YI4l2xlmi69v555snoPVNthg6W6fe1BN9w2ZWk2tpUpatfHDPWPsWpROlkb6MKzKJBv2Fpde6UukxcYL7nM4azoeeflsjxCCnuDfgkt39Z5NfB1Hp357UAs6ipdyOmpkShcy4ElRbBw4UKdiZvy7Zmoufv381dDSXfF1LiJPTssXNEOLkOGFDYuJbyHyKkff48DWSe4ayj0t5lMnOaV4NZw3QxRMdx6eG5FVu8fYZYqaxyBjJ3RYdsYfPBhJBR7KPLUxCCaoKFhM03hNy2t1IGKBOqVtqzTsjhicG2o70IObY03fRrvSH9eEG5s0BOFYzsueaqkgokPMBeMk2eAvSaAJx7G3TE1njgTgpCuSyKri8nCLAtYC6FNR79ouiIFm9hwMW04nQxQBdtCD6R0QBTnlRq1i", 
-    "name": "Channel_name_1QE3K3L1pAudJUR7gyJzuLQoXNu8VxIBnpOIyrnoXw69HlJ3dgGnLmEURR5cc8s0qmiw9ZCXASecoYeAShCBnY", 
+    "epg_name": "Epg_name_BLgEYVIWfbrpJNA9QdoSkxtLVmX7o78Aq", 
+    "name": "1000_symbols_string_YriYepKR7V1h4U0A4KjSEHKvHucw7T4tsdtMPGRcg1B3WZJ3UUyApoReh4MMjjqYBxpum2pKrDAxJU4kjQZdxxS6bXLWDcHZOxTradiJWcDRt3jVybgrBMxB9aSCzoch75vKvCFsSHqSRPDEafEBXpxL0vE6vvdPZvm08p3aubSFls635UPqpkjbnBAh6npnXsjFEBpqYwSCSDyOWtmleii4LvS2q7GXYls144YAyAvTbWLntb76iS5703TyoWZ1VtdNSPOKczIHD40ekQLxgRh57fv1IoTmJ8vy7c8AXPQdrqWyGzu1uewM5tA1Y0ikX7M0mdM19uBVmUmMA4cKLyTQ1mX7dZIWrDHXt3HEZwnn6Q9rEHwcTbGR05QUAg5DsxDuKwHZGu1BMjmYdUt8Rmo1YYvvMjtrI6cT55Y9vALep6QtrT5MG7OWxgghgQGR2wntd0FQDMnopKJqwRkWlxLHbU5edV8QEmIYaYfEDhyhk3oeCskccDmW0TawlWgV4t3kq7bUIvEi4zifUrMPOEoKdFvdA9wczBhqpvyT2bSWk1dpBRzK0Y9aYF5cUGF20BqZ0ATwzAmSnk4A1F4jHtNkBT9IHxProKZXV3XQxbA3WMMdvyXuNXNgHNacRuRH9RzWqbeqp74kw8bDfNObsudGDw5MNkE4V8wQosAcAg9QIdgIsJpCqG0W9igS3LrDNsIA4L5p20WbLdkHly7QYBsW0QZYGQRwcaLZEfXkHJ2R4CwGFDYCSCUu3dVMBX9y2oWZksRY9RIcC6QSzfUZ74XlFwArcLpCrJ6G4PJMyiunPsHeoayKNGfgo2kLounJFH8p2fbVM7CIodLLBqwUZh7uR9ZWalYusrDQuIZ4YMBa5QtnX0LrLjSF8I8856wC1IQLNqpPawo00L9YEQCmtYOMcY60G4Pel7cv5YVdBklFybcxmZtirKVFEjaHRgCPPsoOHpvpdlriKkWMGbfd", 
     "wide_banner": {
       "server_file": null, 
       "user_file": null
     }, 
-    "provider": "Provider_1mkEPDbxInohmzzONKi4bqrEp4D07poGcHj0dvy3mVPWBK0Qf3ijjV6", 
+    "provider": "Provider_UriBkAaGlNXcc5Z5idexntu6kYuJjlF", 
     "narrow_banner": {
       "server_file": null, 
       "user_file": null
     }, 
     "languages": [
       "1", 
-      "4"
+      "3"
     ], 
     "allow_record": true, 
-    "offset": "11", 
-    "service_id": "23956", 
+    "offset": "-15", 
+    "service_id": "8377", 
     "id": null, 
     "icon": {
       "server_file": null, 
@@ -130,23 +105,48 @@
   }, 
   {
     "py/object": "model.channel.Channel", 
-    "epg_name": "EPG_name_Vxz", 
-    "name": "Channel_name_nZH0BymDiEisUZirJXOjGc2bxMdhLHthpc0s2LocSNFMoofNtmDI2fOIg7iR939a2ZUcX6DtueWtKy3", 
+    "epg_name": "1000_symbols_string_qz14NlrUnV8gPFzapvfBsSezJh590wbY0SYYmpP7gA5y4z0BTVxflreuBNVVMPHdwYm0RigYSwjrh3Y3vXY4iqquZCMIJfBvXcqEbmwxVZtHf63riIYwoQzyTuUGjKf0EiOQOOKwHD5vGBzuIkcEmgT8AAJoWWfq17MCLCQWsV7NAeaQD3xamBqiLxsRTNEjXgp0LVRt9V73rgty5wjeGkBiyE3Wjo3zthSx1dkcrAT9Ai7E7qsjBE1biSnbUQ1xmFdlG0UaGsPxatQe0hPm908daX7yue80TIoyDkmvsIbbtYw2Q2iwLvFfIxBuEhRytKXhKczCcEvXfkbMY9XArkewAdmdqWbPRZoBNYnBcINjCXoJvmbCep3FMUI0ppWMwPi5LS0un0dunjvzYMEUPSNz8z1otDvIgPyNJGXKt6OkeHq7qPdyqq5dfYSdtULKq6resEKiJWwoaUyWw7ED8QnhqJ6rO5RryPIOL9iJwkjaNXsaOgN2NZLQ4vuftnkFWjPu69IoKzbOEpFyaOScWyY3O6zAStWnAAAXCw8GAutvvflZXSmPdKCxp6FPx5XukfWxSV93x4JaEIe8FzG96T4RXc8AFdSHzGhQAFrnjfSDHKR1cVVphnRw3mRWLTQeRLgUCuF5qUNOT6u9IXAMArg1sMBAMI6UPG5yChhtFNGmBTJPZapFpgs1ECwLsy5Fqtr80DOPdJfsOA6kj5yw883gzzrTQJpivMbdCeU43VadbQv2UfWxAojnXjTMKKIJfhP9dfV0HTlvsQZSZBFieKBlwqsWCObc71VDljnnehhz4s91Lkjz3jgJPNzkVBWmw3AKpze9nyRKsJnHvf9WG34Kzo3QuCdh8onSAtxqjYHS7r3xIjt94J1Z0C3cKBUImGhzqc8YsFNEVzZ7MIJpJWwH8hpkDh04mS2DgNLGzrquGJz2dwG6RUwLkbY90gJMX4NbgdTrLjJdAX2arRoH", 
+    "name": "Channel_name_gwTk1H8sQqt6aA32JHLo5veiRuUplA4kI4VIXmCAO87BjQEPrZqXJkbH4u7qJfhJJQq5x3JlNU7Do1OTq4ByK5k5hTyXEXF3J7Y2hz4plftYsrbEnPr", 
     "wide_banner": {
       "server_file": null, 
       "user_file": null
     }, 
-    "provider": "1000_symbols_string_PL7NAlwhmO3m8ULpfaiyyrFRUbKr6wGVcC5uSyMeZWJPgrpZsu6JgqUF94vLBM8UCpekmcKZO5DknmTzA3zRjHOaTwh503pjnsa50PskVuMVTaTDBFYIIClyjfKQVqN6rUNd9kuUUrQFwRvShVervdD09gdSihpOKqJzZCPdJ0MTcokVZO8bJ6LFfiznlmoB9lqMck8yxu4PzBkoJyCOFeaZPXuRaA4XcqXfc8Yk1KAtHuE6w2auiN6p1KOJNM2URomiAMY72dy7pT7QERkND5cF7IgSbFgmAalgaBhS7ESoVjB6rlwmJTewUFxiqPHJvHCGg77CLl68GUEfeO36N1vTA6hvmzb7ieFwiZiHJyVXMPjq24948DGlGOJ5XWOpdFMGbQv4zdSupTH7eJfkMNHg2H5K9HkbjGb8OmFHOobG6t7YlImoYxo755VYQJvM06ggum7FDvzcMbXNHdVuOSyfflgkGt0tYLumybePa10UNT9g2kpuYp2XFpMyTwYQbfNpKF2HffTYoHTdiy8r6jO4lqM5HmSoLZb7trK6OCGLOsPdez8JV9BphAfKRW13EUGGSGAIPLGnnIUYZOYVzUWDer1pUI4L9LdWYiIX8mkMjG8SFsmk26bwpRMoIYL96IjB07yEJy2IoobjYHDmyDoqJgREwRYzWW1WpJIdm28iW199kGJJ3Wh4fHMENtY8kBoOaIiGdgyCrqLwWjhdzrVHHxBSK2mbVrwRZO8LDoC7jI4AKTc0WzfY99UHRY28jBVMUcmbwg00uy319s80XrksQq6F23Oa8fYh5zU7inx34Eh7HN6v3KCpqopYHeXV34luhza5tMDHxW3YCSUJ7yb1eTHDS9kYjuA8PliX8JAAnwVGud1wpNG4bdrSZLNToDKSzezV4c5uyxPehnCOPvfTCXgRPCGm1JeGhX0f6JbDAFG1EQ3njurzt7MU9DT2KeNGNZwLrDbH7Qfmcrgk", 
+    "provider": "Provider_gVgGQohjLkyf43GHaDnkbh15KB25DoEpVFrbhE4Rcj2dG", 
     "narrow_banner": {
       "server_file": null, 
       "user_file": null
     }, 
     "languages": [
-      "4"
+      "2"
     ], 
-    "allow_record": true, 
-    "offset": "-8", 
-    "service_id": "42075", 
+    "allow_record": false, 
+    "offset": "-13", 
+    "service_id": "38466", 
+    "id": null, 
+    "icon": {
+      "server_file": null, 
+      "user_file": null
+    }
+  }, 
+  {
+    "py/object": "model.channel.Channel", 
+    "epg_name": "EPG_name_rAUp9bhyNHrrsbdNY", 
+    "name": "Channel_name_K2FqiYWvvddqCOkxZ4fEe8ALOwJYdgzzaqAn64i3AtyNEgWI8YC5CGAnkofE38WQxoE51AFpJeHv5aybQGTTjDcYQ4JBfm", 
+    "wide_banner": {
+      "server_file": null, 
+      "user_file": null
+    }, 
+    "provider": "1000_symbols_string_04HPEgzt3XsmOW3nooDxeZ9Ynd0ox7MIzGdDrC31cDsJ3DCvMKzqYAGWHppsG4eiulNMLiknHO0s7ozw5DA33bo57lFQB4paahyc91uoatjfq6ZLEVyaNDJC2ioLBPoKbmP1wkx6wdOIzgHSKs8XDXoRYIAOHFozGNukoYHdnnRs0FfrO7MHkeXerThzbaMixKQ7hZcY8QemKmeUQgll3EVXMvH6TJrA2KTtPsyHpGPgcNQIGLIHTUK2qp2oS2pkADskVNfoLdWEOIWjeFmk0vFH15AhS9lzrNjUqaRa84vcmHxK4srU8oAYsMtVfOizhIYFZKlWMMEfOkG0gbNfjpYm7h46UJrAFAjHKtGJ6ZsvdmK719eNsRn3yqlaHez7gDL3mebDq6riYOPM4ODH27uuBpgCxyya6CKLGMgPRFCrGPiHKd3De0tGG0axHGFkMWEnrxaXPQUFaAPCkDBbzpJQlniTzQKmeyH2KWVHVvrBwNdHkgmfDVhU3vSJ2vShoydlmZqGnA0A1630fchTGed42Zcjfc6kAleolP9UBsAEDo6aYhpwrAKp1ZOvN2rOuXGanP88xf7y4U2O63POs37LnzAFVYSOjH9hzm5Ua9qpOAPQC2TWsIyAo8E2hySUFGOg10zNchQoUPRDf5neWPwJIWeK7GACVtn8YmpUlQlq5vAg8UKPYu7oaX8Ji6MlE3QRGqERj75iz3hICSqvvi90uVJuYMwPLSuItVjGHsf4ZCLVNct0bJZlcvlJ9dbflNvyR9GXDcheygjN45osqfcvcgV9CM0nBd1QAt4rSbFDW6n1EO18wyi7zoH5ppBphQ4C9oZsyQdC8iiz2KAkPJz2VxM4LnvXgpuCK9JAxBK0nBbLt5bhLSrZALGSry9bvJczxEVgxu7jrLiOq6j72nX71FTemRcnPnQGxiPwhqWIyUldNATJxFJKJP2G35i2m1jTVrjfuJaI5Qhq99k0", 
+    "narrow_banner": {
+      "server_file": null, 
+      "user_file": null
+    }, 
+    "languages": [
+      "2"
+    ], 
+    "allow_record": false, 
+    "offset": "-23", 
+    "service_id": "30372", 
     "id": null, 
     "icon": {
       "server_file": null, 

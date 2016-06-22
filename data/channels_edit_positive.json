@@ -1,27 +1,30 @@
 [
   {
     "py/object": "model.channel.Channel", 
-    "epg_name": "Epg_name_Edited_d28KRTd3U23bL6u", 
-    "name": "Channel_Edited__random_ilq6LoHdNf1VOzQkUwLSqxhOzpMatXPKzA9aYfPCTNcuiJR4tx3TCM47YvIE7MQqESGxAj2QYm3DooL7UXaPx9szPOe", 
+    "epg_name": "Epg_name_Edited_Y", 
+    "name": "Channel_Edited__random_14tRmGRSIEeYelGx9nryisBMUzU7lTyWSv0wwwPt", 
     "wide_banner": {
       "server_file": null, 
-      "user_file": "C:\\Users\\Alexey.Tanana\\Documents\\workspace\\satprof\\py_epg_tests\\data\\banners\\wide_valid.jpg"
+      "user_file": "C:\\Users\\Alexey.Tanana\\Documents\\workspace\\satprof\\py_epg_tests\\data\\banners\\valid\\wide_banner\\uzor3_680x445.jpg"
     }, 
-    "provider": "Provider_Edited_ZuWgf", 
+    "provider": "Provider_Edited_uXKmpJHSgh6ETgPmNIwV5fAAIlCOUFnlJROa7QTA76DCwtSBtprUWdPGq", 
     "narrow_banner": {
       "server_file": null, 
-      "user_file": "C:\\Users\\Alexey.Tanana\\Documents\\workspace\\satprof\\py_epg_tests\\data\\banners\\narrow_valid.jpg"
+      "user_file": "C:\\Users\\Alexey.Tanana\\Documents\\workspace\\satprof\\py_epg_tests\\data\\banners\\valid\\narrow_banner\\random_colors820x125.18284.jpg"
     }, 
     "languages": [
-      "1"
+      "1", 
+      "2", 
+      "3", 
+      "4"
     ], 
-    "allow_record": false, 
-    "offset": "7", 
-    "service_id": "46228", 
+    "allow_record": true, 
+    "offset": "19", 
+    "service_id": "26424", 
     "id": null, 
     "icon": {
       "server_file": null, 
-      "user_file": "C:\\Users\\Alexey.Tanana\\Documents\\workspace\\satprof\\py_epg_tests\\data\\banners\\icon_valid.jpg"
+      "user_file": "C:\\Users\\Alexey.Tanana\\Documents\\workspace\\satprof\\py_epg_tests\\data\\banners\\valid\\icon\\icon_valid.jpg"
     }
   }
 ]

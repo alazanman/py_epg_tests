@@ -1,34 +1,34 @@
 [
   {
     "py/object": "model.channel.Channel", 
-    "epg_name": "Epg_name_tgrGWgTExFXC2GpzrHCa9FMMC", 
-    "name": "Channel_random_PMQfI6NJk53zdQ1gpuiRJifS3uRR3uPXdjcWCKWQmS6mMROGBjjIVU7DpOAGpTsaMm54MeOO", 
+    "epg_name": "Epg_name_6JQ4AAadvSPY5G9NmTdkJKtM9kMVI3qeoxMFjd", 
+    "name": "Channel_random_LoHo5y5mRe58Pv96QdEeOrnSGKo8DmiKgpvxC", 
     "wide_banner": {
       "server_file": null, 
-      "user_file": "C:\\Users\\Alexey.Tanana\\Documents\\workspace\\satprof\\py_epg_tests\\data\\banners\\wide_valid.jpg"
+      "user_file": "C:\\Users\\Alexey.Tanana\\Documents\\workspace\\satprof\\py_epg_tests\\data\\banners\\valid\\wide_banner\\uzor3_680x445.jpg"
     }, 
-    "provider": "Provider_DCUWUC7juiH6cdg3b1g3wkOsC0o8IEuzs4u046UokHKMvGxqMENXSjZc0zlTgwpCBGndkyFWQzTJ0PAfIVMY8tuAgsrLotxE3f9PnvVKYN", 
+    "provider": "Provider_28C", 
     "narrow_banner": {
       "server_file": null, 
-      "user_file": "C:\\Users\\Alexey.Tanana\\Documents\\workspace\\satprof\\py_epg_tests\\data\\banners\\narrow_valid.jpg"
+      "user_file": "C:\\Users\\Alexey.Tanana\\Documents\\workspace\\satprof\\py_epg_tests\\data\\banners\\valid\\narrow_banner\\narrow_820x125.jpg"
     }, 
     "languages": [
-      "1", 
+      "3", 
       "4"
     ], 
-    "allow_record": false, 
-    "offset": "19", 
-    "service_id": "18304", 
+    "allow_record": true, 
+    "offset": "-12", 
+    "service_id": "56364", 
     "id": null, 
     "icon": {
       "server_file": null, 
-      "user_file": "C:\\Users\\Alexey.Tanana\\Documents\\workspace\\satprof\\py_epg_tests\\data\\banners\\icon_valid.jpg"
+      "user_file": "C:\\Users\\Alexey.Tanana\\Documents\\workspace\\satprof\\py_epg_tests\\data\\banners\\valid\\icon\\icon_valid.png"
     }
   }, 
   {
     "py/object": "model.channel.Channel", 
-    "epg_name": "Epg_name_ntg0EnolbgFsFgFIjgAI7GNLzt6tmArAn64lUqch", 
-    "name": "Channel_required_fields_only_4lR3GoZIrvXVnX", 
+    "epg_name": "Epg_name_4qRB9gxda0ZUw25wSssaxyKy", 
+    "name": "Channel_required_fields_only_3g8I5cnCtXn", 
     "wide_banner": {
       "server_file": null, 
       "user_file": null
@@ -39,11 +39,11 @@
       "user_file": null
     }, 
     "languages": [
-      "3"
+      "1"
     ], 
     "allow_record": false, 
     "offset": "0", 
-    "service_id": "37855", 
+    "service_id": "43113", 
     "id": null, 
     "icon": {
       "server_file": null, 
@@ -52,13 +52,13 @@
   }, 
   {
     "py/object": "model.channel.Channel", 
-    "epg_name": "n", 
-    "name": "x", 
+    "epg_name": "Y", 
+    "name": "1", 
     "wide_banner": {
       "server_file": null, 
       "user_file": null
     }, 
-    "provider": "W", 
+    "provider": "b", 
     "narrow_banner": {
       "server_file": null, 
       "user_file": null
@@ -77,13 +77,13 @@
   }, 
   {
     "py/object": "model.channel.Channel", 
-    "epg_name": "50_symbols_string_e4hTNFEqaNB72TSrxGhtjqFbLmFD1Uj5", 
-    "name": "128_symbols_string_xqeHeShJs7SnsXtiqnkIMUkrIqIGWpavqEd1uwrzDcdYcR7LXDLGukKXuEBw60hr6ycmYDBXrgN8kOP83ybcUwFioUEgawZHbRBqc58EHUmjQ", 
+    "epg_name": "50_symbols_string_QRx5cW8GOHUefGOzOpx1up08bQ6WI3Gf", 
+    "name": "128_symbols_string_z1WR0sMAcFROQoxU0N3mMMuzNvWuYvqPMr9Ot6NoPLgjbUkJPyTSc10j5Z9F0oI08uXbw5RkXTrlHrFEvvTZzNEzyOabRPrx19Aw0R7uRiHkE", 
     "wide_banner": {
       "server_file": null, 
       "user_file": null
     }, 
-    "provider": "128_symbols_string_YLATXACLmrG0utE11DXxJ21tBQVFTzLAqHMvqMvLWvwHnLSQzTap8aFU0mc8Brx2U5jZPJbfpmjvicVs9CQVNgkGU0Oqr19jZZLpc4CO1sVLp", 
+    "provider": "128_symbols_string_CZaNQicLGCx6zGEnqHfs6ArISFs9pRIAzNBS9zdUZIcoXgybMS1EncMthofGhL9aCjX3J6szzO9zU3Shlt1DCELILvl4L5k8B7p08p3RkldaU", 
     "narrow_banner": {
       "server_file": null, 
       "user_file": null

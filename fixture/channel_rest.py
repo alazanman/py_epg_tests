@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 # from model.channel import Channel
+from random import choice
 from utils.file_util import encode_base64
 
 
@@ -46,3 +47,19 @@ class RestChannelHelper:
                 # print data[key]
         r = session.post(url, data=data, cookies=session.cookies)
         print "Channel created via rest:", channel
+
+    def delete(self, channel):
+        session = self.rest.session
+        url = "%sepg/channel/%s/delete/" % (self.rest.base_url, channel.id)
+        data = {
+                'csrfmiddlewaretoken': session.cookies['csrftoken']
+        }
+        print url
+        r = session.post(url, data=data, cookies=session.cookies)
+        # print "Channel deleted via rest:", channel
+
+    def delete_channels(self, channels, count_to_retain=0):
+        while len(channels) > count_to_retain:
+            # some_channel = choice(channels)
+            self.delete(channels[0])
+            channels.remove(channels[0])

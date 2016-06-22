@@ -1,0 +1,547 @@
+[
+  {
+    "py/object": "model.channel.Channel", 
+    "epg_name": "Epg_name_ADdXgkY2rYTn3OtmaL6dwPvX2knDYWUltPSTNnW2w", 
+    "name": "Channel_random_p6oYVFrKvMtTwDYhZErDLooE1f5IgWjPwToS", 
+    "wide_banner": {
+      "server_file": null, 
+      "user_file": null
+    }, 
+    "provider": "Provider_sKkvk7BPm73OXMHaWh7z4PgnxngNCBIFwkSqFpYPMNZNnDoR9MUKxPtjlqZeDPbU7wsbeQ6", 
+    "narrow_banner": {
+      "server_file": null, 
+      "user_file": null
+    }, 
+    "languages": [
+      "1", 
+      "3"
+    ], 
+    "allow_record": true, 
+    "offset": "20", 
+    "service_id": "15584", 
+    "id": null, 
+    "icon": {
+      "server_file": null, 
+      "user_file": "C:\\Users\\Alexey.Tanana\\Documents\\workspace\\satprof\\py_epg_tests\\data\\banners\\invalid\\icon\\icon.bmp"
+    }
+  }, 
+  {
+    "py/object": "model.channel.Channel", 
+    "epg_name": "Epg_name_3aR0Qp435I5iP6JOuxqKr", 
+    "name": "Channel_random_SVw1zIGP0FyU6k1AxkJkQR4KUAhk3H84x7lEskBuy0QcYhwXlq9tXcnXzjk", 
+    "wide_banner": {
+      "server_file": null, 
+      "user_file": null
+    }, 
+    "provider": "Provider_qj8dlOduL8", 
+    "narrow_banner": {
+      "server_file": null, 
+      "user_file": null
+    }, 
+    "languages": [
+      "2", 
+      "3"
+    ], 
+    "allow_record": false, 
+    "offset": "-6", 
+    "service_id": "49513", 
+    "id": null, 
+    "icon": {
+      "server_file": null, 
+      "user_file": "C:\\Users\\Alexey.Tanana\\Documents\\workspace\\satprof\\py_epg_tests\\data\\banners\\invalid\\icon\\icon.gif"
+    }
+  }, 
+  {
+    "py/object": "model.channel.Channel", 
+    "epg_name": "Epg_name_zxlZf1gtopi2UD", 
+    "name": "Channel_random_u6KUarj0h5pR3h6Zf20Yvw4O", 
+    "wide_banner": {
+      "server_file": null, 
+      "user_file": null
+    }, 
+    "provider": "Provider_J59gch3olSVlmlNk77ov2GliHUMPlk42XPHVCHLgaB", 
+    "narrow_banner": {
+      "server_file": null, 
+      "user_file": null
+    }, 
+    "languages": [
+      "2", 
+      "3", 
+      "4"
+    ], 
+    "allow_record": false, 
+    "offset": "9", 
+    "service_id": "33263", 
+    "id": null, 
+    "icon": {
+      "server_file": null, 
+      "user_file": "C:\\Users\\Alexey.Tanana\\Documents\\workspace\\satprof\\py_epg_tests\\data\\banners\\invalid\\icon\\icon.tif"
+    }
+  }, 
+  {
+    "py/object": "model.channel.Channel", 
+    "epg_name": "Epg_name_TVS", 
+    "name": "Channel_random_PA871o7rMF0AtXjeGAB4t3jvqMpTc4CNiEeeJrjXbnh3lkciFhlfgYeqa", 
+    "wide_banner": {
+      "server_file": null, 
+      "user_file": null
+    }, 
+    "provider": "Provider_118WrGALpB9FgEDzxg0rrlAie9pnXjF5OO0wgLS14nDqsLIFjR7K", 
+    "narrow_banner": {
+      "server_file": null, 
+      "user_file": "C:\\Users\\Alexey.Tanana\\Documents\\workspace\\satprof\\py_epg_tests\\data\\banners\\invalid\\narrow_banner\\narrow.bmp"
+    }, 
+    "languages": [
+      "3", 
+      "4"
+    ], 
+    "allow_record": false, 
+    "offset": "-20", 
+    "service_id": "16699", 
+    "id": null, 
+    "icon": {
+      "server_file": null, 
+      "user_file": null
+    }
+  }, 
+  {
+    "py/object": "model.channel.Channel", 
+    "epg_name": "Epg_name_uUueDiUw325Gj4ohCTLI", 
+    "name": "Channel_random_YRT7YMZvG899MVhepicJTuyyK5ErazdyOQzCz3ckArOmKo2rg1wiA3bxX8Z", 
+    "wide_banner": {
+      "server_file": null, 
+      "user_file": null
+    }, 
+    "provider": "Provider_7XEhNuSiLIuv5u9POPUGbGYKhXomgBWAPKPcE3vBcLXhKBKqP1EotXUpwA46C39ZoPR6C9ZGGd41OrVyYe8", 
+    "narrow_banner": {
+      "server_file": null, 
+      "user_file": "C:\\Users\\Alexey.Tanana\\Documents\\workspace\\satprof\\py_epg_tests\\data\\banners\\invalid\\narrow_banner\\narrow.gif"
+    }, 
+    "languages": [
+      "3"
+    ], 
+    "allow_record": false, 
+    "offset": "-9", 
+    "service_id": "5398", 
+    "id": null, 
+    "icon": {
+      "server_file": null, 
+      "user_file": null
+    }
+  }, 
+  {
+    "py/object": "model.channel.Channel", 
+    "epg_name": "Epg_name_kEFOiuV6Ikx4uN", 
+    "name": "Channel_random_5PmLx2GAfvtnAgbpSbn2OLsnpuRdine0i", 
+    "wide_banner": {
+      "server_file": null, 
+      "user_file": null
+    }, 
+    "provider": "Provider_byjaUfulVi8CvXX4HScnEti0cktvJAHLWYb9D2McPYCSGQ9Rg45qdBcc0", 
+    "narrow_banner": {
+      "server_file": null, 
+      "user_file": "C:\\Users\\Alexey.Tanana\\Documents\\workspace\\satprof\\py_epg_tests\\data\\banners\\invalid\\narrow_banner\\narrow.png"
+    }, 
+    "languages": [
+      "1", 
+      "2", 
+      "3", 
+      "4"
+    ], 
+    "allow_record": false, 
+    "offset": "-14", 
+    "service_id": "40507", 
+    "id": null, 
+    "icon": {
+      "server_file": null, 
+      "user_file": null
+    }
+  }, 
+  {
+    "py/object": "model.channel.Channel", 
+    "epg_name": "Epg_name_nxgr5yXtNau5CkABpzQbUB9jv4rr", 
+    "name": "Channel_random_u7lmEXNMqz", 
+    "wide_banner": {
+      "server_file": null, 
+      "user_file": null
+    }, 
+    "provider": "Provider_eCfSovQCSfdomWCAhTVarmCHQZDl8d20h73BS", 
+    "narrow_banner": {
+      "server_file": null, 
+      "user_file": "C:\\Users\\Alexey.Tanana\\Documents\\workspace\\satprof\\py_epg_tests\\data\\banners\\invalid\\narrow_banner\\narrow.tif"
+    }, 
+    "languages": [
+      "3"
+    ], 
+    "allow_record": true, 
+    "offset": "-20", 
+    "service_id": "2567", 
+    "id": null, 
+    "icon": {
+      "server_file": null, 
+      "user_file": null
+    }
+  }, 
+  {
+    "py/object": "model.channel.Channel", 
+    "epg_name": "Epg_name_erycOuMWUTJ", 
+    "name": "Channel_random_Q5O7kNrirNPCd6Or35vVYve1HiQuvDdYaG2A0JF2GZxUVP1eHfrE7AqakjZ0nsUJ04Y8cbzME", 
+    "wide_banner": {
+      "server_file": null, 
+      "user_file": null
+    }, 
+    "provider": "Provider_gkFIJPf4GB3v1FihBqpP6289VzJPHyYNJ7YZ7wBz75qmEPXRD9UIHowO7z2tyOzqNsMxuR5vbMvioEW6Ona4W9p3aLLyBRqMK4lOeA6A1LyNcV2", 
+    "narrow_banner": {
+      "server_file": null, 
+      "user_file": "C:\\Users\\Alexey.Tanana\\Documents\\workspace\\satprof\\py_epg_tests\\data\\banners\\invalid\\narrow_banner\\narrow_125x820.jpg"
+    }, 
+    "languages": [
+      "2"
+    ], 
+    "allow_record": true, 
+    "offset": "-19", 
+    "service_id": "23338", 
+    "id": null, 
+    "icon": {
+      "server_file": null, 
+      "user_file": null
+    }
+  }, 
+  {
+    "py/object": "model.channel.Channel", 
+    "epg_name": "Epg_name_WBs", 
+    "name": "Channel_random_TlFLB1vn1mTBKU9SlJBwYyghb", 
+    "wide_banner": {
+      "server_file": null, 
+      "user_file": null
+    }, 
+    "provider": "Provider_5pCzr9", 
+    "narrow_banner": {
+      "server_file": null, 
+      "user_file": "C:\\Users\\Alexey.Tanana\\Documents\\workspace\\satprof\\py_epg_tests\\data\\banners\\invalid\\narrow_banner\\narrow_819x125.jpg"
+    }, 
+    "languages": [
+      "2"
+    ], 
+    "allow_record": true, 
+    "offset": "17", 
+    "service_id": "28192", 
+    "id": null, 
+    "icon": {
+      "server_file": null, 
+      "user_file": null
+    }
+  }, 
+  {
+    "py/object": "model.channel.Channel", 
+    "epg_name": "Epg_name_5aqDy85CgemJby", 
+    "name": "Channel_random_Xw9tmIQN060B0K20fgEcEsciAPyuRDEKcxHTkL9U4wtQeYLH44kcKHr3gyWpgI6tXcIjUDAk9paGOFDgPGTMto0p1175Pf", 
+    "wide_banner": {
+      "server_file": null, 
+      "user_file": null
+    }, 
+    "provider": "Provider_rXi6dP7C71hGf5TbnKTzyMce9PhpViFL6qlzGwZSb9XcGIDNiPb2M7WIQPIn0ONGChHCRSNiuFgmti2rpHpZItOXUIl0s6NIcvl0", 
+    "narrow_banner": {
+      "server_file": null, 
+      "user_file": "C:\\Users\\Alexey.Tanana\\Documents\\workspace\\satprof\\py_epg_tests\\data\\banners\\invalid\\narrow_banner\\narrow_820x124.jpg"
+    }, 
+    "languages": [
+      "2", 
+      "3"
+    ], 
+    "allow_record": false, 
+    "offset": "11", 
+    "service_id": "64875", 
+    "id": null, 
+    "icon": {
+      "server_file": null, 
+      "user_file": null
+    }
+  }, 
+  {
+    "py/object": "model.channel.Channel", 
+    "epg_name": "Epg_name_rZnnJgDxSSK78p7epD0hb7W38GvUTQKEnqTD6ZHQ", 
+    "name": "Channel_random_7GLbZwlDmjpmoqwWKBV3jCkXz3WBfYWlX65k8ty5lFbk8Lb", 
+    "wide_banner": {
+      "server_file": null, 
+      "user_file": null
+    }, 
+    "provider": "Provider_73Ulj4TzJtDi1REKHuvBV8jxI2GPuabpOMBz8rnRysXtumOY7u80mKzOTMTSRI4J2Fz3qTW", 
+    "narrow_banner": {
+      "server_file": null, 
+      "user_file": "C:\\Users\\Alexey.Tanana\\Documents\\workspace\\satprof\\py_epg_tests\\data\\banners\\invalid\\narrow_banner\\narrow_820x126.jpg"
+    }, 
+    "languages": [
+      "2"
+    ], 
+    "allow_record": false, 
+    "offset": "18", 
+    "service_id": "51937", 
+    "id": null, 
+    "icon": {
+      "server_file": null, 
+      "user_file": null
+    }
+  }, 
+  {
+    "py/object": "model.channel.Channel", 
+    "epg_name": "Epg_name_gUGiZRyYp5p1M4KPbOlG6tFmSwPjT", 
+    "name": "Channel_random_5EfAUoEbnL98prLjxieq0gN", 
+    "wide_banner": {
+      "server_file": null, 
+      "user_file": null
+    }, 
+    "provider": "Provider_5LVCJkiBilCocEQCtKiZIlsutKf0CLnQr3WK25lc5PJ9HzWW8s0CUr0YqNtsfxVi", 
+    "narrow_banner": {
+      "server_file": null, 
+      "user_file": "C:\\Users\\Alexey.Tanana\\Documents\\workspace\\satprof\\py_epg_tests\\data\\banners\\invalid\\narrow_banner\\narrow_821x125.jpg"
+    }, 
+    "languages": [
+      "1", 
+      "2", 
+      "3", 
+      "4"
+    ], 
+    "allow_record": true, 
+    "offset": "8", 
+    "service_id": "62811", 
+    "id": null, 
+    "icon": {
+      "server_file": null, 
+      "user_file": null
+    }
+  }, 
+  {
+    "py/object": "model.channel.Channel", 
+    "epg_name": "Epg_name_MeQGflJVyrI", 
+    "name": "Channel_random_qyzZi20a5ibj4dhKlTFrGpSrINQcj3OiLq84V5218Zge64fcXpIoz004RdF486T6n9EYmyQ5i4w57TXzRTVquaURGrpowo", 
+    "wide_banner": {
+      "server_file": null, 
+      "user_file": "C:\\Users\\Alexey.Tanana\\Documents\\workspace\\satprof\\py_epg_tests\\data\\banners\\invalid\\wide_banner\\wide.bmp"
+    }, 
+    "provider": "Provider_n82u2VFSre6tAcnZl20yW4tGPUB1Kwcsr3elGdn4uFrKr2olilZ1Mg9JCZGVrhU9NXUrJQ0BwMfWxdm2UXjPTSNG", 
+    "narrow_banner": {
+      "server_file": null, 
+      "user_file": "C:\\Users\\Alexey.Tanana\\Documents\\workspace\\satprof\\py_epg_tests\\data\\banners\\valid\\narrow_banner\\narrow_820x125.jpg"
+    }, 
+    "languages": [
+      "3", 
+      "4"
+    ], 
+    "allow_record": true, 
+    "offset": "-22", 
+    "service_id": "58839", 
+    "id": null, 
+    "icon": {
+      "server_file": null, 
+      "user_file": null
+    }
+  }, 
+  {
+    "py/object": "model.channel.Channel", 
+    "epg_name": "Epg_name_H15xJWX4nNFtVf2qpD7ZX2cxuIMzlzXj", 
+    "name": "Channel_random_UIhP9nOSma8K9poDiCvpy0cNZBKpd39rxivLYf9VffB9ISVVLKkm23wGeeVIJQeVuUq9pyx3gp", 
+    "wide_banner": {
+      "server_file": null, 
+      "user_file": "C:\\Users\\Alexey.Tanana\\Documents\\workspace\\satprof\\py_epg_tests\\data\\banners\\invalid\\wide_banner\\wide.gif"
+    }, 
+    "provider": "Provider_IPCDjABm8LhWDScf3jc3EP9FJNGYtWjL33Ckdp5yeuQsl1hywR0zbUpDz7Y3mTDqMSAoc15lqJa5o9vO2K9rhQ5ydoK", 
+    "narrow_banner": {
+      "server_file": null, 
+      "user_file": "C:\\Users\\Alexey.Tanana\\Documents\\workspace\\satprof\\py_epg_tests\\data\\banners\\valid\\narrow_banner\\random_colors820x125.18284.jpg"
+    }, 
+    "languages": [
+      "1", 
+      "2", 
+      "4"
+    ], 
+    "allow_record": false, 
+    "offset": "-6", 
+    "service_id": "29227", 
+    "id": null, 
+    "icon": {
+      "server_file": null, 
+      "user_file": null
+    }
+  }, 
+  {
+    "py/object": "model.channel.Channel", 
+    "epg_name": "Epg_name_Tz0EKo5Mv4p", 
+    "name": "Channel_random_YLE56fX", 
+    "wide_banner": {
+      "server_file": null, 
+      "user_file": "C:\\Users\\Alexey.Tanana\\Documents\\workspace\\satprof\\py_epg_tests\\data\\banners\\invalid\\wide_banner\\wide.png"
+    }, 
+    "provider": "Provider_pb1OES2BbP76OLcgm4PZoGvugmkk2oE4kyyzaJy8DSUHpnElufeRgXMCMFcOnNQfQ9K3EctH5uMtrkk", 
+    "narrow_banner": {
+      "server_file": null, 
+      "user_file": "C:\\Users\\Alexey.Tanana\\Documents\\workspace\\satprof\\py_epg_tests\\data\\banners\\valid\\narrow_banner\\narrow_valid_edited.jpg"
+    }, 
+    "languages": [
+      "3", 
+      "4"
+    ], 
+    "allow_record": false, 
+    "offset": "-2", 
+    "service_id": "23374", 
+    "id": null, 
+    "icon": {
+      "server_file": null, 
+      "user_file": null
+    }
+  }, 
+  {
+    "py/object": "model.channel.Channel", 
+    "epg_name": "Epg_name_6MznToVBwWPxC", 
+    "name": "Channel_random_FTY6Dh", 
+    "wide_banner": {
+      "server_file": null, 
+      "user_file": "C:\\Users\\Alexey.Tanana\\Documents\\workspace\\satprof\\py_epg_tests\\data\\banners\\invalid\\wide_banner\\wide.tif"
+    }, 
+    "provider": "Provider_sAd4J", 
+    "narrow_banner": {
+      "server_file": null, 
+      "user_file": "C:\\Users\\Alexey.Tanana\\Documents\\workspace\\satprof\\py_epg_tests\\data\\banners\\valid\\narrow_banner\\narrow_valid_edited.jpg"
+    }, 
+    "languages": [
+      "2"
+    ], 
+    "allow_record": false, 
+    "offset": "23", 
+    "service_id": "45264", 
+    "id": null, 
+    "icon": {
+      "server_file": null, 
+      "user_file": null
+    }
+  }, 
+  {
+    "py/object": "model.channel.Channel", 
+    "epg_name": "Epg_name_9HUkfBEJ3GFdRgKWxdG", 
+    "name": "Channel_random_cVs9q0ktrGjU7Etu1", 
+    "wide_banner": {
+      "server_file": null, 
+      "user_file": "C:\\Users\\Alexey.Tanana\\Documents\\workspace\\satprof\\py_epg_tests\\data\\banners\\invalid\\wide_banner\\wide_445x680.jpg"
+    }, 
+    "provider": "Provider_0ojWzKcUB", 
+    "narrow_banner": {
+      "server_file": null, 
+      "user_file": "C:\\Users\\Alexey.Tanana\\Documents\\workspace\\satprof\\py_epg_tests\\data\\banners\\valid\\narrow_banner\\narrow_valid_edited.jpg"
+    }, 
+    "languages": [
+      "4"
+    ], 
+    "allow_record": true, 
+    "offset": "13", 
+    "service_id": "33564", 
+    "id": null, 
+    "icon": {
+      "server_file": null, 
+      "user_file": null
+    }
+  }, 
+  {
+    "py/object": "model.channel.Channel", 
+    "epg_name": "Epg_name_55ccHyRoQfLZXp", 
+    "name": "Channel_random_kPlnCnVXdScYQPyj8TTBpNgI0OHXhOFn7sfIGBbHOKuR9RAKhLVTZLpV1RZEy", 
+    "wide_banner": {
+      "server_file": null, 
+      "user_file": "C:\\Users\\Alexey.Tanana\\Documents\\workspace\\satprof\\py_epg_tests\\data\\banners\\invalid\\wide_banner\\wide_679x445.jpg"
+    }, 
+    "provider": "Provider_j", 
+    "narrow_banner": {
+      "server_file": null, 
+      "user_file": "C:\\Users\\Alexey.Tanana\\Documents\\workspace\\satprof\\py_epg_tests\\data\\banners\\valid\\narrow_banner\\uzor3_850x125.jpg"
+    }, 
+    "languages": [
+      "2", 
+      "3", 
+      "4"
+    ], 
+    "allow_record": false, 
+    "offset": "-3", 
+    "service_id": "12964", 
+    "id": null, 
+    "icon": {
+      "server_file": null, 
+      "user_file": null
+    }
+  }, 
+  {
+    "py/object": "model.channel.Channel", 
+    "epg_name": "Epg_name_3w2dwU8", 
+    "name": "Channel_random_dRUcLyYSfPJ3zBQqJNyvJvqYz8ZbwNWwCUmJUnG5kRkaJavtyFgUQiOEbbUo3bJ7zRuK0IgzuLVWJQm3fOvUweA", 
+    "wide_banner": {
+      "server_file": null, 
+      "user_file": "C:\\Users\\Alexey.Tanana\\Documents\\workspace\\satprof\\py_epg_tests\\data\\banners\\invalid\\wide_banner\\wide_680x444.jpg"
+    }, 
+    "provider": "Provider_ux0tJcP2CfMR9S8gJHks9eeIEuX435B1tbPJxoOtOaDzTAOriOOcO4NFImbtqg88Aw3f", 
+    "narrow_banner": {
+      "server_file": null, 
+      "user_file": "C:\\Users\\Alexey.Tanana\\Documents\\workspace\\satprof\\py_epg_tests\\data\\banners\\valid\\narrow_banner\\narrow_blue.jpg"
+    }, 
+    "languages": [
+      "1", 
+      "3"
+    ], 
+    "allow_record": false, 
+    "offset": "-4", 
+    "service_id": "1189", 
+    "id": null, 
+    "icon": {
+      "server_file": null, 
+      "user_file": null
+    }
+  }, 
+  {
+    "py/object": "model.channel.Channel", 
+    "epg_name": "Epg_name_gPOziQLA70PfJ59K", 
+    "name": "Channel_random_1w0Hp26yII2p", 
+    "wide_banner": {
+      "server_file": null, 
+      "user_file": "C:\\Users\\Alexey.Tanana\\Documents\\workspace\\satprof\\py_epg_tests\\data\\banners\\invalid\\wide_banner\\wide_680x446.jpg"
+    }, 
+    "provider": "Provider_1g8b7uelx6YYUEvvqOaArXHnoh6zAzeEuckGYIDnyVPI41zrbr6PFOCFP7VIrYwURDvzQkmpyBpr9zSftSZApoIHmuJ5A3Q00759RwSUuoMUvTKG6Q0", 
+    "narrow_banner": {
+      "server_file": null, 
+      "user_file": "C:\\Users\\Alexey.Tanana\\Documents\\workspace\\satprof\\py_epg_tests\\data\\banners\\valid\\narrow_banner\\random_colors820x125.18284.jpg"
+    }, 
+    "languages": [
+      "1", 
+      "2"
+    ], 
+    "allow_record": true, 
+    "offset": "6", 
+    "service_id": "42989", 
+    "id": null, 
+    "icon": {
+      "server_file": null, 
+      "user_file": null
+    }
+  }, 
+  {
+    "py/object": "model.channel.Channel", 
+    "epg_name": "Epg_name_f4RVR1ykoyOHV9", 
+    "name": "Channel_random_zCLGBo8SoH6c", 
+    "wide_banner": {
+      "server_file": null, 
+      "user_file": "C:\\Users\\Alexey.Tanana\\Documents\\workspace\\satprof\\py_epg_tests\\data\\banners\\invalid\\wide_banner\\wide_681x445.jpg"
+    }, 
+    "provider": "Provider_BqBtE57IuwX831xtnF23Z6UOhlU1UAizgnWf321lJHiGBRG5F2a5XICd4NlTSXGCY7Y2RmBMy", 
+    "narrow_banner": {
+      "server_file": null, 
+      "user_file": "C:\\Users\\Alexey.Tanana\\Documents\\workspace\\satprof\\py_epg_tests\\data\\banners\\valid\\narrow_banner\\random_colors820x125.18284.jpg"
+    }, 
+    "languages": [
+      "3"
+    ], 
+    "allow_record": false, 
+    "offset": "-7", 
+    "service_id": "49577", 
+    "id": null, 
+    "icon": {
+      "server_file": null, 
+      "user_file": null
+    }
+  }
+]
